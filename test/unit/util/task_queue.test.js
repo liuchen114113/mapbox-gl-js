@@ -1,4 +1,4 @@
-import { test } from 'mapbox-gl-js-test';
+import { test } from 'curvemap-gl-js-test';
 import TaskQueue from '../../../src/util/task_queue';
 
 test('TaskQueue', (t) => {

@@ -1,8 +1,8 @@
 import fs from 'fs';
 import path from 'path';
-import vt from '@mapbox/vector-tile';
+import vt from '@hymap/vector-tile';
 import Protobuf from 'pbf';
-import { test } from 'mapbox-gl-js-test';
+import { test } from 'curvemap-gl-js-test';
 import VectorTileWorkerSource from '../../../src/source/vector_tile_worker_source';
 import StyleLayerIndex from '../../../src/style/style_layer_index';
 import perf from '../../../src/util/performance';
@@ -105,7 +105,7 @@ test('VectorTileWorkerSource#reloadTile queues a reload when parsing is in progr
 });
 
 test('VectorTileWorkerSource#reloadTile handles multiple pending reloads', (t) => {
-    // https://github.com/mapbox/mapbox-gl-js/issues/6308
+    // https://github.com/curvemap/curvemap-gl-js/issues/6308
     const source = new VectorTileWorkerSource(null, new StyleLayerIndex());
     const parse = t.spy();
 

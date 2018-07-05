@@ -56,7 +56,7 @@ exports.run = function (implementation, options, query) {
 
             const expected = require(path.join(dir, 'expected.json'));
 
-            //For feature states, remove 'state' from fixtures until implemented in native https://github.com/mapbox/mapbox-gl-native/issues/11846
+            //For feature states, remove 'state' from fixtures until implemented in native https://github.com/curvemap/curvemap-gl-native/issues/11846
             if (implementation === 'native') {
                 for (let i = 0; i < expected.length; i++) {
                     delete expected[i].state;

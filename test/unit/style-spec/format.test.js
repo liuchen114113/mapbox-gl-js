@@ -1,4 +1,4 @@
-import { test as t } from 'mapbox-gl-js-test';
+import { test as t } from 'curvemap-gl-js-test';
 import format from '../../../src/style-spec/format';
 
 function roundtrip(style) {

@@ -12,7 +12,7 @@
   "zoom": 14,
   "bearing": 180,
   "sources": {
-    "mapbox": {
+    "curvemap": {
       "type": "vector",
       "maxzoom": 14,
       "tiles": [
@@ -32,7 +32,7 @@
     {
       "id": "point-placement-align-map-false",
       "type": "symbol",
-      "source": "mapbox",
+      "source": "curvemap",
       "source-layer": "poi_label",
       "layout": {
         "symbol-placement": "point",

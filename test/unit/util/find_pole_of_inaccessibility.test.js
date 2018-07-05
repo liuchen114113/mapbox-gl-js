@@ -1,5 +1,5 @@
-import { test } from 'mapbox-gl-js-test';
-import Point from '@mapbox/point-geometry';
+import { test } from 'curvemap-gl-js-test';
+import Point from '@hymap/point-geometry';
 import findPoleOfInaccessibility from '../../../src/util/find_pole_of_inaccessibility';
 
 test('polygon_poi', (t) => {

@@ -1,6 +1,6 @@
-import { test } from 'mapbox-gl-js-test';
+import { test } from 'curvemap-gl-js-test';
 import mergeLines from '../../../src/symbol/mergelines';
-import Point from '@mapbox/point-geometry';
+import Point from '@hymap/point-geometry';
 
 function makeFeatures(lines) {
     const features = [];

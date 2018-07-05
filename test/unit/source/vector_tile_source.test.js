@@ -1,4 +1,4 @@
-import { test } from 'mapbox-gl-js-test';
+import { test } from 'curvemap-gl-js-test';
 import VectorTileSource from '../../../src/source/vector_tile_source';
 import { OverscaledTileID } from '../../../src/source/tile_id';
 import window from '../../../src/util/window';
@@ -34,7 +34,7 @@ test('VectorTileSource', (t) => {
         const source = createSource({
             minzoom: 1,
             maxzoom: 10,
-            attribution: "Mapbox",
+            attribution: "Curvemap",
             tiles: ["http://example.com/{z}/{x}/{y}.png"]
         });
 
@@ -43,7 +43,7 @@ test('VectorTileSource', (t) => {
                 t.deepEqual(source.tiles, ["http://example.com/{z}/{x}/{y}.png"]);
                 t.deepEqual(source.minzoom, 1);
                 t.deepEqual(source.maxzoom, 10);
-                t.deepEqual(source.attribution, "Mapbox");
+                t.deepEqual(source.attribution, "Curvemap");
                 t.end();
             }
         });
@@ -59,7 +59,7 @@ test('VectorTileSource', (t) => {
                 t.deepEqual(source.tiles, ["http://example.com/{z}/{x}/{y}.png"]);
                 t.deepEqual(source.minzoom, 1);
                 t.deepEqual(source.maxzoom, 10);
-                t.deepEqual(source.attribution, "Mapbox");
+                t.deepEqual(source.attribution, "Curvemap");
                 t.end();
             }
         });
@@ -121,14 +121,14 @@ test('VectorTileSource', (t) => {
         const source = createSource({
             minzoom: 1,
             maxzoom: 10,
-            attribution: "Mapbox",
+            attribution: "Curvemap",
             tiles: ["http://example.com/{z}/{x}/{y}.png"]
         });
         t.deepEqual(source.serialize(), {
             type: 'vector',
             minzoom: 1,
             maxzoom: 10,
-            attribution: "Mapbox",
+            attribution: "Curvemap",
             tiles: ["http://example.com/{z}/{x}/{y}.png"]
         });
         t.end();
@@ -139,7 +139,7 @@ test('VectorTileSource', (t) => {
             const source = createSource({
                 minzoom: 1,
                 maxzoom: 10,
-                attribution: "Mapbox",
+                attribution: "Curvemap",
                 tiles: ["http://example.com/{z}/{x}/{y}.png"],
                 scheme: scheme
             });
@@ -221,7 +221,7 @@ test('VectorTileSource', (t) => {
         const source = createSource({
             minzoom: 0,
             maxzoom: 22,
-            attribution: "Mapbox",
+            attribution: "Curvemap",
             tiles: ["http://example.com/{z}/{x}/{y}.png"],
             bounds: [-47, -7, -45, -5]
         });
@@ -238,7 +238,7 @@ test('VectorTileSource', (t) => {
         const source = createSource({
             minzoom: 0,
             maxzoom: 22,
-            attribution: "Mapbox",
+            attribution: "Curvemap",
             tiles: ["http://example.com/{z}/{x}/{y}.png"],
             bounds: [-47, -7, -45, 91]
         });
@@ -255,7 +255,7 @@ test('VectorTileSource', (t) => {
         window.server.respondWith('/source.json', JSON.stringify({
             minzoom: 0,
             maxzoom: 22,
-            attribution: "Mapbox",
+            attribution: "Curvemap",
             tiles: ["http://example.com/{z}/{x}/{y}.png"],
             bounds: [-47, -7, -45, -5]
         }));

@@ -2,17 +2,17 @@
     "version": 8,
     "name": "Basic",
     "metadata": {
-        "mapbox:autocomposite": true,
-        "mapbox:type": "template"
+        "curvemap:autocomposite": true,
+        "curvemap:type": "template"
     },
     "sources": {
-        "mapbox": {
+        "curvemap": {
             "type": "vector",
             "tiles": [ "local://mvt-fixtures/real-world/nepal/{z}-{x}-{y}.mvt" ]
         }
     },
-    "sprite": "mapbox://sprites/mapbox/basic-v9",
-    "glyphs": "mapbox://fonts/mapbox/{fontstack}/{range}.pbf",
+    "sprite": "curvemap://sprites/curvemap/basic-v9",
+    "glyphs": "curvemap://fonts/curvemap/{fontstack}/{range}.pbf",
     "layers": [
         {
             "id": "background",
@@ -25,7 +25,7 @@
         {
             "id": "landuse_overlay_national_park",
             "type": "fill",
-            "source": "mapbox",
+            "source": "curvemap",
             "source-layer": "landuse_overlay",
             "filter": [
                 "==",
@@ -41,7 +41,7 @@
         {
             "id": "landuse_park",
             "type": "fill",
-            "source": "mapbox",
+            "source": "curvemap",
             "source-layer": "landuse",
             "filter": [
                 "==",
@@ -56,7 +56,7 @@
         {
             "id": "waterway",
             "type": "line",
-            "source": "mapbox",
+            "source": "curvemap",
             "source-layer": "waterway",
             "filter": [
                 "all",
@@ -93,7 +93,7 @@
         {
             "id": "water",
             "type": "fill",
-            "source": "mapbox",
+            "source": "curvemap",
             "source-layer": "water",
             "paint": {
                 "fill-color": "#a0cfdf"
@@ -103,7 +103,7 @@
         {
             "id": "building",
             "type": "fill",
-            "source": "mapbox",
+            "source": "curvemap",
             "source-layer": "building",
             "paint": {
                 "fill-color": "#d6d6d6"
@@ -145,7 +145,7 @@
                 ]
             ],
             "type": "line",
-            "source": "mapbox",
+            "source": "curvemap",
             "id": "tunnel_minor",
             "paint": {
                 "line-color": "#efefef",
@@ -201,7 +201,7 @@
                 ]
             ],
             "type": "line",
-            "source": "mapbox",
+            "source": "curvemap",
             "id": "tunnel_major",
             "paint": {
                 "line-color": "#fff",
@@ -261,7 +261,7 @@
                 ]
             ],
             "type": "line",
-            "source": "mapbox",
+            "source": "curvemap",
             "id": "road_minor",
             "paint": {
                 "line-color": "#efefef",
@@ -314,7 +314,7 @@
                 ]
             ],
             "type": "line",
-            "source": "mapbox",
+            "source": "curvemap",
             "id": "road_major",
             "paint": {
                 "line-color": "#fff",
@@ -369,7 +369,7 @@
                 ]
             ],
             "type": "line",
-            "source": "mapbox",
+            "source": "curvemap",
             "id": "bridge_minor case",
             "paint": {
                 "line-color": "#dedede",
@@ -434,7 +434,7 @@
                 ]
             ],
             "type": "line",
-            "source": "mapbox",
+            "source": "curvemap",
             "id": "bridge_major case",
             "paint": {
                 "line-color": "#dedede",
@@ -502,7 +502,7 @@
                 ]
             ],
             "type": "line",
-            "source": "mapbox",
+            "source": "curvemap",
             "id": "bridge_minor",
             "paint": {
                 "line-color": "#efefef",
@@ -554,7 +554,7 @@
                 ]
             ],
             "type": "line",
-            "source": "mapbox",
+            "source": "curvemap",
             "id": "bridge_major",
             "paint": {
                 "line-color": "#fff",
@@ -602,7 +602,7 @@
                 ]
             ],
             "type": "line",
-            "source": "mapbox",
+            "source": "curvemap",
             "id": "admin_country",
             "paint": {
                 "line-color": "#8b8a8a",
@@ -663,7 +663,7 @@
                 ]
             ],
             "type": "symbol",
-            "source": "mapbox",
+            "source": "curvemap",
             "id": "poi_label",
             "paint": {
                 "text-color": "#666",
@@ -716,7 +716,7 @@
                 ]
             ],
             "type": "symbol",
-            "source": "mapbox",
+            "source": "curvemap",
             "id": "road_major_label",
             "paint": {
                 "text-color": "#666",
@@ -767,7 +767,7 @@
                 ]
             ],
             "type": "symbol",
-            "source": "mapbox",
+            "source": "curvemap",
             "id": "place_label_other",
             "paint": {
                 "text-color": "#666",
@@ -814,7 +814,7 @@
                 ]
             ],
             "type": "symbol",
-            "source": "mapbox",
+            "source": "curvemap",
             "id": "place_label_city",
             "paint": {
                 "text-color": "#666",
@@ -853,7 +853,7 @@
                 "Point"
             ],
             "type": "symbol",
-            "source": "mapbox",
+            "source": "curvemap",
             "id": "country_label",
             "paint": {
                 "text-color": "#666",
@@ -866,7 +866,7 @@
         {
             "id": "contour-line",
             "type": "line",
-            "source": "mapbox",
+            "source": "curvemap",
             "source-layer": "contour",
             "minzoom": 11,
             "filter": [
@@ -923,7 +923,7 @@
         {
             "id": "contour-line-index",
             "type": "line",
-            "source": "mapbox",
+            "source": "curvemap",
             "source-layer": "contour",
             "minzoom": 11,
             "filter": [

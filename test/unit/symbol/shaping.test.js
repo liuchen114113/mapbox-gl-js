@@ -1,4 +1,4 @@
-import { test } from 'mapbox-gl-js-test';
+import { test } from 'curvemap-gl-js-test';
 import fs from 'fs';
 import path from 'path';
 import * as shaping from '../../../src/symbol/shaping';
@@ -62,7 +62,7 @@ test('shaping', (t) => {
     shaped = shaping.shapeText(String.fromCharCode(0), glyphs, 15 * oneEm, oneEm, 'center', 'center', 0 * oneEm, [0, 0], oneEm, WritingMode.horizontal);
     t.equal(false, shaped);
 
-    // https://github.com/mapbox/mapbox-gl-js/issues/3254
+    // https://github.com/curvemap/curvemap-gl-js/issues/3254
     shaped = shaping.shapeText('   foo bar\n', glyphs, 15 * oneEm, oneEm, 'center', 'center', 0 * oneEm, [0, 0], oneEm, WritingMode.horizontal);
     const shaped2 = shaping.shapeText('foo bar', glyphs, 15 * oneEm, oneEm, 'center', 'center', 0 * oneEm, [0, 0], oneEm, WritingMode.horizontal);
     t.same(shaped.positionedGlyphs, shaped2.positionedGlyphs);

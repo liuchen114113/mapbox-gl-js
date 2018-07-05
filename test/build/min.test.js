@@ -1,11 +1,11 @@
-import {test} from 'mapbox-gl-js-test';
+import {test} from 'curvemap-gl-js-test';
 import fs from 'fs';
 import path from 'path';
 import reference from '../../src/style-spec/reference/latest';
 import { Linter } from 'eslint';
 import { scripts } from '../../package.json';
 
-const minBundle = fs.readFileSync('dist/mapbox-gl.js', 'utf8');
+const minBundle = fs.readFileSync('dist/curvemap-gl.js', 'utf8');
 
 test('production build removes asserts', (t) => {
     t.assert(minBundle.indexOf('canary assert') === -1);

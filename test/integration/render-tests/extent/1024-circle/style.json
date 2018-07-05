@@ -9,7 +9,7 @@
   ],
   "zoom": 0,
   "sources": {
-    "mapbox": {
+    "curvemap": {
       "type": "vector",
       "maxzoom": 14,
       "tiles": [
@@ -26,9 +26,9 @@
       }
     },
     {
-      "id": "mapbox",
+      "id": "curvemap",
       "type": "circle",
-      "source": "mapbox",
+      "source": "curvemap",
       "source-layer": "poi_label",
       "paint": {
         "circle-color": "black",

@@ -18,7 +18,7 @@
   ],
   "zoom": 0,
   "sources": {
-    "mapbox": {
+    "curvemap": {
       "type": "vector",
       "maxzoom": 14,
       "tiles": [
@@ -30,7 +30,7 @@
     {
       "id": "countries",
       "type": "circle",
-      "source": "mapbox",
+      "source": "curvemap",
       "source-layer": "hillshade",
       "filter": [
         "==",

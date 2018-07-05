@@ -1,6 +1,6 @@
-import { test } from 'mapbox-gl-js-test';
+import { test } from 'curvemap-gl-js-test';
 import { createMap } from '../../util';
-import simulate from 'mapbox-gl-js-test/simulate_interaction';
+import simulate from 'curvemap-gl-js-test/simulate_interaction';
 
 test('Map#on adds a non-delegated event listener', (t) => {
     const map = createMap(t);

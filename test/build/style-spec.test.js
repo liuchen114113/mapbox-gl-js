@@ -1,7 +1,7 @@
 
 /* eslint-disable import/no-commonjs */
 
-const test = require('mapbox-gl-js-test').test;
+const test = require('curvemap-gl-js-test').test;
 const fs = require('fs');
 const path = require('path');
 const isBuiltin = require('is-builtin-module');
@@ -16,7 +16,7 @@ const styleSpecDirectory = path.join(__dirname, '../../src/style-spec');
 const styleSpecPackage = require('../../src/style-spec/package.json');
 const styleSpecDistBundle = fs.readFileSync(path.join(__dirname, '../../dist/style-spec/index.js'), 'utf-8');
 
-test('@mapbox/mapbox-gl-style-spec npm package', (t) => {
+test('@curvemap/curvemap-gl-style-spec npm package', (t) => {
     t.test('build plain ES5 bundle in prepublish', (t) => {
         const linter = new Linter();
         const messages = linter.verify(styleSpecDistBundle, {
@@ -54,7 +54,7 @@ test('@mapbox/mapbox-gl-style-spec npm package', (t) => {
         });
     });
 
-    t.test('exports components directly, not behind `default` - https://github.com/mapbox/mapbox-gl-js/issues/6601', (t) => {
+    t.test('exports components directly, not behind `default` - https://github.com/curvemap/curvemap-gl-js/issues/6601', (t) => {
         const spec = require('../../dist/style-spec/index.js');
         t.ok(spec.validate);
         t.notOk(spec.default && spec.default.validate);

@@ -1,8 +1,8 @@
-import { test } from 'mapbox-gl-js-test';
+import { test } from 'curvemap-gl-js-test';
 import fs from 'fs';
 import path from 'path';
 import Protobuf from 'pbf';
-import { VectorTile } from '@mapbox/vector-tile';
+import { VectorTile } from '@hymap/vector-tile';
 import SymbolBucket from '../../../src/data/bucket/symbol_bucket';
 import { CollisionBoxArray } from '../../../src/data/array_types';
 import SymbolStyleLayer from '../../../src/style/style_layer/symbol_style_layer';

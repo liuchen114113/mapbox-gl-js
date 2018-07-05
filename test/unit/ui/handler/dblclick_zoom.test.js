@@ -1,8 +1,8 @@
-import { test } from 'mapbox-gl-js-test';
+import { test } from 'curvemap-gl-js-test';
 import window from '../../../../src/util/window';
 import Map from '../../../../src/ui/map';
 import DOM from '../../../../src/util/dom';
-import simulate from 'mapbox-gl-js-test/simulate_interaction';
+import simulate from 'curvemap-gl-js-test/simulate_interaction';
 
 function createMap(t) {
     t.stub(Map.prototype, '_detectMissingCSS');

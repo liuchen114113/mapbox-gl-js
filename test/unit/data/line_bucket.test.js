@@ -1,9 +1,9 @@
-import { test } from 'mapbox-gl-js-test';
+import { test } from 'curvemap-gl-js-test';
 import fs from 'fs';
 import path from 'path';
 import Protobuf from 'pbf';
-import { VectorTile } from '@mapbox/vector-tile';
-import Point from '@mapbox/point-geometry';
+import { VectorTile } from '@hymap/vector-tile';
+import Point from '@hymap/point-geometry';
 import segment from '../../../src/data/segment';
 import LineBucket from '../../../src/data/bucket/line_bucket';
 import LineStyleLayer from '../../../src/style/style_layer/line_style_layer';

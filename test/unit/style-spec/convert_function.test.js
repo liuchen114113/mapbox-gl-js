@@ -1,4 +1,4 @@
-import { test } from 'mapbox-gl-js-test';
+import { test } from 'curvemap-gl-js-test';
 import convertFunction from '../../../src/style-spec/function/convert';
 
 test('convertFunction', (t) => {

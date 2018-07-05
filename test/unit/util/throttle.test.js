@@ -1,6 +1,6 @@
 // @flow
 
-import { test } from 'mapbox-gl-js-test';
+import { test } from 'curvemap-gl-js-test';
 
 import throttle from '../../../src/util/throttle';
 

@@ -5,7 +5,7 @@
   },
   "zoom": 2,
   "sources": {
-    "mapbox": {
+    "curvemap": {
       "type": "vector",
       "maxzoom": 14,
       "tiles": [
@@ -25,7 +25,7 @@
     {
       "id": "land",
       "type": "fill",
-      "source": "mapbox",
+      "source": "curvemap",
       "source-layer": "water",
       "paint": {
         "fill-color": "blue"

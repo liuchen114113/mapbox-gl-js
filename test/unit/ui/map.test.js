@@ -1,4 +1,4 @@
-import { test } from 'mapbox-gl-js-test';
+import { test } from 'curvemap-gl-js-test';
 import { extend } from '../../../src/util/util';
 import window from '../../../src/util/window';
 import Map from '../../../src/ui/map';
@@ -7,9 +7,9 @@ import LngLat from '../../../src/geo/lng_lat';
 import Tile from '../../../src/source/tile';
 import { OverscaledTileID } from '../../../src/source/tile_id';
 import { Event, ErrorEvent } from '../../../src/util/evented';
-import simulate from 'mapbox-gl-js-test/simulate_interaction';
+import simulate from 'curvemap-gl-js-test/simulate_interaction';
 
-import fixed from 'mapbox-gl-js-test/fixed';
+import fixed from 'curvemap-gl-js-test/fixed';
 const fixedNum = fixed.Num;
 const fixedLngLat = fixed.LngLat;
 const fixedCoord = fixed.Coord;
@@ -406,7 +406,7 @@ test('Map', (t) => {
         const map = createMap(t, {
             style: extend(createStyle(), {
                 sources: {
-                    mapbox: {
+                    curvemap: {
                         type: 'vector',
                         minzoom: 1,
                         maxzoom: 10,
@@ -416,12 +416,12 @@ test('Map', (t) => {
                 layers: [{
                     id: 'layerId1',
                     type: 'circle',
-                    source: 'mapbox',
+                    source: 'curvemap',
                     'source-layer': 'sourceLayer'
                 }, {
                     id: 'layerId2',
                     type: 'circle',
-                    source: 'mapbox',
+                    source: 'curvemap',
                     'source-layer': 'sourceLayer'
                 }]
             })
@@ -439,13 +439,13 @@ test('Map', (t) => {
         const layer = {
             id: 'layerId',
             type: 'circle',
-            source: 'mapbox',
+            source: 'curvemap',
             'source-layer': 'sourceLayer'
         };
         const map = createMap(t, {
             style: extend(createStyle(), {
                 sources: {
-                    mapbox: {
+                    curvemap: {
                         type: 'vector',
                         minzoom: 1,
                         maxzoom: 10,
@@ -1064,7 +1064,7 @@ test('Map', (t) => {
                 style: {
                     "version": 8,
                     "sources": {
-                        "mapbox://mapbox.satellite": {
+                        "curvemap://curvemap.satellite": {
                             "type": "raster",
                             "tiles": ["http://example.com/{z}/{x}/{y}.png"]
                         }
@@ -1072,7 +1072,7 @@ test('Map', (t) => {
                     "layers": [{
                         "id": "satellite",
                         "type": "raster",
-                        "source": "mapbox://mapbox.satellite",
+                        "source": "curvemap://curvemap.satellite",
                         "layout": {
                             "visibility": "none"
                         }
@@ -1321,7 +1321,7 @@ test('Map', (t) => {
 
     t.test('render stabilizes', (t) => {
         const style = createStyle();
-        style.sources.mapbox = {
+        style.sources.curvemap = {
             type: 'vector',
             minzoom: 1,
             maxzoom: 10,
@@ -1330,7 +1330,7 @@ test('Map', (t) => {
         style.layers.push({
             id: 'layerId',
             type: 'circle',
-            source: 'mapbox',
+            source: 'curvemap',
             'source-layer': 'sourceLayer'
         });
 
@@ -1351,7 +1351,7 @@ test('Map', (t) => {
         const map = createMap(t, {
             style: extend(createStyle(), {
                 sources: {
-                    mapbox: {
+                    curvemap: {
                         type: 'vector',
                         minzoom: 1,
                         maxzoom: 10,
@@ -1361,7 +1361,7 @@ test('Map', (t) => {
                 layers: [{
                     id: 'layerId',
                     type: 'circle',
-                    source: 'mapbox',
+                    source: 'curvemap',
                     'source-layer': 'sourceLayer'
                 }]
             })
@@ -1426,7 +1426,7 @@ test('Map', (t) => {
         const stub = t.stub(console, 'warn');
 
         const styleSheet = new window.CSSStyleSheet();
-        styleSheet.insertRule('.mapboxgl-canary { background-color: rgb(250, 128, 114); }', 0);
+        styleSheet.insertRule('.curvemapgl-canary { background-color: rgb(250, 128, 114); }', 0);
         window.document.styleSheets[0] = styleSheet;
         window.document.styleSheets.length = 1;
 

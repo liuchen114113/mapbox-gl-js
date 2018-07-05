@@ -1,9 +1,9 @@
-import { test } from 'mapbox-gl-js-test';
+import { test } from 'curvemap-gl-js-test';
 import { extend } from '../../../../src/util/util';
 import window from '../../../../src/util/window';
 import Map from '../../../../src/ui/map';
 import DOM from '../../../../src/util/dom';
-import simulate from 'mapbox-gl-js-test/simulate_interaction';
+import simulate from 'curvemap-gl-js-test/simulate_interaction';
 import browser from '../../../../src/util/browser';
 
 function createMap(t, options) {
@@ -419,7 +419,7 @@ test('DragRotateHandler requests a new render frame after each mousemove event',
 
     map._renderTaskQueue.run();
 
-    // https://github.com/mapbox/mapbox-gl-js/issues/6063
+    // https://github.com/curvemap/curvemap-gl-js/issues/6063
     requestRenderFrame.resetHistory();
     simulate.mousemove(map.getCanvas(), {buttons: 2, clientX: 20, clientY: 20});
     t.equal(requestRenderFrame.callCount, 1);
@@ -429,7 +429,7 @@ test('DragRotateHandler requests a new render frame after each mousemove event',
 });
 
 test('DragRotateHandler can interleave with another handler', (t) => {
-    // https://github.com/mapbox/mapbox-gl-js/issues/6106
+    // https://github.com/curvemap/curvemap-gl-js/issues/6106
     const map = createMap(t);
 
     // Prevent inertial rotation.

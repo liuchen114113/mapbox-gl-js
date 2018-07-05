@@ -3,7 +3,7 @@
   "sources": {
     "source": {
       "type": "vector",
-      "url": "mapbox://mapbox.mapbox-streets-v5"
+      "url": "curvemap://curvemap.curvemap-streets-v5"
     }
   },
   "layers": [
@@ -110,7 +110,7 @@
       "source-layer": "source-layer",
       "filter": [
         "has",
-        "mapbox"
+        "curvemap"
       ]
     },
     {
@@ -120,7 +120,7 @@
       "source-layer": "source-layer",
       "filter": [
         "!has",
-        "mapbox"
+        "curvemap"
       ]
     },
     {
@@ -130,7 +130,7 @@
       "source-layer": "source-layer",
       "filter": [
         "has",
-        "mapbox",
+        "curvemap",
         "bad"
       ]
     },
@@ -141,7 +141,7 @@
       "source-layer": "source-layer",
       "filter": [
         "has",
-        {"mapbox": true}
+        {"curvemap": true}
       ]
     },
     {

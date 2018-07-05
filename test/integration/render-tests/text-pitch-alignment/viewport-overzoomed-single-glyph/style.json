@@ -8,11 +8,11 @@
   "pitch": 60,
   "bearing": 161.5,
   "sources": {
-    "mapbox": {
+    "curvemap": {
       "type": "vector",
       "maxzoom": 16,
       "tiles": [
-        "local://tiles/mapbox.mapbox-streets-v7/16-11235-26208.mvt"
+        "local://tiles/curvemap.curvemap-streets-v7/16-11235-26208.mvt"
       ]
     }
   },
@@ -28,7 +28,7 @@
     {
       "id": "road-label-large",
       "type": "symbol",
-      "source": "mapbox",
+      "source": "curvemap",
       "source-layer": "road_label",
       "layout": {
         "text-size": { "base": 1, "stops": [ [ 9, 10 ], [ 20, 16 ] ] },

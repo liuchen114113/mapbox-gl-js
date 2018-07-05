@@ -1,4 +1,4 @@
-import { test as t } from 'mapbox-gl-js-test';
+import { test as t } from 'curvemap-gl-js-test';
 import deref from '../../../src/style-spec/deref';
 
 t('derefs a ref layer which follows its parent', (t) => {

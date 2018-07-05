@@ -1,8 +1,8 @@
-import { test } from 'mapbox-gl-js-test';
+import { test } from 'curvemap-gl-js-test';
 import fs from 'fs';
 import path from 'path';
 import Protobuf from 'pbf';
-import { VectorTile } from '@mapbox/vector-tile';
+import { VectorTile } from '@hymap/vector-tile';
 import loadGeometry from '../../../src/data/load_geometry.js';
 
 // Load a line feature from fixture tile.

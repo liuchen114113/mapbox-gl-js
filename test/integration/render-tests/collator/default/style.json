@@ -8,7 +8,7 @@
     }
   },
   "sources": {
-    "mapbox": {
+    "curvemap": {
       "type": "geojson",
       "data": {
         "type": "FeatureCollection",
@@ -182,7 +182,7 @@
     {
       "id": "literal",
       "type": "symbol",
-      "source": "mapbox",
+      "source": "curvemap",
       "layout": {
         "text-field": ["let",
             "a", ["to-string", ["get", "a"]],

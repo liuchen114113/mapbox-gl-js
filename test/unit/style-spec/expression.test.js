@@ -1,4 +1,4 @@
-import { test } from 'mapbox-gl-js-test';
+import { test } from 'curvemap-gl-js-test';
 import { createPropertyExpression } from '../../../src/style-spec/expression';
 import definitions from '../../../src/style-spec/expression/definitions';
 import v8 from '../../../src/style-spec/reference/v8';

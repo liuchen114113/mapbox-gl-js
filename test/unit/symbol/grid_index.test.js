@@ -1,4 +1,4 @@
-import { test } from 'mapbox-gl-js-test';
+import { test } from 'curvemap-gl-js-test';
 import GridIndex from '../../../src/symbol/grid_index';
 
 test('GridIndex', (t) => {

@@ -1,21 +1,21 @@
-Verify correctness and consistency of [mapbox-gl-js](https://github.com/mapbox/mapbox-gl-js) and
-[mapbox-gl-native](https://github.com/mapbox/mapbox-gl-native) rendering.
+Verify correctness and consistency of [curvemap-gl-js](https://github.com/curvemap/curvemap-gl-js) and
+[curvemap-gl-native](https://github.com/curvemap/curvemap-gl-native) rendering.
 
 ## Organization
 
-Tests are contained in a directory tree, generally organized by [style specification](https://github.com/mapbox/mapbox-gl-style-spec)
+Tests are contained in a directory tree, generally organized by [style specification](https://github.com/curvemap/curvemap-gl-style-spec)
 property: `background-color`, `line-width`, etc., with a second level of directories below that for individual tests.
 
-Within a leaf directory is a `style.json` file, which contains the minimal style needed for the given test case. The style can specify the map size, center, bearing, and pitch, and additional test metadata. The expected output for a given test case is in `expected.png`, e.g. [`tests/background-color/constant/expected.png`](https://github.com/mapbox/mapbox-gl-js/blob/master/test/integration/render-tests/background-color/constant/expected.png).
+Within a leaf directory is a `style.json` file, which contains the minimal style needed for the given test case. The style can specify the map size, center, bearing, and pitch, and additional test metadata. The expected output for a given test case is in `expected.png`, e.g. [`tests/background-color/constant/expected.png`](https://github.com/curvemap/curvemap-gl-js/blob/master/test/integration/render-tests/background-color/constant/expected.png).
 
 Supporting files -- glyphs, sprites, and tiles -- live in their own respective subdirectories at the top level. The test
 harness sets up the environment such that requests for these resources are directed to the correct location.
 
-The contents of vector tile fixtures can be read using the [`vt2geojson`](https://github.com/mapbox/vt2geojson) tool
+The contents of vector tile fixtures can be read using the [`vt2geojson`](https://github.com/curvemap/vt2geojson) tool
 
 ## Running tests
 
-Run `npm run test-suite` in mapbox-gl-js or mapbox-gl-native. To view the results graphically, run:
+Run `npm run test-suite` in curvemap-gl-js or curvemap-gl-native. To view the results graphically, run:
 
 ```
 open ./test/integration/render-tests/index.html
@@ -28,7 +28,7 @@ open ./test/integration/query-tests/index.html
 When run via Travis, the test artifacts are uploaded to S3 as a permanent record of results. Near the
 end of the Travis output is a link to the result, for example:
 
-http://mapbox.s3.amazonaws.com/mapbox-gl-native/tests/5952.10/index.html
+http://curvemap.s3.amazonaws.com/curvemap-gl-native/tests/5952.10/index.html
 
 ## Writing new tests
 

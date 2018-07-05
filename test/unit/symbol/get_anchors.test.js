@@ -1,5 +1,5 @@
-import { test } from 'mapbox-gl-js-test';
-import Point from '@mapbox/point-geometry';
+import { test } from 'curvemap-gl-js-test';
+import Point from '@hymap/point-geometry';
 import { getAnchors, getCenterAnchor } from '../../../src/symbol/get_anchors';
 
 const TILE_EXTENT = 4096;

@@ -1,4 +1,4 @@
-import { test } from 'mapbox-gl-js-test';
+import { test } from 'curvemap-gl-js-test';
 import config from '../../../../src/util/config';
 import AttributionControl from '../../../../src/ui/control/attribution_control';
 import { createMap as globalCreateMap } from '../../../util';
@@ -12,7 +12,7 @@ function createMap(t) {
             version: 8,
             sources: {},
             layers: [],
-            owner: 'mapbox',
+            owner: 'curvemap',
             id: 'streets-v10',
         },
         hash: true
@@ -23,7 +23,7 @@ test('AttributionControl appears in bottom-right by default', (t) => {
     const map = createMap(t);
     map.addControl(new AttributionControl());
 
-    t.equal(map.getContainer().querySelectorAll('.mapboxgl-ctrl-bottom-right .mapboxgl-ctrl-attrib').length, 1);
+    t.equal(map.getContainer().querySelectorAll('.curvemapgl-ctrl-bottom-right .curvemapgl-ctrl-attrib').length, 1);
     t.end();
 });
 
@@ -31,7 +31,7 @@ test('AttributionControl appears in the position specified by the position optio
     const map = createMap(t);
     map.addControl(new AttributionControl(), 'top-left');
 
-    t.equal(map.getContainer().querySelectorAll('.mapboxgl-ctrl-top-left .mapboxgl-ctrl-attrib').length, 1);
+    t.equal(map.getContainer().querySelectorAll('.curvemapgl-ctrl-top-left .curvemapgl-ctrl-attrib').length, 1);
     t.end();
 });
 
@@ -46,7 +46,7 @@ test('AttributionControl appears in compact mode if compact option is used', (t)
 
     const container = map.getContainer();
 
-    t.equal(container.querySelectorAll('.mapboxgl-ctrl-attrib.mapboxgl-compact').length, 1);
+    t.equal(container.querySelectorAll('.curvemapgl-ctrl-attrib.curvemapgl-compact').length, 1);
     map.removeControl(attributionControl);
 
     Object.defineProperty(map.getCanvasContainer(), 'offsetWidth', {value: 600, configurable: true});
@@ -55,7 +55,7 @@ test('AttributionControl appears in compact mode if compact option is used', (t)
     });
 
     map.addControl(attributionControl);
-    t.equal(container.querySelectorAll('.mapboxgl-ctrl-attrib:not(.mapboxgl-compact)').length, 1);
+    t.equal(container.querySelectorAll('.curvemapgl-ctrl-attrib:not(.curvemapgl-compact)').length, 1);
     t.end();
 });
 
@@ -66,12 +66,12 @@ test('AttributionControl appears in compact mode if container is less then 640 p
 
     const container = map.getContainer();
 
-    t.equal(container.querySelectorAll('.mapboxgl-ctrl-attrib:not(.mapboxgl-compact)').length, 1);
+    t.equal(container.querySelectorAll('.curvemapgl-ctrl-attrib:not(.curvemapgl-compact)').length, 1);
 
     Object.defineProperty(map.getCanvasContainer(), 'offsetWidth', {value: 600, configurable: true});
     map.resize();
 
-    t.equal(container.querySelectorAll('.mapboxgl-ctrl-attrib.mapboxgl-compact').length, 1);
+    t.equal(container.querySelectorAll('.curvemapgl-ctrl-attrib.curvemapgl-compact').length, 1);
     t.end();
 });
 
@@ -107,12 +107,12 @@ test('AttributionControl has the correct edit map link', (t) => {
     const attribution = new AttributionControl();
     map.addControl(attribution);
     map.on('load', () => {
-        map.addSource('1', {type: 'vector', attribution: '<a class="mapbox-improve-map" href="https://www.mapbox.com/feedback/" target="_blank">Improve this map</a>'});
+        map.addSource('1', {type: 'vector', attribution: '<a class="curvemap-improve-map" href="https://www.curvemap.com/feedback/" target="_blank">Improve this map</a>'});
         map.on('data', (e) => {
             if (e.dataType === 'source' && e.sourceDataType === 'metadata') {
-                t.equal(attribution._editLink.href, 'https://www.mapbox.com/feedback/?owner=mapbox&id=streets-v10&access_token=pk.123#/0/0/0', 'edit link contains map location data');
+                t.equal(attribution._editLink.href, 'https://www.curvemap.com/feedback/?owner=curvemap&id=streets-v10&access_token=pk.123#/0/0/0', 'edit link contains map location data');
                 map.setZoom(2);
-                t.equal(attribution._editLink.href, 'https://www.mapbox.com/feedback/?owner=mapbox&id=streets-v10&access_token=pk.123#/0/0/2', 'edit link updates on mapmove');
+                t.equal(attribution._editLink.href, 'https://www.curvemap.com/feedback/?owner=curvemap&id=streets-v10&access_token=pk.123#/0/0/2', 'edit link updates on mapmove');
                 t.end();
             }
         });
@@ -131,14 +131,14 @@ test('AttributionControl is hidden if empty', (t) => {
 
     const checkEmptyFirst = () => {
         t.equal(attribution._container.innerHTML, '');
-        t.equal(container.querySelectorAll('.mapboxgl-attrib-empty').length, 1, 'includes empty class when no attribution strings are provided');
+        t.equal(container.querySelectorAll('.curvemapgl-attrib-empty').length, 1, 'includes empty class when no attribution strings are provided');
 
         map.addSource('2', { type: 'vector', attribution: 'Hello World' });
     };
 
     const checkNotEmptyLater = () => {
         t.equal(attribution._container.innerHTML, 'Hello World');
-        t.equal(container.querySelectorAll('.mapboxgl-attrib-empty').length, 0, 'removes empty class when source with attribution is added');
+        t.equal(container.querySelectorAll('.curvemapgl-attrib-empty').length, 0, 'removes empty class when source with attribution is added');
         t.end();
     };
 

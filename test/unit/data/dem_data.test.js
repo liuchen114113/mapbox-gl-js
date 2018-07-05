@@ -1,4 +1,4 @@
-import { test } from 'mapbox-gl-js-test';
+import { test } from 'curvemap-gl-js-test';
 import DEMData, { Level } from '../../../src/data/dem_data';
 import { RGBAImage } from '../../../src/util/image';
 import { serialize, deserialize } from '../../../src/util/web_worker_transfer';

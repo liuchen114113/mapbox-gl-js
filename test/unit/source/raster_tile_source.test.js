@@ -1,4 +1,4 @@
-import { test } from 'mapbox-gl-js-test';
+import { test } from 'curvemap-gl-js-test';
 import RasterTileSource from '../../../src/source/raster_tile_source';
 import window from '../../../src/util/window';
 import { OverscaledTileID } from '../../../src/source/tile_id';
@@ -32,7 +32,7 @@ test('RasterTileSource', (t) => {
         window.server.respondWith('/source.json', JSON.stringify({
             minzoom: 0,
             maxzoom: 22,
-            attribution: "Mapbox",
+            attribution: "Curvemap",
             tiles: ["http://example.com/{z}/{x}/{y}.png"],
             bounds: [-47, -7, -45, -5]
         }));
@@ -52,7 +52,7 @@ test('RasterTileSource', (t) => {
         const source = createSource({
             minzoom: 0,
             maxzoom: 22,
-            attribution: "Mapbox",
+            attribution: "Curvemap",
             tiles: ["http://example.com/{z}/{x}/{y}.png"],
             bounds: [-47, -7, -45, -5]
         });
@@ -69,7 +69,7 @@ test('RasterTileSource', (t) => {
         const source = createSource({
             minzoom: 0,
             maxzoom: 22,
-            attribution: "Mapbox",
+            attribution: "Curvemap",
             tiles: ["http://example.com/{z}/{x}/{y}.png"],
             bounds: [-47, -7, -45, 91]
         });
@@ -86,7 +86,7 @@ test('RasterTileSource', (t) => {
         window.server.respondWith('/source.json', JSON.stringify({
             minzoom: 0,
             maxzoom: 22,
-            attribution: "Mapbox",
+            attribution: "Curvemap",
             tiles: ["http://example.com/{z}/{x}/{y}.png"],
             bounds: [-47, -7, -45, -5]
         }));
@@ -106,7 +106,7 @@ test('RasterTileSource', (t) => {
         window.server.respondWith('/source.json', JSON.stringify({
             minzoom: 0,
             maxzoom: 22,
-            attribution: "Mapbox",
+            attribution: "Curvemap",
             tiles: ["http://example.com/{z}/{x}/{y}.png"],
             bounds: [-47, -7, -45, -5]
         }));

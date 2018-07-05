@@ -1,7 +1,7 @@
 {
   "version": 8,
   "metadata": {
-    "mapbox:groups": {
+    "curvemap:groups": {
       "group-0": {
         "name": "Group Name"
       }
@@ -14,7 +14,7 @@
       "id": "background",
       "type": "background",
       "metadata": {
-        "mapbox:group": "group-0"
+        "curvemap:group": "group-0"
       },
       "paint": {
         "background-color": "#000"

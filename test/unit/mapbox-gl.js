@@ -1,14 +1,14 @@
-import { test } from 'mapbox-gl-js-test';
-import mapboxgl from '../../src';
+import { test } from 'curvemap-gl-js-test';
+import curvemapgl from '../../src';
 
-test('mapboxgl', (t) => {
+test('curvemapgl', (t) => {
     t.test('version', (t) => {
-        t.ok(mapboxgl.version);
+        t.ok(curvemapgl.version);
         t.end();
     });
 
     t.test('workerCount', (t) => {
-        t.ok(typeof mapboxgl.workerCount === 'number');
+        t.ok(typeof curvemapgl.workerCount === 'number');
         t.end();
     });
     t.end();

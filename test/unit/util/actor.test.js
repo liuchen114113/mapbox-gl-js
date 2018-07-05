@@ -1,4 +1,4 @@
-import { test } from 'mapbox-gl-js-test';
+import { test } from 'curvemap-gl-js-test';
 import Actor from '../../../src/util/actor';
 import WebWorker from '../../../src/util/web_worker';
 

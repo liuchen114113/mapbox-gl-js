@@ -1,4 +1,4 @@
-import { test as t } from 'mapbox-gl-js-test';
+import { test as t } from 'curvemap-gl-js-test';
 import declass from '../../../src/style-spec/declass';
 
 t('declass a style, one class', (t) => {

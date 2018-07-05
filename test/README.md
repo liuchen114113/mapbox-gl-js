@@ -3,9 +3,9 @@
 
 ## Running Tests
 
-First you must configure your development environment per [`../CONTRIBUTING.md`](https://github.com/mapbox/mapbox-gl-js/blob/master/CONTRIBUTING.md)
+First you must configure your development environment per [`../CONTRIBUTING.md`](https://github.com/curvemap/curvemap-gl-js/blob/master/CONTRIBUTING.md)
 
-There are two test suites associated with Mapbox GL JS
+There are two test suites associated with Curvemap GL JS
 
  - `yarn test` runs quick unit tests
  - `yarn run test-suite` runs slower integration tests

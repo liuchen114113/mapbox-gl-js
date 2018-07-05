@@ -1,4 +1,4 @@
-import { test } from 'mapbox-gl-js-test';
+import { test } from 'curvemap-gl-js-test';
 import {
     getArrayBuffer,
     getJSON
@@ -73,7 +73,7 @@ test('ajax', (t) => {
         window.server.respond();
     });
 
-    t.test('getJSON, 401: non-Mapbox domain', (t) => {
+    t.test('getJSON, 401: non-Curvemap domain', (t) => {
         window.server.respondWith(request => {
             request.respond(401);
         });
@@ -85,13 +85,13 @@ test('ajax', (t) => {
         window.server.respond();
     });
 
-    t.test('getJSON, 401: Mapbox domain', (t) => {
+    t.test('getJSON, 401: Curvemap domain', (t) => {
         window.server.respondWith(request => {
             request.respond(401);
         });
-        getJSON({ url:'api.mapbox.com' }, (error) => {
+        getJSON({ url:'api.curvemap.com' }, (error) => {
             t.equal(error.status, 401);
-            t.equal(error.message, "Unauthorized: you may have provided an invalid Mapbox access token. See https://www.mapbox.com/api-documentation/#access-tokens");
+            t.equal(error.message, "Unauthorized: you may have provided an invalid Curvemap access token. See https://www.curvemap.com/api-documentation/#access-tokens");
             t.end();
         });
         window.server.respond();

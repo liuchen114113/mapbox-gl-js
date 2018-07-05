@@ -3,7 +3,7 @@
   "sources": {
     "source": {
       "type": "vector",
-      "url": "mapbox://mapbox.mapbox-streets-v5"
+      "url": "curvemap://curvemap.curvemap-streets-v5"
     }
   },
   "layers": [
@@ -215,7 +215,7 @@
       "source-layer": "layer",
       "paint": {
         "fill-color": {
-          "property": "mapbox",
+          "property": "curvemap",
           "stops": [
             [
               {
@@ -239,7 +239,7 @@
       "source-layer": "layer",
       "paint": {
         "fill-color": {
-          "property": "mapbox",
+          "property": "curvemap",
           "stops": [
             [
               {
@@ -258,7 +258,7 @@
       "source-layer": "layer",
       "paint": {
         "fill-color": {
-          "property": "mapbox",
+          "property": "curvemap",
           "stops": [
             [
               {
@@ -277,7 +277,7 @@
       "source-layer": "layer",
       "paint": {
         "fill-color": {
-          "property": "mapbox",
+          "property": "curvemap",
           "stops": [
             [
               {
@@ -297,7 +297,7 @@
       "source-layer": "layer",
       "paint": {
         "fill-color": {
-          "property": "mapbox",
+          "property": "curvemap",
           "stops": [
             [
               {
@@ -335,7 +335,7 @@
       "source-layer": "layer",
       "paint": {
         "fill-color": {
-          "property": "mapbox",
+          "property": "curvemap",
           "stops": [
             [
               "bad",
@@ -370,7 +370,7 @@
       "paint": {
         "fill-color": {
           "type": "categorical",
-          "property": "mapbox",
+          "property": "curvemap",
           "stops": [
             [
               "good",
@@ -423,7 +423,7 @@
       "source-layer": "layer",
       "paint": {
         "fill-color": {
-          "property": "mapbox",
+          "property": "curvemap",
           "type": "categorical",
           "stops": [
             [
@@ -445,7 +445,7 @@
       "source-layer": "layer",
       "paint": {
         "fill-color": {
-          "property": "mapbox",
+          "property": "curvemap",
           "type": "categorical",
           "stops": [
             [
@@ -467,7 +467,7 @@
       "source-layer": "layer",
       "paint": {
         "fill-color": {
-          "property": "mapbox",
+          "property": "curvemap",
           "type": "exponential",
           "stops": [
             [
@@ -485,7 +485,7 @@
       "source-layer": "layer",
       "paint": {
         "fill-color": {
-          "property": "mapbox",
+          "property": "curvemap",
           "type": "exponential",
           "stops": [
             [
@@ -503,7 +503,7 @@
       "source-layer": "layer",
       "paint": {
         "fill-color": {
-          "property": "mapbox",
+          "property": "curvemap",
           "type": "interval",
           "stops": [
             [
@@ -521,7 +521,7 @@
       "source-layer": "layer",
       "paint": {
         "fill-color": {
-          "property": "mapbox",
+          "property": "curvemap",
           "type": "interval",
           "stops": [
             [
@@ -539,7 +539,7 @@
       "source-layer": "layer",
       "paint": {
         "fill-color": {
-          "property": "mapbox",
+          "property": "curvemap",
           "type": "categorical",
           "stops": [
             [
@@ -557,7 +557,7 @@
       "source-layer": "layer",
       "paint": {
         "fill-color": {
-          "property": "mapbox",
+          "property": "curvemap",
           "type": "categorical",
           "stops": [
             [
@@ -575,7 +575,7 @@
       "source-layer": "layer",
       "paint": {
         "fill-color": {
-          "property": "mapbox",
+          "property": "curvemap",
           "type": "categorical",
           "stops": [
             [
@@ -634,7 +634,7 @@
       "paint": {
         "fill-opacity": {
           "type": "categorical",
-          "property": "mapbox",
+          "property": "curvemap",
           "stops": [
             [
               "foo",
@@ -660,7 +660,7 @@
       "paint": {
         "fill-opacity": {
           "type": "categorical",
-          "property": "mapbox",
+          "property": "curvemap",
           "stops": [
             [
               0.33,
@@ -677,7 +677,7 @@
       "source-layer": "layer",
       "paint": {
         "fill-opacity": {
-          "property": "mapbox",
+          "property": "curvemap",
           "stops": [
             [
               {
@@ -704,7 +704,7 @@
       "source-layer": "layer",
       "paint": {
         "fill-opacity": {
-          "property": "mapbox",
+          "property": "curvemap",
           "stops": [
             [
               {
@@ -731,7 +731,7 @@
       "source-layer": "layer",
       "paint": {
         "fill-opacity": {
-          "property": "mapbox",
+          "property": "curvemap",
           "type": "categorical",
           "stops": [
             [
@@ -766,7 +766,7 @@
       "source-layer": "layer",
       "paint": {
         "fill-opacity": {
-          "property": "mapbox",
+          "property": "curvemap",
           "type": "categorical",
           "stops": [
             [
@@ -808,7 +808,7 @@
       "source-layer": "layer",
       "paint": {
         "fill-opacity": {
-          "property": "mapbox",
+          "property": "curvemap",
           "type": "identity",
           "default": 0
         }
@@ -821,7 +821,7 @@
       "source-layer": "layer",
       "paint": {
         "fill-opacity": {
-          "property": "mapbox",
+          "property": "curvemap",
           "type": "identity",
           "default": "0"
         }
@@ -834,7 +834,7 @@
       "source-layer": "layer",
       "paint": {
         "fill-color": {
-          "property": "mapbox",
+          "property": "curvemap",
           "type": "identity",
           "default": "invalid"
         }
@@ -847,7 +847,7 @@
       "source-layer": "layer",
       "paint": {
         "fill-opacity": {
-          "property": "mapbox",
+          "property": "curvemap",
           "type": "interval",
           "stops": [
             [
@@ -867,7 +867,7 @@
       "source-layer": "layer",
       "paint": {
         "fill-opacity": {
-          "property": "mapbox",
+          "property": "curvemap",
           "type": "categorical",
           "stops": [
             [

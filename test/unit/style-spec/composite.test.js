@@ -1,34 +1,34 @@
-import { test } from 'mapbox-gl-js-test';
+import { test } from 'curvemap-gl-js-test';
 import composite from '../../../src/style-spec/composite';
 
-test('composites Mapbox vector sources', (t) => {
+test('composites Curvemap vector sources', (t) => {
     const result = composite({
         "version": 7,
         "sources": {
-            "mapbox-a": {
+            "curvemap-a": {
                 "type": "vector",
-                "url": "mapbox://a"
+                "url": "curvemap://a"
             },
-            "mapbox-b": {
+            "curvemap-b": {
                 "type": "vector",
-                "url": "mapbox://b"
+                "url": "curvemap://b"
             }
         },
         "layers": [{
             "id": "a",
             "type": "line",
-            "source": "mapbox-a"
+            "source": "curvemap-a"
         }, {
             "id": "b",
             "type": "line",
-            "source": "mapbox-b"
+            "source": "curvemap-b"
         }]
     });
 
     t.deepEqual(result.sources, {
         "a,b": {
             "type": "vector",
-            "url": "mapbox://a,b"
+            "url": "curvemap://a,b"
         }
     });
 
@@ -43,11 +43,11 @@ test('does not composite vector + raster', (t) => {
         "sources": {
             "a": {
                 "type": "vector",
-                "url": "mapbox://a"
+                "url": "curvemap://a"
             },
             "b": {
                 "type": "raster",
-                "url": "mapbox://b"
+                "url": "curvemap://b"
             }
         },
         "layers": []
@@ -63,7 +63,7 @@ test('incorrect url match', (t) => {
         "sources": {
             "a": {
                 "type": "vector",
-                "url": "mapbox://a"
+                "url": "curvemap://a"
             },
             "b": {
                 "type": "vector",
@@ -77,30 +77,30 @@ test('incorrect url match', (t) => {
     t.end();
 });
 
-test('composites Mapbox vector sources with conflicting source layer names', (t) => {
+test('composites Curvemap vector sources with conflicting source layer names', (t) => {
     t.throws(() => {
         composite({
             "version": 7,
             "sources": {
-                "mapbox-a": {
+                "curvemap-a": {
                     "type": "vector",
-                    "url": "mapbox://a"
+                    "url": "curvemap://a"
                 },
-                "mapbox-b": {
+                "curvemap-b": {
                     "type": "vector",
-                    "url": "mapbox://b"
+                    "url": "curvemap://b"
                 }
             },
             "layers": [{
                 "id": "a",
                 "type": "line",
                 "source-layer": "sourcelayer",
-                "source": "mapbox-a"
+                "source": "curvemap-a"
             }, {
                 "id": "b",
                 "type": "line",
                 "source-layer": "sourcelayer",
-                "source": "mapbox-b"
+                "source": "curvemap-b"
             }]
         });
     }, /Conflicting source layer names/, 'throws error on conflicting source layer names');

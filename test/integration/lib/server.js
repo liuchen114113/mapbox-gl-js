@@ -8,11 +8,11 @@ const fs = require('fs');
 
 module.exports = function () {
     const integrationMount = st({path: path.join(__dirname, '..')});
-    const mapboxGLStylesMount = st({path: path.dirname(require.resolve('mapbox-gl-styles')), url: 'mapbox-gl-styles'});
-    const mapboxMVTFixturesMount = st({path: path.dirname(require.resolve('@mapbox/mvt-fixtures')), url: 'mvt-fixtures'});
+    const curvemapGLStylesMount = st({path: path.dirname(require.resolve('curvemap-gl-styles')), url: 'curvemap-gl-styles'});
+    const curvemapMVTFixturesMount = st({path: path.dirname(require.resolve('@curvemap/mvt-fixtures')), url: 'mvt-fixtures'});
     const server = http.createServer((req, res) => {
-        return mapboxMVTFixturesMount(req, res, () => {
-            return mapboxGLStylesMount(req, res, () => {
+        return curvemapMVTFixturesMount(req, res, () => {
+            return curvemapGLStylesMount(req, res, () => {
                 return integrationMount(req, res);
             });
         });
@@ -22,35 +22,35 @@ module.exports = function () {
         return url.replace(/^local:\/\//, 'http://localhost:2900/');
     }
 
-    function localizeMapboxSpriteURL(url) {
-        return url.replace(/^mapbox:\/\//, 'http://localhost:2900/');
+    function localizeCurvemapSpriteURL(url) {
+        return url.replace(/^curvemap:\/\//, 'http://localhost:2900/');
     }
 
-    function localizeMapboxFontsURL(url) {
-        return url.replace(/^mapbox:\/\/fonts/, 'http://localhost:2900/glyphs');
+    function localizeCurvemapFontsURL(url) {
+        return url.replace(/^curvemap:\/\/fonts/, 'http://localhost:2900/glyphs');
     }
 
-    function localizeMapboxTilesURL(url) {
-        return url.replace(/^mapbox:\/\//, 'http://localhost:2900/tiles/');
+    function localizeCurvemapTilesURL(url) {
+        return url.replace(/^curvemap:\/\//, 'http://localhost:2900/tiles/');
     }
 
-    function localizeMapboxTilesetURL(url) {
-        return url.replace(/^mapbox:\/\//, 'http://localhost:2900/tilesets/');
+    function localizeCurvemapTilesetURL(url) {
+        return url.replace(/^curvemap:\/\//, 'http://localhost:2900/tilesets/');
     }
 
     function localizeSourceURLs(source) {
         for (const tile in source.tiles) {
-            source.tiles[tile] = localizeMapboxTilesURL(source.tiles[tile]);
+            source.tiles[tile] = localizeCurvemapTilesURL(source.tiles[tile]);
             source.tiles[tile] = localizeURL(source.tiles[tile]);
         }
 
         if (source.urls) {
-            source.urls = source.urls.map(localizeMapboxTilesetURL);
+            source.urls = source.urls.map(localizeCurvemapTilesetURL);
             source.urls = source.urls.map(localizeURL);
         }
 
         if (source.url) {
-            source.url = localizeMapboxTilesetURL(source.url);
+            source.url = localizeCurvemapTilesetURL(source.url);
             source.url = localizeURL(source.url);
         }
 
@@ -65,12 +65,12 @@ module.exports = function () {
         }
 
         if (style.sprite) {
-            style.sprite = localizeMapboxSpriteURL(style.sprite);
+            style.sprite = localizeCurvemapSpriteURL(style.sprite);
             style.sprite = localizeURL(style.sprite);
         }
 
         if (style.glyphs) {
-            style.glyphs = localizeMapboxFontsURL(style.glyphs);
+            style.glyphs = localizeCurvemapFontsURL(style.glyphs);
             style.glyphs = localizeURL(style.glyphs);
         }
     }
@@ -99,8 +99,8 @@ module.exports = function () {
                         let styleJSON;
                         try {
                             const relativePath = op[1].replace(/^local:\/\//, '');
-                            if (relativePath.startsWith('mapbox-gl-styles')) {
-                                styleJSON = fs.readFileSync(path.join(path.dirname(require.resolve('mapbox-gl-styles')), '..', relativePath));
+                            if (relativePath.startsWith('curvemap-gl-styles')) {
+                                styleJSON = fs.readFileSync(path.join(path.dirname(require.resolve('curvemap-gl-styles')), '..', relativePath));
                             } else {
                                 styleJSON = fs.readFileSync(path.join(__dirname, '..', relativePath));
                             }

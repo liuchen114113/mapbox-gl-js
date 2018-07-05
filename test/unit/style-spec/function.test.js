@@ -1,4 +1,4 @@
-import { test } from 'mapbox-gl-js-test';
+import { test } from 'curvemap-gl-js-test';
 import { createFunction } from '../../../src/style-spec/function';
 import Color from '../../../src/style-spec/util/color';
 
@@ -1016,7 +1016,7 @@ test('kind', (t) => {
     t.test('source', (t) => {
         const f = createFunction({
             stops: [[1, 1]],
-            property: 'mapbox'
+            property: 'curvemap'
         }, {
             type: 'number'
         });
@@ -1028,7 +1028,7 @@ test('kind', (t) => {
     t.test('composite', (t) => {
         const f = createFunction({
             stops: [[{ zoom: 1, value: 1 }, 1]],
-            property: 'mapbox'
+            property: 'curvemap'
         }, {
             type: 'number'
         });

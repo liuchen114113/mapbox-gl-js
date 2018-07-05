@@ -1,8 +1,8 @@
-import { test } from 'mapbox-gl-js-test';
+import { test } from 'curvemap-gl-js-test';
 import fs from 'fs';
 import path from 'path';
 import Protobuf from 'pbf';
-import { VectorTile } from '@mapbox/vector-tile';
+import { VectorTile } from '@hymap/vector-tile';
 import classifyRings from '../../../src/util/classify_rings';
 
 // Load a fill feature from fixture tile.

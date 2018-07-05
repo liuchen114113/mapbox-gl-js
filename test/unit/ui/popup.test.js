@@ -1,10 +1,10 @@
-import { test } from 'mapbox-gl-js-test';
+import { test } from 'curvemap-gl-js-test';
 import window from '../../../src/util/window';
 import { createMap as globalCreateMap } from '../../util';
 import Popup from '../../../src/ui/popup';
 import LngLat from '../../../src/geo/lng_lat';
-import Point from '@mapbox/point-geometry';
-import { click as simulateClick } from 'mapbox-gl-js-test/simulate_interaction';
+import Point from '@hymap/point-geometry';
+import { click as simulateClick } from 'curvemap-gl-js-test/simulate_interaction';
 
 const containerWidth = 512;
 const containerHeight = 512;
@@ -17,7 +17,7 @@ function createMap(t, options) {
     return globalCreateMap(t, { container: container });
 }
 
-test('Popup#addTo adds a .mapboxgl-popup element', (t) => {
+test('Popup#addTo adds a .curvemapgl-popup element', (t) => {
     const map = createMap(t);
     const popup = new Popup()
         .setText("Test")
@@ -25,7 +25,7 @@ test('Popup#addTo adds a .mapboxgl-popup element', (t) => {
         .addTo(map);
 
     t.ok(popup.isOpen());
-    t.equal(map.getContainer().querySelectorAll('.mapboxgl-popup').length, 1);
+    t.equal(map.getContainer().querySelectorAll('.curvemapgl-popup').length, 1);
     t.end();
 });
 
@@ -62,7 +62,7 @@ test('Popup closes on close button click events', (t) => {
         .setLngLat([0, 0])
         .addTo(map);
 
-    simulateClick(map.getContainer().querySelector('.mapboxgl-popup-close-button'));
+    simulateClick(map.getContainer().querySelector('.curvemapgl-popup-close-button'));
 
     t.ok(!popup.isOpen());
     t.end();
@@ -76,7 +76,7 @@ test('Popup has no close button if closeButton option is false', (t) => {
         .setLngLat([0, 0])
         .addTo(map);
 
-    t.equal(map.getContainer().querySelectorAll('.mapboxgl-popup-close-button').length, 0);
+    t.equal(map.getContainer().querySelectorAll('.curvemapgl-popup-close-button').length, 0);
     t.end();
 });
 
@@ -118,7 +118,7 @@ test('Popup content can be set via setText', (t) => {
         .addTo(map)
         .setText("Test");
 
-    t.equal(map.getContainer().querySelector('.mapboxgl-popup').textContent, "Test");
+    t.equal(map.getContainer().querySelector('.curvemapgl-popup').textContent, "Test");
     t.end();
 });
 
@@ -130,7 +130,7 @@ test('Popup content can be set via setHTML', (t) => {
         .addTo(map)
         .setHTML("<span>Test</span>");
 
-    t.equal(map.getContainer().querySelector('.mapboxgl-popup-content').innerHTML, "<span>Test</span>");
+    t.equal(map.getContainer().querySelector('.curvemapgl-popup-content').innerHTML, "<span>Test</span>");
     t.end();
 });
 
@@ -143,7 +143,7 @@ test('Popup content can be set via setDOMContent', (t) => {
         .addTo(map)
         .setDOMContent(content);
 
-    t.equal(map.getContainer().querySelector('.mapboxgl-popup-content').firstChild, content);
+    t.equal(map.getContainer().querySelector('.curvemapgl-popup-content').firstChild, content);
     t.end();
 });
 
@@ -155,7 +155,7 @@ test('Popup#setText protects against XSS', (t) => {
         .addTo(map)
         .setText("<script>alert('XSS')</script>");
 
-    t.equal(map.getContainer().querySelector('.mapboxgl-popup').textContent, "<script>alert('XSS')</script>");
+    t.equal(map.getContainer().querySelector('.curvemapgl-popup').textContent, "<script>alert('XSS')</script>");
     t.end();
 });
 
@@ -167,13 +167,13 @@ test('Popup content setters overwrite previous content', (t) => {
         .addTo(map);
 
     popup.setText("Test 1");
-    t.equal(map.getContainer().querySelector('.mapboxgl-popup').textContent, "Test 1");
+    t.equal(map.getContainer().querySelector('.curvemapgl-popup').textContent, "Test 1");
 
     popup.setHTML("Test 2");
-    t.equal(map.getContainer().querySelector('.mapboxgl-popup').textContent, "Test 2");
+    t.equal(map.getContainer().querySelector('.curvemapgl-popup').textContent, "Test 2");
 
     popup.setDOMContent(window.document.createTextNode("Test 3"));
-    t.equal(map.getContainer().querySelector('.mapboxgl-popup').textContent, "Test 3");
+    t.equal(map.getContainer().querySelector('.curvemapgl-popup').textContent, "Test 3");
 
     t.end();
 });
@@ -295,7 +295,7 @@ test('Popup anchors as specified by the anchor option', (t) => {
         .setText('Test')
         .addTo(map);
 
-    t.ok(popup._container.classList.contains('mapboxgl-popup-anchor-top-left'));
+    t.ok(popup._container.classList.contains('curvemapgl-popup-anchor-top-left'));
     t.end();
 });
 
@@ -327,7 +327,7 @@ test('Popup anchors as specified by the anchor option', (t) => {
         t.stub(map, 'project').returns(point);
         popup.setLngLat([0, 0]);
 
-        t.ok(popup._container.classList.contains(`mapboxgl-popup-anchor-${anchor}`));
+        t.ok(popup._container.classList.contains(`curvemapgl-popup-anchor-${anchor}`));
         t.end();
     });
 
@@ -363,7 +363,7 @@ test('Popup automatically anchors to top if its bottom offset would push it off-
     t.stub(map, 'project').returns(point);
     popup.setLngLat([0, 0]);
 
-    t.ok(popup._container.classList.contains('mapboxgl-popup-anchor-top'));
+    t.ok(popup._container.classList.contains('curvemapgl-popup-anchor-top'));
     t.end();
 });
 
@@ -416,7 +416,7 @@ test('Popup can be removed and added again (#1477)', (t) => {
         .remove()
         .addTo(map);
 
-    t.equal(map.getContainer().querySelectorAll('.mapboxgl-popup').length, 1);
+    t.equal(map.getContainer().querySelectorAll('.curvemapgl-popup').length, 1);
     t.end();
 });
 
@@ -429,7 +429,7 @@ test('Popup#addTo is idempotent (#1811)', (t) => {
         .addTo(map)
         .addTo(map);
 
-    t.equal(map.getContainer().querySelector('.mapboxgl-popup-content').textContent, "Test");
+    t.equal(map.getContainer().querySelector('.curvemapgl-popup-content').textContent, "Test");
     t.end();
 });
 
@@ -443,7 +443,7 @@ test('Popup#remove is idempotent (#2395)', (t) => {
         .remove()
         .remove();
 
-    t.equal(map.getContainer().querySelectorAll('.mapboxgl-popup').length, 0);
+    t.equal(map.getContainer().querySelectorAll('.curvemapgl-popup').length, 0);
     t.end();
 });
 
@@ -454,7 +454,7 @@ test('Popup adds classes from className option', (t) => {
         .setLngLat([0, 0])
         .addTo(map);
 
-    const popupContainer = map.getContainer().querySelector('.mapboxgl-popup');
+    const popupContainer = map.getContainer().querySelector('.curvemapgl-popup');
     t.ok(popupContainer.classList.contains('some'));
     t.ok(popupContainer.classList.contains('classes'));
     t.end();

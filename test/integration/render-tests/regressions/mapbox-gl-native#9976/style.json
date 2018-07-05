@@ -14,7 +14,7 @@
           {
             "id": "fill",
             "type": "fill",
-            "source": "mapbox",
+            "source": "curvemap",
             "source-layer": "road",
             "paint": {
               "fill-pattern": "marker"
@@ -37,7 +37,7 @@
           {
             "id": "road",
             "type": "line",
-            "source": "mapbox",
+            "source": "curvemap",
             "source-layer": "road",
             "paint": {
               "line-width": 20,
@@ -58,7 +58,7 @@
   ],
   "zoom": 17,
   "sources": {
-    "mapbox": {
+    "curvemap": {
       "type": "vector",
       "maxzoom": 14,
       "tiles": [

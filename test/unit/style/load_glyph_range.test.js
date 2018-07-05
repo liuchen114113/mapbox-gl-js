@@ -1,6 +1,6 @@
 // @flow
 
-import { test } from 'mapbox-gl-js-test';
+import { test } from 'curvemap-gl-js-test';
 import fs from 'fs';
 import path from 'path';
 import window from '../../../src/util/window';

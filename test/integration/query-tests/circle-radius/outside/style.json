@@ -15,7 +15,7 @@
   ],
   "zoom": 14,
   "sources": {
-    "mapbox": {
+    "curvemap": {
       "type": "vector",
       "maxzoom": 14,
       "tiles": [
@@ -27,7 +27,7 @@
     {
       "id": "road",
       "type": "circle",
-      "source": "mapbox",
+      "source": "curvemap",
       "source-layer": "road",
       "paint": {
         "circle-radius": 10

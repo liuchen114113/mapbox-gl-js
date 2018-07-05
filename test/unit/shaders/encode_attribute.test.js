@@ -1,4 +1,4 @@
-import { test } from 'mapbox-gl-js-test';
+import { test } from 'curvemap-gl-js-test';
 import { packUint8ToFloat } from '../../../src/shaders/encode_attribute';
 
 test('packUint8ToFloat', (t) => {

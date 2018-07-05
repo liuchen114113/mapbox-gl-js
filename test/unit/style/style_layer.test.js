@@ -1,4 +1,4 @@
-import { test } from 'mapbox-gl-js-test';
+import { test } from 'curvemap-gl-js-test';
 import createStyleLayer from '../../../src/style/create_style_layer';
 import FillStyleLayer from '../../../src/style/style_layer/fill_style_layer';
 import { extend } from '../../../src/util/util';
@@ -219,7 +219,7 @@ test('StyleLayer#setLayoutProperty', (t) => {
             t.end();
         });
 
-        layer.setLayoutProperty('text-transform', 'mapboxcase');
+        layer.setLayoutProperty('text-transform', 'curvemapcase');
     });
 
     t.test('updates property value', (t) => {

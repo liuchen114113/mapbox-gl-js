@@ -3,11 +3,11 @@
   "sources": {
     "vector": {
       "type": "vector",
-      "url": "mapbox://mapbox.mapbox-streets-v5"
+      "url": "curvemap://curvemap.curvemap-streets-v5"
     }
   },
   "constants": {
-    "@mapbox": "#fff"
+    "@curvemap": "#fff"
   },
   "layers": [
     {

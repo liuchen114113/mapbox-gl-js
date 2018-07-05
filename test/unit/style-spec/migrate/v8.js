@@ -1,4 +1,4 @@
-import { test as t } from 'mapbox-gl-js-test';
+import { test as t } from 'curvemap-gl-js-test';
 import migrate from '../../../../src/style-spec/migrate/v8';
 
 t('split text-font', (t) => {
@@ -6,7 +6,7 @@ t('split text-font', (t) => {
         "version": 7,
         "sources": {
             "vector": {
-                "type": "vector", "url": "mapbox://mapbox.mapbox-streets-v5"
+                "type": "vector", "url": "curvemap://curvemap.curvemap-streets-v5"
             }
         },
         "layers": [
@@ -27,7 +27,7 @@ t('split text-font', (t) => {
         "version": 8,
         "sources": {
             "vector": {
-                "type": "vector", "url": "mapbox://mapbox.mapbox-streets-v5"
+                "type": "vector", "url": "curvemap://curvemap.curvemap-streets-v5"
             }
         },
         "layers": [
@@ -53,7 +53,7 @@ t('rename symbol-min-distance', (t) => {
         "version": 7,
         "sources": {
             "vector": {
-                "type": "vector", "url": "mapbox://mapbox.mapbox-streets-v5"
+                "type": "vector", "url": "curvemap://curvemap.curvemap-streets-v5"
             }
         },
         "layers": [
@@ -73,7 +73,7 @@ t('rename symbol-min-distance', (t) => {
         "version": 8,
         "sources": {
             "vector": {
-                "type": "vector", "url": "mapbox://mapbox.mapbox-streets-v5"
+                "type": "vector", "url": "curvemap://curvemap.curvemap-streets-v5"
             }
         },
         "layers": [
@@ -127,7 +127,7 @@ t('not migrate interpolated functions', (t) => {
         "sources": {
             "vector": {
                 "type": "vector",
-                "url": "mapbox://mapbox.mapbox-streets-v5"
+                "url": "curvemap://curvemap.curvemap-streets-v5"
             }
         },
         "layers": [{
@@ -149,7 +149,7 @@ t('not migrate interpolated functions', (t) => {
         "sources": {
             "vector": {
                 "type": "vector",
-                "url": "mapbox://mapbox.mapbox-streets-v5"
+                "url": "curvemap://curvemap.curvemap-streets-v5"
             }
         },
         "layers": [{
@@ -176,7 +176,7 @@ t('not migrate piecewise-constant functions', (t) => {
         "sources": {
             "vector": {
                 "type": "vector",
-                "url": "mapbox://mapbox.mapbox-streets-v5"
+                "url": "curvemap://curvemap.curvemap-streets-v5"
             }
         },
         "layers": [{
@@ -197,7 +197,7 @@ t('not migrate piecewise-constant functions', (t) => {
         "sources": {
             "vector": {
                 "type": "vector",
-                "url": "mapbox://mapbox.mapbox-streets-v5"
+                "url": "curvemap://curvemap.curvemap-streets-v5"
             }
         },
         "layers": [{
@@ -224,7 +224,7 @@ t('inline constants', (t) => {
             "@foo": 0.5
         },
         "sources": {
-            "vector": {"type": "vector", "url": "mapbox://mapbox.mapbox-streets-v5"}
+            "vector": {"type": "vector", "url": "curvemap://curvemap.curvemap-streets-v5"}
         },
         "layers": [
             {
@@ -242,7 +242,7 @@ t('inline constants', (t) => {
     const output = {
         "version": 8,
         "sources": {
-            "vector": {"type": "vector", "url": "mapbox://mapbox.mapbox-streets-v5"}
+            "vector": {"type": "vector", "url": "curvemap://curvemap.curvemap-streets-v5"}
         },
         "layers": [
             {
@@ -268,7 +268,7 @@ t('migrate and inline fontstack constants', (t) => {
             "@foo": "Arial Unicode,Foo Bar"
         },
         "sources": {
-            "vector": {"type": "vector", "url": "mapbox://mapbox.mapbox-streets-v5"}
+            "vector": {"type": "vector", "url": "curvemap://curvemap.curvemap-streets-v5"}
         },
         "layers": [
             {
@@ -286,7 +286,7 @@ t('migrate and inline fontstack constants', (t) => {
     const output = {
         "version": 8,
         "sources": {
-            "vector": {"type": "vector", "url": "mapbox://mapbox.mapbox-streets-v5"}
+            "vector": {"type": "vector", "url": "curvemap://curvemap.curvemap-streets-v5"}
         },
         "layers": [
             {
@@ -309,7 +309,7 @@ t('update fontstack function', (t) => {
     const input = {
         "version": 7,
         "sources": {
-            "vector": {"type": "vector", "url": "mapbox://mapbox.mapbox-streets-v5"}
+            "vector": {"type": "vector", "url": "curvemap://curvemap.curvemap-streets-v5"}
         },
         "layers": [
             {
@@ -339,7 +339,7 @@ t('update fontstack function', (t) => {
     const output = {
         "version": 8,
         "sources": {
-            "vector": {"type": "vector", "url": "mapbox://mapbox.mapbox-streets-v5"}
+            "vector": {"type": "vector", "url": "curvemap://curvemap.curvemap-streets-v5"}
         },
         "layers": [
             {
@@ -383,7 +383,7 @@ t('inline and migrate fontstack constant function', (t) => {
             }
         },
         "sources": {
-            "vector": {"type": "vector", "url": "mapbox://mapbox.mapbox-streets-v5"}
+            "vector": {"type": "vector", "url": "curvemap://curvemap.curvemap-streets-v5"}
         },
         "layers": [
             {
@@ -401,7 +401,7 @@ t('inline and migrate fontstack constant function', (t) => {
     const output = {
         "version": 8,
         "sources": {
-            "vector": {"type": "vector", "url": "mapbox://mapbox.mapbox-streets-v5"}
+            "vector": {"type": "vector", "url": "curvemap://curvemap.curvemap-streets-v5"}
         },
         "layers": [
             {
@@ -434,7 +434,7 @@ t('update fontstack function constant', (t) => {
             "@font-stack-b": "Open Sans Semibold, Arial Unicode MS Regular"
         },
         "sources": {
-            "vector": {"type": "vector", "url": "mapbox://mapbox.mapbox-streets-v5"}
+            "vector": {"type": "vector", "url": "curvemap://curvemap.curvemap-streets-v5"}
         },
         "layers": [
             {
@@ -458,7 +458,7 @@ t('update fontstack function constant', (t) => {
     const output = {
         "version": 8,
         "sources": {
-            "vector": {"type": "vector", "url": "mapbox://mapbox.mapbox-streets-v5"}
+            "vector": {"type": "vector", "url": "curvemap://curvemap.curvemap-streets-v5"}
         },
         "layers": [
             {
@@ -486,13 +486,13 @@ t('update fontstack function constant', (t) => {
 t('migrate UNversioned fontstack urls', (t) => {
     const input = {
         "version": 7,
-        "glyphs": "mapbox://fontstack/{fontstack}/{range}.pbf",
+        "glyphs": "curvemap://fontstack/{fontstack}/{range}.pbf",
         "layers": []
     };
 
     const output = {
         "version": 8,
-        "glyphs": "mapbox://fonts/mapbox/{fontstack}/{range}.pbf",
+        "glyphs": "curvemap://fonts/curvemap/{fontstack}/{range}.pbf",
         "layers": []
     };
 
@@ -503,13 +503,13 @@ t('migrate UNversioned fontstack urls', (t) => {
 t('migrate versioned fontstack urls', (t) => {
     const input = {
         "version": 7,
-        "glyphs": "mapbox://fonts/v1/boxmap/{fontstack}/{range}.pbf",
+        "glyphs": "curvemap://fonts/v1/boxmap/{fontstack}/{range}.pbf",
         "layers": []
     };
 
     const output = {
         "version": 8,
-        "glyphs": "mapbox://fonts/boxmap/{fontstack}/{range}.pbf",
+        "glyphs": "curvemap://fonts/boxmap/{fontstack}/{range}.pbf",
         "layers": []
     };
 

@@ -1,4 +1,4 @@
-import { test as t } from 'mapbox-gl-js-test';
+import { test as t } from 'curvemap-gl-js-test';
 import migrate from '../../../../src/style-spec/migrate/v9';
 
 t('deref layers', (t) => {

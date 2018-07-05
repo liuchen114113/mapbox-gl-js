@@ -1,4 +1,4 @@
-import { test as t } from 'mapbox-gl-js-test';
+import { test as t } from 'curvemap-gl-js-test';
 import fs from 'fs';
 import glob from 'glob';
 import path from 'path';

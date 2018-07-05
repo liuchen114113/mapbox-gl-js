@@ -1,4 +1,4 @@
-import { test } from 'mapbox-gl-js-test';
+import { test } from 'curvemap-gl-js-test';
 import SourceCache from '../../../src/source/source_cache';
 import {setType} from '../../../src/source/source';
 import Tile from '../../../src/source/tile';

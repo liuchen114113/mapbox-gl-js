@@ -1,4 +1,4 @@
-import { test as t } from 'mapbox-gl-js-test';
+import { test as t } from 'curvemap-gl-js-test';
 import group from '../../../src/style-spec/group_by_layout';
 
 t('group layers whose ref properties are identical', (t) => {

@@ -1,4 +1,4 @@
-import { test } from 'mapbox-gl-js-test';
+import { test } from 'curvemap-gl-js-test';
 import { getIconQuads } from '../../../src/symbol/quads';
 import Anchor from '../../../src/symbol/anchor';
 import SymbolStyleLayer from '../../../src/style/style_layer/symbol_style_layer';

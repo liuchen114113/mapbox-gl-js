@@ -1,5 +1,5 @@
-import { test } from 'mapbox-gl-js-test';
-import Point from '@mapbox/point-geometry';
+import { test } from 'curvemap-gl-js-test';
+import Point from '@hymap/point-geometry';
 import checkMaxAngle from '../../../src/symbol/check_max_angle';
 import Anchor from '../../../src/symbol/anchor';
 

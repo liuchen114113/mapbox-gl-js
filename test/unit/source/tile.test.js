@@ -1,4 +1,4 @@
-import { test } from 'mapbox-gl-js-test';
+import { test } from 'curvemap-gl-js-test';
 import Tile from '../../../src/source/tile';
 import GeoJSONWrapper from '../../../src/source/geojson_wrapper';
 import { OverscaledTileID } from '../../../src/source/tile_id';
