@@ -1,8 +1,8 @@
 /rollup/build/
 /docs/components/api.json
 /dist/
-/docs/pages/dist/mapbox-gl-dev.js
-/docs/pages/dist/mapbox-gl.js
+/docs/pages/dist/curvemap-gl-dev.js
+/docs/pages/dist/curvemap-gl.js
 *.js.map
 node_modules
 package-lock.json

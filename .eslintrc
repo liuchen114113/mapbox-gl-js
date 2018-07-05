@@ -14,8 +14,8 @@
   ],
   "settings": {
     "import/ignore": [
-        "@mapbox/shelf-pack",
-        "@mapbox/whoots-js"
+        "@hymap/shelf-pack",
+        "@hymap/whoots-js"
     ]
   },
   "rules": {

@@ -84,7 +84,7 @@ workflows:
 defaults: &defaults
   docker:
     - image: mbgl/ci:r4-linux-gl-js
-  working_directory: ~/mapbox-gl-js
+  working_directory: ~/curvemap-gl-js
 
 jobs:
   prepare:
@@ -187,7 +187,7 @@ jobs:
           command: BENCHMARK_VERSION="${CIRCLE_TAG:-$CIRCLE_BRANCH} $(git rev-parse --short=7 HEAD)" yarn run build-benchmarks
       - run:
           name: Upload
-          command: aws s3 cp --acl public-read --content-type application/javascript bench/benchmarks_generated.js s3://mapbox-gl-js/${CIRCLE_TAG:-$CIRCLE_BRANCH}/benchmarks.js
+          command: aws s3 cp --acl public-read --content-type application/javascript bench/benchmarks_generated.js s3://curvemap-gl-js/${CIRCLE_TAG:-$CIRCLE_BRANCH}/benchmarks.js
 
   deploy-release:
     <<: *defaults
@@ -198,14 +198,14 @@ jobs:
           name: Deploy release
           command: |
             function upload {
-                aws s3 cp --acl public-read --content-type $2 dist/$1 s3://mapbox-gl-js/$CIRCLE_TAG/$1
+                aws s3 cp --acl public-read --content-type $2 dist/$1 s3://curvemap-gl-js/$CIRCLE_TAG/$1
 
                 AWS_ACCESS_KEY_ID=$AWSCN_ACCESS_KEY_ID \
                 AWS_SECRET_ACCESS_KEY=$AWSCN_SECRET_ACCESS_KEY \
-                aws s3 cp --region cn-north-1 --acl public-read --content-type $2 dist/$1 s3://mapbox-gl-js-cn-north-1/$CIRCLE_TAG/$1
+                aws s3 cp --region cn-north-1 --acl public-read --content-type $2 dist/$1 s3://curvemap-gl-js-cn-north-1/$CIRCLE_TAG/$1
             }
 
-            upload mapbox-gl.js     application/javascript
-            upload mapbox-gl.js.map application/octet-stream
-            upload mapbox-gl-dev.js application/javascript
-            upload mapbox-gl.css    text/css
+            upload curvemap-gl.js     application/javascript
+            upload curvemap-gl.js.map application/octet-stream
+            upload curvemap-gl-dev.js application/javascript
+            upload curvemap-gl.css    text/css

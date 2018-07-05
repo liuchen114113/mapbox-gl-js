@@ -2,24 +2,24 @@
 # yarn lockfile v1
 
 
-"@mapbox/babel-plugin-transform-jsxtreme-markdown@^0.4.2":
+"@curvemap/babel-plugin-transform-jsxtreme-markdown@^0.4.2":
   version "0.4.2"
-  resolved "https://registry.yarnpkg.com/@mapbox/babel-plugin-transform-jsxtreme-markdown/-/babel-plugin-transform-jsxtreme-markdown-0.4.2.tgz#7b52474baa8b7bef5c4539f2bd5c26261dd77294"
+  resolved "https://registry.yarnpkg.com/@curvemap/babel-plugin-transform-jsxtreme-markdown/-/babel-plugin-transform-jsxtreme-markdown-0.4.2.tgz#7b52474baa8b7bef5c4539f2bd5c26261dd77294"
   dependencies:
-    "@mapbox/jsxtreme-markdown" "^0.7.3"
+    "@curvemap/jsxtreme-markdown" "^0.7.3"
     babylon "^6.17.4"
 
 "@mapbox/batfish@^1.0.4":
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/@mapbox/batfish/-/batfish-1.0.4.tgz#f06584e18bee5d4ac60e52e2ced9b32579c3e030"
   dependencies:
-    "@mapbox/babel-plugin-transform-jsxtreme-markdown" "^0.4.2"
-    "@mapbox/jsxtreme-markdown-loader" "^0.5.3"
-    "@mapbox/link-hijacker" "^1.1.0"
-    "@mapbox/link-to-location" "^1.0.0"
-    "@mapbox/postcss-html-filter" "^1.0.0"
-    "@mapbox/query-selector-contains-node" "^1.0.0"
-    "@mapbox/scroll-restorer" "^1.0.0"
+    "@curvemap/babel-plugin-transform-jsxtreme-markdown" "^0.4.2"
+    "@curvemap/jsxtreme-markdown-loader" "^0.5.3"
+    "@curvemap/link-hijacker" "^1.1.0"
+    "@curvemap/link-to-location" "^1.0.0"
+    "@curvemap/postcss-html-filter" "^1.0.0"
+    "@curvemap/query-selector-contains-node" "^1.0.0"
+    "@curvemap/scroll-restorer" "^1.0.0"
     assets-webpack-plugin "^3.5.1"
     autoprefixer "^8.0.0"
     babel-loader "^7.1.2"
@@ -91,27 +91,27 @@
     pirates "^3.0.2"
     vlq "^0.2.1"
 
-"@mapbox/geojson-area@0.2.2":
+"@curvemap/geojson-area@0.2.2":
   version "0.2.2"
-  resolved "https://registry.yarnpkg.com/@mapbox/geojson-area/-/geojson-area-0.2.2.tgz#18d7814aa36bf23fbbcc379f8e26a22927debf10"
+  resolved "https://registry.yarnpkg.com/@curvemap/geojson-area/-/geojson-area-0.2.2.tgz#18d7814aa36bf23fbbcc379f8e26a22927debf10"
   dependencies:
     wgs84 "0.0.0"
 
-"@mapbox/jsonlint-lines-primitives@^2.0.1":
+"@hymap/jsonlint-lines-primitives@^2.0.1":
   version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@mapbox/jsonlint-lines-primitives/-/jsonlint-lines-primitives-2.0.1.tgz#bc4c1593e2ec2371e2771c518068d6eab8eeae58"
+  resolved "https://registry.yarnpkg.com/@hymap/jsonlint-lines-primitives/-/jsonlint-lines-primitives-2.0.1.tgz#bc4c1593e2ec2371e2771c518068d6eab8eeae58"
 
-"@mapbox/jsxtreme-markdown-loader@^0.5.3":
+"@curvemap/jsxtreme-markdown-loader@^0.5.3":
   version "0.5.3"
-  resolved "https://registry.yarnpkg.com/@mapbox/jsxtreme-markdown-loader/-/jsxtreme-markdown-loader-0.5.3.tgz#f43630f1bca4971bd3753afe182798e15b28706d"
+  resolved "https://registry.yarnpkg.com/@curvemap/jsxtreme-markdown-loader/-/jsxtreme-markdown-loader-0.5.3.tgz#f43630f1bca4971bd3753afe182798e15b28706d"
   dependencies:
-    "@mapbox/jsxtreme-markdown" "^0.7.3"
+    "@curvemap/jsxtreme-markdown" "^0.7.3"
     loader-utils "^1.1.0"
     lodash.clonedeep "^4.5.0"
 
-"@mapbox/jsxtreme-markdown@^0.7.3":
+"@curvemap/jsxtreme-markdown@^0.7.3":
   version "0.7.3"
-  resolved "https://registry.yarnpkg.com/@mapbox/jsxtreme-markdown/-/jsxtreme-markdown-0.7.3.tgz#150f230ff1d4afe48622f48a2fd71887786d0939"
+  resolved "https://registry.yarnpkg.com/@curvemap/jsxtreme-markdown/-/jsxtreme-markdown-0.7.3.tgz#150f230ff1d4afe48622f48a2fd71887786d0939"
   dependencies:
     babel-code-frame "^6.22.0"
     babel-core "^6.25.0"
@@ -132,97 +132,97 @@
     stringify-object "^3.2.0"
     unified "^6.1.5"
 
-"@mapbox/link-hijacker@^1.1.0":
+"@curvemap/link-hijacker@^1.1.0":
   version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@mapbox/link-hijacker/-/link-hijacker-1.1.0.tgz#f14a68edabe45424d8bec7375ad13e18cac22bf8"
+  resolved "https://registry.yarnpkg.com/@curvemap/link-hijacker/-/link-hijacker-1.1.0.tgz#f14a68edabe45424d8bec7375ad13e18cac22bf8"
 
-"@mapbox/link-to-location@^1.0.0":
+"@curvemap/link-to-location@^1.0.0":
   version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@mapbox/link-to-location/-/link-to-location-1.0.0.tgz#484a4d922e3e6f7b54fd7964d8035bcb00bbf59a"
+  resolved "https://registry.yarnpkg.com/@curvemap/link-to-location/-/link-to-location-1.0.0.tgz#484a4d922e3e6f7b54fd7964d8035bcb00bbf59a"
 
 "@mapbox/mapbox-gl-rtl-text@^0.1.2":
   version "0.1.2"
-  resolved "https://registry.yarnpkg.com/@mapbox/mapbox-gl-rtl-text/-/mapbox-gl-rtl-text-0.1.2.tgz#c6bdcc05ac71c1caa4dfa09022466d1e278083bc"
+  resolved "https://registry.yarnpkg.com/@mapbox/mapbox-gl-rtl-text/-/curvemap-gl-rtl-text-0.1.2.tgz#c6bdcc05ac71c1caa4dfa09022466d1e278083bc"
 
-"@mapbox/mapbox-gl-supported@^1.4.0":
+"@hymap/hymap-gl-supported@^1.4.0":
   version "1.4.0"
-  resolved "https://registry.yarnpkg.com/@mapbox/mapbox-gl-supported/-/mapbox-gl-supported-1.4.0.tgz#36946b22944fe2cfa43cfafd5ef36fdb54a069e4"
+  resolved "https://registry.yarnpkg.com/@hymap/hymap-gl-supported/-/curvemap-gl-supported-1.4.0.tgz#36946b22944fe2cfa43cfafd5ef36fdb54a069e4"
 
 "@mapbox/mapbox-gl-test-suite@file:test/integration":
   version "0.0.0"
   dependencies:
-    "@mapbox/mvt-fixtures" "^3.2.0"
+    "@curvemap/mvt-fixtures" "^3.2.0"
     chalk "^2.3.0"
     d3-queue "^3.0.3"
     diff "^3.0.0"
     glob "^7.0.3"
     json-stringify-pretty-compact "^1.0.4"
     lodash.template "^4.4.0"
-    mapbox-gl-styles "2.0.2"
+    curvemap-gl-styles "2.0.2"
     pixelmatch "^4.0.2"
     pngjs "^3.0.0"
     shuffle-seed "^1.1.6"
     st "^1.1.0"
 
-"@mapbox/mvt-fixtures@^3.2.0":
+"@curvemap/mvt-fixtures@^3.2.0":
   version "3.2.0"
-  resolved "https://registry.yarnpkg.com/@mapbox/mvt-fixtures/-/mvt-fixtures-3.2.0.tgz#9312bfe1437f889cbc65a9d56efac02bbcb9a91d"
+  resolved "https://registry.yarnpkg.com/@curvemap/mvt-fixtures/-/mvt-fixtures-3.2.0.tgz#9312bfe1437f889cbc65a9d56efac02bbcb9a91d"
   dependencies:
-    "@mapbox/sphericalmercator" "^1.0.5"
-    "@mapbox/vector-tile" "^1.3.0"
+    "@curvemap/sphericalmercator" "^1.0.5"
+    "@hymap/vector-tile" "^1.3.0"
     d3-queue "^3.0.7"
     pbf "^3.0.5"
     protocol-buffers-schema "^3.3.1"
 
-"@mapbox/point-geometry@0.1.0", "@mapbox/point-geometry@^0.1.0", "@mapbox/point-geometry@~0.1.0":
+"@hymap/point-geometry@0.1.0", "@hymap/point-geometry@^0.1.0", "@hymap/point-geometry@~0.1.0":
   version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@mapbox/point-geometry/-/point-geometry-0.1.0.tgz#8a83f9335c7860effa2eeeca254332aa0aeed8f2"
+  resolved "https://registry.yarnpkg.com/@hymap/point-geometry/-/point-geometry-0.1.0.tgz#8a83f9335c7860effa2eeeca254332aa0aeed8f2"
 
-"@mapbox/postcss-html-filter@^1.0.0":
+"@curvemap/postcss-html-filter@^1.0.0":
   version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@mapbox/postcss-html-filter/-/postcss-html-filter-1.0.0.tgz#eee2423c71e7807c5f2ef7e9ba9dd6b33b78265b"
+  resolved "https://registry.yarnpkg.com/@curvemap/postcss-html-filter/-/postcss-html-filter-1.0.0.tgz#eee2423c71e7807c5f2ef7e9ba9dd6b33b78265b"
   dependencies:
     cheerio "^1.0.0-rc.1"
     lodash "^4.17.4"
     postcss-discard-empty "^2.1.0"
     postcss-discard-unused "^2.2.3"
 
-"@mapbox/query-selector-contains-node@^1.0.0":
+"@curvemap/query-selector-contains-node@^1.0.0":
   version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@mapbox/query-selector-contains-node/-/query-selector-contains-node-1.0.0.tgz#b5e1fdbaa0f7e627dc7eeeb625619f09ba2cca0c"
+  resolved "https://registry.yarnpkg.com/@curvemap/query-selector-contains-node/-/query-selector-contains-node-1.0.0.tgz#b5e1fdbaa0f7e627dc7eeeb625619f09ba2cca0c"
 
-"@mapbox/scroll-restorer@^1.0.0":
+"@curvemap/scroll-restorer@^1.0.0":
   version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@mapbox/scroll-restorer/-/scroll-restorer-1.0.0.tgz#a4eb70a4266612d8e638ff8857c295d57c1c8ead"
+  resolved "https://registry.yarnpkg.com/@curvemap/scroll-restorer/-/scroll-restorer-1.0.0.tgz#a4eb70a4266612d8e638ff8857c295d57c1c8ead"
   dependencies:
     debounce "^1.0.2"
     xtend "^4.0.1"
 
-"@mapbox/shelf-pack@^3.1.0":
+"@hymap/shelf-pack@^3.1.0":
   version "3.1.0"
-  resolved "https://registry.yarnpkg.com/@mapbox/shelf-pack/-/shelf-pack-3.1.0.tgz#1edea9c0bf6715b217171ba60646c201af520f6a"
+  resolved "https://registry.yarnpkg.com/@hymap/shelf-pack/-/shelf-pack-3.1.0.tgz#1edea9c0bf6715b217171ba60646c201af520f6a"
 
-"@mapbox/sphericalmercator@^1.0.5":
+"@curvemap/sphericalmercator@^1.0.5":
   version "1.0.5"
-  resolved "https://registry.yarnpkg.com/@mapbox/sphericalmercator/-/sphericalmercator-1.0.5.tgz#70237b9774095ed1cfdbcea7a8fd1fc82b2691f2"
+  resolved "https://registry.yarnpkg.com/@curvemap/sphericalmercator/-/sphericalmercator-1.0.5.tgz#70237b9774095ed1cfdbcea7a8fd1fc82b2691f2"
 
-"@mapbox/tiny-sdf@^1.1.0":
+"@hymap/tiny-sdf@^1.1.0":
   version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@mapbox/tiny-sdf/-/tiny-sdf-1.1.0.tgz#b0b8f5c22005e6ddb838f421ffd257c1f74f9a20"
+  resolved "https://registry.yarnpkg.com/@hymap/tiny-sdf/-/tiny-sdf-1.1.0.tgz#b0b8f5c22005e6ddb838f421ffd257c1f74f9a20"
 
-"@mapbox/unitbezier@^0.0.0":
+"@hymap/unitbezier@^0.0.0":
   version "0.0.0"
-  resolved "https://registry.yarnpkg.com/@mapbox/unitbezier/-/unitbezier-0.0.0.tgz#15651bd553a67b8581fb398810c98ad86a34524e"
+  resolved "https://registry.yarnpkg.com/@hymap/unitbezier/-/unitbezier-0.0.0.tgz#15651bd553a67b8581fb398810c98ad86a34524e"
 
-"@mapbox/vector-tile@^1.3.0", "@mapbox/vector-tile@^1.3.1":
+"@hymap/vector-tile@^1.3.0", "@hymap/vector-tile@^1.3.1":
   version "1.3.1"
-  resolved "https://registry.yarnpkg.com/@mapbox/vector-tile/-/vector-tile-1.3.1.tgz#d3a74c90402d06e89ec66de49ec817ff53409666"
+  resolved "https://registry.yarnpkg.com/@hymap/vector-tile/-/vector-tile-1.3.1.tgz#d3a74c90402d06e89ec66de49ec817ff53409666"
   dependencies:
-    "@mapbox/point-geometry" "~0.1.0"
+    "@hymap/point-geometry" "~0.1.0"
 
-"@mapbox/whoots-js@^3.0.0":
+"@hymap/whoots-js@^3.0.0":
   version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@mapbox/whoots-js/-/whoots-js-3.0.0.tgz#c1de4293081424da3ac30c23afa850af1019bb54"
+  resolved "https://registry.yarnpkg.com/@hymap/whoots-js/-/whoots-js-3.0.0.tgz#c1de4293081424da3ac30c23afa850af1019bb54"
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
@@ -4365,7 +4365,7 @@ geojson-rewind@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/geojson-rewind/-/geojson-rewind-0.3.0.tgz#d5c35025fa708910e2da1a97fc23a2e2478a876a"
   dependencies:
-    "@mapbox/geojson-area" "0.2.2"
+    "@curvemap/geojson-area" "0.2.2"
     concat-stream "~1.6.0"
     minimist "1.2.0"
 
@@ -6388,9 +6388,9 @@ map-visit@^1.0.0:
   dependencies:
     object-visit "^1.0.0"
 
-mapbox-gl-styles@2.0.2:
+curvemap-gl-styles@2.0.2:
   version "2.0.2"
-  resolved "https://registry.yarnpkg.com/mapbox-gl-styles/-/mapbox-gl-styles-2.0.2.tgz#bb525b77ea0dc2b041bb8051645176f3783e294a"
+  resolved "https://registry.yarnpkg.com/curvemap-gl-styles/-/curvemap-gl-styles-2.0.2.tgz#bb525b77ea0dc2b041bb8051645176f3783e294a"
   dependencies:
     glob "^5.0.14"
 
@@ -10581,8 +10581,8 @@ vt-pbf@^3.0.1:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/vt-pbf/-/vt-pbf-3.1.0.tgz#d7e63f585b362cbff6b84fcd052c159112e0acc7"
   dependencies:
-    "@mapbox/point-geometry" "0.1.0"
-    "@mapbox/vector-tile" "^1.3.0"
+    "@hymap/point-geometry" "0.1.0"
+    "@hymap/vector-tile" "^1.3.0"
     pbf "^3.0.5"
 
 w3c-hr-time@^1.0.1:

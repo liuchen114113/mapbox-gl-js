@@ -3,7 +3,7 @@ import sourcemaps from 'rollup-plugin-sourcemaps';
 import {plugins} from './build/rollup_plugins';
 
 const production = process.env.BUILD === 'production';
-const outputFile = production ? 'dist/mapbox-gl.js' : 'dist/mapbox-gl-dev.js';
+const outputFile = production ? 'dist/curvemap-gl.js' : 'dist/curvemap-gl-dev.js';
 
 const config = [{
     // First, use code splitting to bundle GL JS into three "chunks":
@@ -16,7 +16,7 @@ const config = [{
     // sources as strings, etc.
     input: ['src/index.js', 'src/source/worker.js'],
     output: {
-        dir: 'rollup/build/mapboxgl',
+        dir: 'rollup/build/curvemapgl',
         format: 'amd',
         sourcemap: 'inline',
         indent: false
@@ -27,10 +27,10 @@ const config = [{
 }, {
     // Next, bundle together the three "chunks" produced in the previous pass
     // into a single, final bundle. See rollup/bundle_prelude.js and
-    // rollup/mapboxgl.js for details.
-    input: 'rollup/mapboxgl.js',
+    // rollup/curvemapgl.js for details.
+    input: 'rollup/curvemapgl.js',
     output: {
-        name: 'mapboxgl',
+        name: 'curvemapgl',
         file: outputFile,
         format: 'umd',
         sourcemap: production ? true : 'inline',

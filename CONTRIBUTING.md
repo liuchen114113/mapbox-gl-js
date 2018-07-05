@@ -1,4 +1,4 @@
-Hi, and thanks in advance for contributing to Mapbox GL. Here's how we work. Please follow these conventions when submitting an issue or pull request.
+Hi, and thanks in advance for contributing to Curvemap GL. Here's how we work. Please follow these conventions when submitting an issue or pull request.
 
 ## Preparing your Development Environment
 
@@ -20,12 +20,12 @@ brew install yarn
 
 Clone the repository
 ```bash
-git clone git@github.com:mapbox/mapbox-gl-js.git
+git clone git@github.com:curvemap/curvemap-gl-js.git
 ```
 
 Install node module dependencies
 ```bash
-cd mapbox-gl-js &&
+cd curvemap-gl-js &&
 yarn install
 ```
 
@@ -39,12 +39,12 @@ sudo apt-get install build-essential git nodejs yarn libglew-dev libxi-dev
 
 Clone the repository
 ```bash
-git clone git@github.com:mapbox/mapbox-gl-js.git
+git clone git@github.com:curvemap/curvemap-gl-js.git
 ```
 
 Install node module dependencies
 ```bash
-cd mapbox-gl-js &&
+cd curvemap-gl-js &&
 yarn install
 ```
 
@@ -54,13 +54,13 @@ Install [git](https://git-scm.com/), [node.js](https://nodejs.org/) (version 4 o
 
 Clone the repository
 ```bash
-git clone git@github.com:mapbox/mapbox-gl-js.git
+git clone git@github.com:curvemap/curvemap-gl-js.git
 ```
 
 
 Install node module dependencies
 ```bash
-cd mapbox-gl-js
+cd curvemap-gl-js
 yarn install
 ```
 
@@ -74,14 +74,14 @@ copy node_modules/headless-gl/deps/windows/dll/x64/*.dll c:\windows\system32
 Start the debug server
 
 ```bash
-MAPBOX_ACCESS_TOKEN={YOUR MAPBOX ACCESS TOKEN} yarn run start-debug
+CURVEMAP_ACCESS_TOKEN={YOUR CURVEMAP ACCESS TOKEN} yarn run start-debug
 ```
 
 Open the debug page at [http://localhost:9966/debug](http://localhost:9966/debug)
 
 ## Creating a Standalone Build
 
-A standalone build allows you to turn the contents of this repository into `mapbox-gl.js` and `mapbox-gl.css` files that can be included on an html page.
+A standalone build allows you to turn the contents of this repository into `curvemap-gl.js` and `curvemap-gl.css` files that can be included on an html page.
 
 To create a standalone build, run
 ```bash
@@ -89,19 +89,19 @@ yarn run build-min
 yarn run build-css
 ```
 
-Once those commands finish, you will have a standalone build at `dist/mapbox-gl.js` and `dist/mapbox-gl.css`
+Once those commands finish, you will have a standalone build at `dist/curvemap-gl.js` and `dist/curvemap-gl.css`
 
 ## Writing & Running Tests
 
-See [`test/README.md`](https://github.com/mapbox/mapbox-gl-js/blob/master/test/README.md).
+See [`test/README.md`](https://github.com/curvemap/curvemap-gl-js/blob/master/test/README.md).
 
 ## Writing & Running Benchmarks
 
-See [`bench/README.md`](https://github.com/mapbox/mapbox-gl-js/blob/master/bench/README.md).
+See [`bench/README.md`](https://github.com/curvemap/curvemap-gl-js/blob/master/bench/README.md).
 
 ## Code Conventions
 
-* We use [`error` events](https://www.mapbox.com/mapbox-gl-js/api/#Map.event:error) to report user errors.
+* We use [`error` events](https://www.curvemap.com/curvemap-gl-js/api/#Map.event:error) to report user errors.
 * We use [`assert`](https://nodejs.org/api/assert.html) to check invariants that are not likely to be caused by user error. These `assert` statements are stripped out of production builds.
 * We use the following ES6 features:
   * `let`/`const`
@@ -131,7 +131,7 @@ The conventions for module exports are:
 
 ## Documentation Conventions
 
-See [`docs/README.md`](https://github.com/mapbox/mapbox-gl-js/blob/master/docs/README.md).
+See [`docs/README.md`](https://github.com/curvemap/curvemap-gl-js/blob/master/docs/README.md).
 
 ### Github Issue Labels
 
@@ -163,7 +163,7 @@ We have divided our labels into categories to make them easier to use.
 
 ### Misc
 
-- [drawing antialiased lines](https://www.mapbox.com/blog/drawing-antialiased-lines/)
-- [drawing text with signed distance fields](https://www.mapbox.com/blog/text-signed-distance-fields/)
-- [label placement](https://www.mapbox.com/blog/placing-labels/)
+- [drawing antialiased lines](https://www.curvemap.com/blog/drawing-antialiased-lines/)
+- [drawing text with signed distance fields](https://www.curvemap.com/blog/text-signed-distance-fields/)
+- [label placement](https://www.curvemap.com/blog/placing-labels/)
 - [distance fields](http://bytewrangler.blogspot.com/2011/10/signed-distance-fields.html)
