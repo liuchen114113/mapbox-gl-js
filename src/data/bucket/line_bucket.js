@@ -8,7 +8,7 @@ import { ProgramConfigurationSet } from '../program_configuration';
 import { TriangleIndexArray } from '../index_array_type';
 import loadGeometry from '../load_geometry';
 import EXTENT from '../extent';
-import mvt from '@mapbox/vector-tile';
+import mvt from '@hymap/vector-tile';
 const vectorTileFeatureTypes = mvt.VectorTileFeature.types;
 import { register } from '../../util/web_worker_transfer';
 import EvaluationParameters from '../../style/evaluation_parameters';
@@ -20,7 +20,7 @@ import type {
     PopulateParameters
 } from '../bucket';
 import type LineStyleLayer from '../../style/style_layer/line_style_layer';
-import type Point from '@mapbox/point-geometry';
+import type Point from '@hymap/point-geometry';
 import type {Segment} from '../segment';
 import type Context from '../../gl/context';
 import type IndexBuffer from '../../gl/index_buffer';
@@ -175,11 +175,11 @@ class LineBucket implements Bucket {
     addLine(vertices: Array<Point>, feature: VectorTileFeature, join: string, cap: string, miterLimit: number, roundLimit: number, index: number) {
         let lineDistances = null;
         if (!!feature.properties &&
-            feature.properties.hasOwnProperty('mapbox_clip_start') &&
-            feature.properties.hasOwnProperty('mapbox_clip_end')) {
+            feature.properties.hasOwnProperty('curvemap_clip_start') &&
+            feature.properties.hasOwnProperty('curvemap_clip_end')) {
             lineDistances = {
-                start: feature.properties.mapbox_clip_start,
-                end: feature.properties.mapbox_clip_end,
+                start: feature.properties.curvemap_clip_start,
+                end: feature.properties.curvemap_clip_end,
                 tileTotal: undefined
             };
         }

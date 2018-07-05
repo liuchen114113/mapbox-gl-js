@@ -31,22 +31,22 @@ varying vec2 v_tex_a;
 varying vec2 v_tex_b;
 varying float v_gamma_scale;
 
-#pragma mapbox: define highp vec4 color
-#pragma mapbox: define lowp float blur
-#pragma mapbox: define lowp float opacity
-#pragma mapbox: define mediump float gapwidth
-#pragma mapbox: define lowp float offset
-#pragma mapbox: define mediump float width
-#pragma mapbox: define lowp float floorwidth
+#pragma curvemap: define highp vec4 color
+#pragma curvemap: define lowp float blur
+#pragma curvemap: define lowp float opacity
+#pragma curvemap: define mediump float gapwidth
+#pragma curvemap: define lowp float offset
+#pragma curvemap: define mediump float width
+#pragma curvemap: define lowp float floorwidth
 
 void main() {
-    #pragma mapbox: initialize highp vec4 color
-    #pragma mapbox: initialize lowp float blur
-    #pragma mapbox: initialize lowp float opacity
-    #pragma mapbox: initialize mediump float gapwidth
-    #pragma mapbox: initialize lowp float offset
-    #pragma mapbox: initialize mediump float width
-    #pragma mapbox: initialize lowp float floorwidth
+    #pragma curvemap: initialize highp vec4 color
+    #pragma curvemap: initialize lowp float blur
+    #pragma curvemap: initialize lowp float opacity
+    #pragma curvemap: initialize mediump float gapwidth
+    #pragma curvemap: initialize lowp float offset
+    #pragma curvemap: initialize mediump float width
+    #pragma curvemap: initialize lowp float floorwidth
 
     vec2 a_extrude = a_data.xy - 128.0;
     float a_direction = mod(a_data.z, 4.0) - 1.0;

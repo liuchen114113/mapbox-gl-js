@@ -148,7 +148,7 @@ export default function(style) {
     eachLayer(style, (layer) => {
         // get rid of text-max-size, icon-max-size
         // turn text-size, icon-size into layout properties
-        // https://github.com/mapbox/mapbox-gl-style-spec/issues/255
+        // https://github.com/curvemap/curvemap-gl-style-spec/issues/255
 
         eachLayout(layer, (layout) => {
             delete layout['text-max-size'];
@@ -174,18 +174,18 @@ export default function(style) {
         const inputParsed = URL.parse(input);
         const inputPathnameParts = inputParsed.pathname.split('/');
 
-        if (inputParsed.protocol !== 'mapbox:') {
+        if (inputParsed.protocol !== 'curvemap:') {
             return input;
 
         } else if (inputParsed.hostname === 'fontstack') {
             assert(decodeURI(inputParsed.pathname) === '/{fontstack}/{range}.pbf');
-            return 'mapbox://fonts/mapbox/{fontstack}/{range}.pbf';
+            return 'curvemap://fonts/curvemap/{fontstack}/{range}.pbf';
 
         } else if (inputParsed.hostname === 'fonts') {
             assert(inputPathnameParts[1] === 'v1');
             assert(decodeURI(inputPathnameParts[3]) === '{fontstack}');
             assert(decodeURI(inputPathnameParts[4]) === '{range}.pbf');
-            return `mapbox://fonts/${inputPathnameParts[2]}/{fontstack}/{range}.pbf`;
+            return `curvemap://fonts/${inputPathnameParts[2]}/{fontstack}/{range}.pbf`;
 
         } else {
             assert(false);

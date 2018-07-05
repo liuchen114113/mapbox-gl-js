@@ -1,6 +1,6 @@
-# Mapbox GL Shaders
+# Curvemap GL Shaders
 
-This repository contains GL shaders which are shared by [Mapbox GL JS](https://github.com/mapbox/mapbox-gl-js) and [Mapbox GL Native](https://github.com/mapbox/mapbox-gl-native).
+This repository contains GL shaders which are shared by [Curvemap GL JS](https://github.com/curvemap/curvemap-gl-js) and [Curvemap GL Native](https://github.com/curvemap/curvemap-gl-native).
 
 ## Pragmas
 
@@ -13,10 +13,10 @@ Some variables change type depending on their context:
 We abstract over this functionality using pragmas.
 
 ```glsl
-#pragma mapbox: define highp vec4 color
+#pragma curvemap: define highp vec4 color
 
 main() {
-    #pragma mapbox: initialize highp vec4 color
+    #pragma curvemap: initialize highp vec4 color
     ...
     gl_FragColor = color;
 }
@@ -27,7 +27,7 @@ This program defines a variable within `main` called `color`, initialize the val
 Pragmas take the following form.
 
 ```glsl
-#pragma mapbox: (define|initialize) (lowp|mediump|highp) (float|vec2|vec3|vec4) {name}
+#pragma curvemap: (define|initialize) (lowp|mediump|highp) (float|vec2|vec3|vec4) {name}
 ```
 
 When using pragmas, the following requirements apply.

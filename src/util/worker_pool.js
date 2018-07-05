@@ -5,7 +5,7 @@ import assert from 'assert';
 import WebWorker from './web_worker';
 
 import type {WorkerInterface} from './web_worker';
-import mapboxgl from '../';
+import curvemapgl from '../';
 
 /**
  * Constructs a worker pool.
@@ -21,9 +21,9 @@ class WorkerPool {
 
     acquire(mapId: number): Array<WorkerInterface> {
         if (!this.workers) {
-            // Lazily look up the value of mapboxgl.workerCount so that
+            // Lazily look up the value of curvemapgl.workerCount so that
             // client code has had a chance to set it.
-            const workerCount = mapboxgl.workerCount;
+            const workerCount = curvemapgl.workerCount;
             assert(typeof workerCount === 'number' && workerCount < Infinity);
 
             this.workers = [];

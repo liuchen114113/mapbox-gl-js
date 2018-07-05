@@ -22,7 +22,7 @@ import type HeatmapStyleLayer from '../../style/style_layer/heatmap_style_layer'
 import type Context from '../../gl/context';
 import type IndexBuffer from '../../gl/index_buffer';
 import type VertexBuffer from '../../gl/vertex_buffer';
-import type Point from '@mapbox/point-geometry';
+import type Point from '@hymap/point-geometry';
 import type {FeatureStates} from '../../source/source_state';
 
 function addCircleVertex(layoutVertexArray, x, y, extrudeX, extrudeY) {

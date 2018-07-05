@@ -116,7 +116,7 @@ const shaders: {[string]: {fragmentSource: string, vertexSource: string}} = {
 
 // Expand #pragmas to #ifdefs.
 
-const re = /#pragma mapbox: ([\w]+) ([\w]+) ([\w]+) ([\w]+)/g;
+const re = /#pragma curvemap: ([\w]+) ([\w]+) ([\w]+) ([\w]+)/g;
 
 for (const programName in shaders) {
     const program = shaders[programName];

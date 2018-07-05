@@ -9,7 +9,7 @@ import SymbolBucket from '../data/bucket/symbol_bucket';
 import { RasterBoundsArray, CollisionBoxArray } from '../data/array_types';
 import rasterBoundsAttributes from '../data/raster_bounds_attributes';
 import EXTENT from '../data/extent';
-import Point from '@mapbox/point-geometry';
+import Point from '@hymap/point-geometry';
 import Texture from '../render/texture';
 import SegmentVector from '../data/segment';
 import { TriangleIndexArray } from '../data/index_array_type';

@@ -52,7 +52,7 @@ void main() {
     // scale factor pow(2, (u_zoom - u_maxzoom) * a) where a is an arbitrary value
     // Here we use a=0.3 which works out to the expression below. see 
     // nickidlugash's awesome breakdown for more info
-    // https://github.com/mapbox/mapbox-gl-js/pull/5286#discussion_r148419556
+    // https://github.com/curvemap/curvemap-gl-js/pull/5286#discussion_r148419556
     float exaggeration = u_zoom < 2.0 ? 0.4 : u_zoom < 4.5 ? 0.35 : 0.3;
 
     vec2 deriv = vec2(

@@ -4,7 +4,7 @@ import { extend, bindAll } from '../util/util';
 import { Event, Evented } from '../util/evented';
 import DOM from '../util/dom';
 import LngLat from '../geo/lng_lat';
-import Point from '@mapbox/point-geometry';
+import Point from '@hymap/point-geometry';
 import window from '../util/window';
 import smartWrap from '../util/smart_wrap';
 import { type Anchor, anchorTranslate, applyAnchorClass } from './anchor';
@@ -61,14 +61,14 @@ export type PopupOptions = {
  *  'left': [markerRadius, (markerHeight - markerRadius) * -1],
  *  'right': [-markerRadius, (markerHeight - markerRadius) * -1]
  *  };
- * var popup = new mapboxgl.Popup({offset: popupOffsets, className: 'my-class'})
+ * var popup = new curvemapgl.Popup({offset: popupOffsets, className: 'my-class'})
  *   .setLngLat(e.lngLat)
  *   .setHTML("<h1>Hello World!</h1>")
  *   .addTo(map);
- * @see [Display a popup](https://www.mapbox.com/mapbox-gl-js/example/popup/)
- * @see [Display a popup on hover](https://www.mapbox.com/mapbox-gl-js/example/popup-on-hover/)
- * @see [Display a popup on click](https://www.mapbox.com/mapbox-gl-js/example/popup-on-click/)
- * @see [Attach a popup to a marker instance](https://www.mapbox.com/mapbox-gl-js/example/set-popup/)
+ * @see [Display a popup](https://www.curvemap.com/curvemap-gl-js/example/popup/)
+ * @see [Display a popup on hover](https://www.curvemap.com/curvemap-gl-js/example/popup-on-hover/)
+ * @see [Display a popup on click](https://www.curvemap.com/curvemap-gl-js/example/popup-on-click/)
+ * @see [Attach a popup to a marker instance](https://www.curvemap.com/curvemap-gl-js/example/set-popup/)
  */
 export default class Popup extends Evented {
     _map: Map;
@@ -89,7 +89,7 @@ export default class Popup extends Evented {
     /**
      * Adds the popup to a map.
      *
-     * @param {Map} map The Mapbox GL JS map to add the popup to.
+     * @param {Map} map The Curvemap GL JS map to add the popup to.
      * @returns {Popup} `this`
      */
     addTo(map: Map) {
@@ -125,7 +125,7 @@ export default class Popup extends Evented {
      * Removes the popup from the map it has been added to.
      *
      * @example
-     * var popup = new mapboxgl.Popup().addTo(map);
+     * var popup = new curvemapgl.Popup().addTo(map);
      * popup.remove();
      * @returns {Popup} `this`
      */
@@ -195,7 +195,7 @@ export default class Popup extends Evented {
      * @param text Textual content for the popup.
      * @returns {Popup} `this`
      * @example
-     * var popup = new mapboxgl.Popup()
+     * var popup = new curvemapgl.Popup()
      *   .setLngLat(e.lngLat)
      *   .setText('Hello, world!')
      *   .addTo(map);
@@ -237,7 +237,7 @@ export default class Popup extends Evented {
      * // create an element with the popup content
      * var div = window.document.createElement('div');
      * div.innerHTML = 'Hello, world!';
-     * var popup = new mapboxgl.Popup()
+     * var popup = new curvemapgl.Popup()
      *   .setLngLat(e.lngLat)
      *   .setDOMContent(div)
      *   .addTo(map);
@@ -254,10 +254,10 @@ export default class Popup extends Evented {
             DOM.remove(this._content);
         }
 
-        this._content = DOM.create('div', 'mapboxgl-popup-content', this._container);
+        this._content = DOM.create('div', 'curvemapgl-popup-content', this._container);
 
         if (this.options.closeButton) {
-            this._closeButton = DOM.create('button', 'mapboxgl-popup-close-button', this._content);
+            this._closeButton = DOM.create('button', 'curvemapgl-popup-close-button', this._content);
             this._closeButton.type = 'button';
             this._closeButton.setAttribute('aria-label', 'Close popup');
             this._closeButton.innerHTML = '&#215;';
@@ -269,8 +269,8 @@ export default class Popup extends Evented {
         if (!this._map || !this._lngLat || !this._content) { return; }
 
         if (!this._container) {
-            this._container = DOM.create('div', 'mapboxgl-popup', this._map.getContainer());
-            this._tip       = DOM.create('div', 'mapboxgl-popup-tip', this._container);
+            this._container = DOM.create('div', 'curvemapgl-popup', this._map.getContainer());
+            this._tip       = DOM.create('div', 'curvemapgl-popup-tip', this._container);
             this._container.appendChild(this._content);
 
             if (this.options.className) {

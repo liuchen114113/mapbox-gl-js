@@ -1,6 +1,6 @@
 // @flow
 
-import ShelfPack from '@mapbox/shelf-pack';
+import ShelfPack from '@hymap/shelf-pack';
 
 import { RGBAImage } from '../util/image';
 import { ImagePosition } from './image_atlas';
@@ -9,7 +9,7 @@ import assert from 'assert';
 
 import type {StyleImage} from '../style/style_image';
 import type Context from '../gl/context';
-import type {Bin} from '@mapbox/shelf-pack';
+import type {Bin} from '@hymap/shelf-pack';
 import type {Callback} from '../types/callback';
 
 type Pattern = {

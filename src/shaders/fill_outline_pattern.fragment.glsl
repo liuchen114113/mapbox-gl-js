@@ -11,10 +11,10 @@ varying vec2 v_pos_a;
 varying vec2 v_pos_b;
 varying vec2 v_pos;
 
-#pragma mapbox: define lowp float opacity
+#pragma curvemap: define lowp float opacity
 
 void main() {
-    #pragma mapbox: initialize lowp float opacity
+    #pragma curvemap: initialize lowp float opacity
 
     vec2 imagecoord = mod(v_pos_a, 1.0);
     vec2 pos = mix(u_pattern_tl_a / u_texsize, u_pattern_br_a / u_texsize, imagecoord);

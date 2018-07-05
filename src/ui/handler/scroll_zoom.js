@@ -10,7 +10,7 @@ import LngLat from '../../geo/lng_lat';
 import { Event } from '../../util/evented';
 
 import type Map from '../map';
-import type Point from '@mapbox/point-geometry';
+import type Point from '@hymap/point-geometry';
 import type {TaskID} from '../../util/task_queue';
 
 // deltaY value for mouse scroll wheel identification

@@ -8,7 +8,7 @@ import { Event } from '../../util/evented';
 import assert from 'assert';
 
 import type Map from '../map';
-import type Point from '@mapbox/point-geometry';
+import type Point from '@hymap/point-geometry';
 import type {TaskID} from '../../util/task_queue';
 
 const inertiaLinearity = 0.3,
@@ -78,7 +78,7 @@ class DragPanHandler {
      */
     enable() {
         if (this.isEnabled()) return;
-        this._el.classList.add('mapboxgl-touch-drag-pan');
+        this._el.classList.add('curvemapgl-touch-drag-pan');
         this._state = 'enabled';
     }
 
@@ -90,7 +90,7 @@ class DragPanHandler {
      */
     disable() {
         if (!this.isEnabled()) return;
-        this._el.classList.remove('mapboxgl-touch-drag-pan');
+        this._el.classList.remove('curvemapgl-touch-drag-pan');
         switch (this._state) {
         case 'active':
             this._state = 'disabled';

@@ -16,7 +16,7 @@ import type {PerformanceResourceTiming} from '../types/performance_resource_timi
 
 /**
  * A source containing GeoJSON.
- * (See the [Style Specification](https://www.mapbox.com/mapbox-gl-style-spec/#sources-geojson) for detailed documentation of options.)
+ * (See the [Style Specification](https://www.curvemap.com/curvemap-gl-style-spec/#sources-geojson) for detailed documentation of options.)
  *
  * @example
  * map.addSource('some id', {
@@ -55,9 +55,9 @@ import type {PerformanceResourceTiming} from '../types/performance_resource_timi
  *       }
  *   }]
  * });
- * @see [Draw GeoJSON points](https://www.mapbox.com/mapbox-gl-js/example/geojson-markers/)
- * @see [Add a GeoJSON line](https://www.mapbox.com/mapbox-gl-js/example/geojson-line/)
- * @see [Create a heatmap from points](https://www.mapbox.com/mapbox-gl-js/example/heatmap/)
+ * @see [Draw GeoJSON points](https://www.curvemap.com/curvemap-gl-js/example/geojson-markers/)
+ * @see [Add a GeoJSON line](https://www.curvemap.com/curvemap-gl-js/example/geojson-line/)
+ * @see [Create a heatmap from points](https://www.curvemap.com/curvemap-gl-js/example/heatmap/)
  */
 class GeoJSONSource extends Evented implements Source {
     type: 'geojson';

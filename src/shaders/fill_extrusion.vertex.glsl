@@ -8,15 +8,15 @@ attribute vec4 a_normal_ed;
 
 varying vec4 v_color;
 
-#pragma mapbox: define lowp float base
-#pragma mapbox: define lowp float height
+#pragma curvemap: define lowp float base
+#pragma curvemap: define lowp float height
 
-#pragma mapbox: define highp vec4 color
+#pragma curvemap: define highp vec4 color
 
 void main() {
-    #pragma mapbox: initialize lowp float base
-    #pragma mapbox: initialize lowp float height
-    #pragma mapbox: initialize highp vec4 color
+    #pragma curvemap: initialize lowp float base
+    #pragma curvemap: initialize lowp float height
+    #pragma curvemap: initialize highp vec4 color
 
     vec3 normal = a_normal_ed.xyz;
 

@@ -86,8 +86,8 @@ export const getJSON = function(requestParameters: RequestParameters, callback: 
             }
             callback(null, data);
         } else {
-            if (xhr.status === 401 && requestParameters.url.match(/mapbox.com/)) {
-                callback(new AJAXError(`${xhr.statusText}: you may have provided an invalid Mapbox access token. See https://www.mapbox.com/api-documentation/#access-tokens`, xhr.status, requestParameters.url));
+            if (xhr.status === 401 && requestParameters.url.match(/curvemap.com/)) {
+                callback(new AJAXError(`${xhr.statusText}: you may have provided an invalid Curvemap access token. See https://www.curvemap.com/api-documentation/#access-tokens`, xhr.status, requestParameters.url));
             } else {
                 callback(new AJAXError(xhr.statusText, xhr.status, requestParameters.url));
             }
@@ -132,7 +132,7 @@ const transparentPngUrl = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA
 
 export const getImage = function(requestParameters: RequestParameters, callback: Callback<HTMLImageElement>): Cancelable {
     // request the image with XHR to work around caching issues
-    // see https://github.com/mapbox/mapbox-gl-js/issues/1470
+    // see https://github.com/curvemap/curvemap-gl-js/issues/1470
     return getArrayBuffer(requestParameters, (err, imgData) => {
         if (err) {
             callback(err);

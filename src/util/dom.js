@@ -1,6 +1,6 @@
 // @flow
 
-import Point from '@mapbox/point-geometry';
+import Point from '@hymap/point-geometry';
 
 import window from './window';
 import assert from 'assert';
@@ -127,7 +127,7 @@ DOM.mouseButton = function (e: MouseEvent) {
     assert(e.type === 'mousedown' || e.type === 'mouseup');
     if (typeof window.InstallTrigger !== 'undefined' && e.button === 2 && e.ctrlKey &&
         window.navigator.platform.toUpperCase().indexOf('MAC') >= 0) {
-        // Fix for https://github.com/mapbox/mapbox-gl-js/issues/3131:
+        // Fix for https://github.com/curvemap/curvemap-gl-js/issues/3131:
         // Firefox (detected by InstallTrigger) on Mac determines e.button = 2 when
         // using Control + left click
         return 0;

@@ -13,7 +13,7 @@ import { number as interpolate } from '../style-spec/util/interpolate';
 import browser from '../util/browser';
 import LngLat from '../geo/lng_lat';
 import LngLatBounds from '../geo/lng_lat_bounds';
-import Point from '@mapbox/point-geometry';
+import Point from '@hymap/point-geometry';
 import { Event, Evented } from '../util/evented';
 
 import type Transform from '../geo/transform';
@@ -120,7 +120,7 @@ class Camera extends Evented {
      * @returns {Map} `this`
      * @example
      * map.setCenter([-74, 38]);
-     * @see [Move symbol with the keyboard](https://www.mapbox.com/mapbox-gl-js/example/rotating-controllable-marker/)
+     * @see [Move symbol with the keyboard](https://www.curvemap.com/curvemap-gl-js/example/rotating-controllable-marker/)
      */
     setCenter(center: LngLatLike, eventData?: Object) {
         return this.jumpTo({center: center}, eventData);
@@ -136,7 +136,7 @@ class Camera extends Evented {
      * @fires movestart
      * @fires moveend
      * @returns {Map} `this`
-     * @see [Navigate the map with game-like controls](https://www.mapbox.com/mapbox-gl-js/example/game-controls/)
+     * @see [Navigate the map with game-like controls](https://www.curvemap.com/curvemap-gl-js/example/game-controls/)
      */
     panBy(offset: PointLike, options?: AnimationOptions, eventData?: Object) {
         offset = Point.convert(offset).mult(-1);
@@ -255,7 +255,7 @@ class Camera extends Evented {
      *
      * @memberof Map#
      * @returns The map's current bearing.
-     * @see [Navigate the map with game-like controls](https://www.mapbox.com/mapbox-gl-js/example/game-controls/)
+     * @see [Navigate the map with game-like controls](https://www.curvemap.com/curvemap-gl-js/example/game-controls/)
      */
     getBearing(): number { return this.transform.bearing; }
 
@@ -462,7 +462,7 @@ class Camera extends Evented {
      * map.fitBounds(bbox, {
      *   padding: {top: 10, bottom:25, left: 15, right: 5}
      * });
-     * @see [Fit a map to a bounding box](https://www.mapbox.com/mapbox-gl-js/example/fitbounds/)
+     * @see [Fit a map to a bounding box](https://www.curvemap.com/curvemap-gl-js/example/fitbounds/)
      */
     fitBounds(bounds: LngLatBoundsLike, options?: AnimationOptions & CameraOptions, eventData?: Object) {
         const calculatedOptions = this.cameraForBounds(bounds, options);
@@ -568,7 +568,7 @@ class Camera extends Evented {
      * @fires zoomend
      * @fires pitchend
      * @returns {Map} `this`
-     * @see [Navigate the map with game-like controls](https://www.mapbox.com/mapbox-gl-js/example/game-controls/)
+     * @see [Navigate the map with game-like controls](https://www.curvemap.com/curvemap-gl-js/example/game-controls/)
      */
     easeTo(options: CameraOptions & AnimationOptions & {delayEndEvents?: number}, eventData?: Object) {
         this.stop();
@@ -752,9 +752,9 @@ class Camera extends Evented {
      *     return t;
      *   }
      * });
-     * @see [Fly to a location](https://www.mapbox.com/mapbox-gl-js/example/flyto/)
-     * @see [Slowly fly to a location](https://www.mapbox.com/mapbox-gl-js/example/flyto-options/)
-     * @see [Fly to a location based on scroll position](https://www.mapbox.com/mapbox-gl-js/example/scroll-fly-to/)
+     * @see [Fly to a location](https://www.curvemap.com/curvemap-gl-js/example/flyto/)
+     * @see [Slowly fly to a location](https://www.curvemap.com/curvemap-gl-js/example/flyto-options/)
+     * @see [Fly to a location based on scroll position](https://www.curvemap.com/curvemap-gl-js/example/scroll-fly-to/)
      */
     flyTo(options: Object, eventData?: Object) {
         // This method implements an “optimal path” animation, as detailed in:

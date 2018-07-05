@@ -1,6 +1,6 @@
 // @flow
 
-import Point from '@mapbox/point-geometry';
+import Point from '@hymap/point-geometry';
 
 import { mat4, vec4 } from 'gl-matrix';
 import * as symbolSize from './symbol_size';

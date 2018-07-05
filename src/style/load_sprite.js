@@ -3,7 +3,7 @@
 import { getJSON, getImage, ResourceType } from '../util/ajax';
 
 import browser from '../util/browser';
-import { normalizeSpriteURL } from '../util/mapbox';
+import { normalizeSpriteURL } from '../util/curvemap';
 import { RGBAImage } from '../util/image';
 
 import type {StyleImage} from './style_image';

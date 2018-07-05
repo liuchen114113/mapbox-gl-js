@@ -5,7 +5,7 @@ import { number as interpolate } from '../style-spec/util/interpolate';
 import Anchor from '../symbol/anchor';
 import checkMaxAngle from './check_max_angle';
 
-import type Point from '@mapbox/point-geometry';
+import type Point from '@hymap/point-geometry';
 import type {Shaping, PositionedIcon} from './shaping';
 
 export { getAnchors, getCenterAnchor };

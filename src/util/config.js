@@ -7,7 +7,7 @@ type Config = {|
 |};
 
 const config: Config = {
-    API_URL: 'https://api.mapbox.com',
+    API_URL: 'https://api.curvemap.com',
     REQUIRE_ACCESS_TOKEN: true,
     ACCESS_TOKEN: null
 };

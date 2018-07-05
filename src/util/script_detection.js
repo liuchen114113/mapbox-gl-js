@@ -70,7 +70,7 @@ export function charAllowsIdeographicBreaking(char: number) {
 // “neutral” characters.
 
 // Blocks in the Unicode supplementary planes are excluded from this module due
-// to <https://github.com/mapbox/mapbox-gl/issues/29>.
+// to <https://github.com/curvemap/curvemap-gl/issues/29>.
 
 /**
  * Returns true if the given Unicode codepoint identifies a character with

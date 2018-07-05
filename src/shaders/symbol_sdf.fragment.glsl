@@ -2,11 +2,11 @@
 #define EDGE_GAMMA 0.105/DEVICE_PIXEL_RATIO
 
 uniform bool u_is_halo;
-#pragma mapbox: define highp vec4 fill_color
-#pragma mapbox: define highp vec4 halo_color
-#pragma mapbox: define lowp float opacity
-#pragma mapbox: define lowp float halo_width
-#pragma mapbox: define lowp float halo_blur
+#pragma curvemap: define highp vec4 fill_color
+#pragma curvemap: define highp vec4 halo_color
+#pragma curvemap: define lowp float opacity
+#pragma curvemap: define lowp float halo_width
+#pragma curvemap: define lowp float halo_blur
 
 uniform sampler2D u_texture;
 uniform highp float u_gamma_scale;
@@ -16,11 +16,11 @@ varying vec2 v_data0;
 varying vec3 v_data1;
 
 void main() {
-    #pragma mapbox: initialize highp vec4 fill_color
-    #pragma mapbox: initialize highp vec4 halo_color
-    #pragma mapbox: initialize lowp float opacity
-    #pragma mapbox: initialize lowp float halo_width
-    #pragma mapbox: initialize lowp float halo_blur
+    #pragma curvemap: initialize highp vec4 fill_color
+    #pragma curvemap: initialize highp vec4 halo_color
+    #pragma curvemap: initialize lowp float opacity
+    #pragma curvemap: initialize lowp float halo_width
+    #pragma curvemap: initialize lowp float halo_blur
 
     vec2 tex = v_data0.xy;
     float gamma_scale = v_data1.x;

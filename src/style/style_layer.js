@@ -15,7 +15,7 @@ import { supportsPropertyExpression } from '../style-spec/util/properties';
 
 import type { FeatureState } from '../style-spec/expression';
 import type {Bucket} from '../data/bucket';
-import type Point from '@mapbox/point-geometry';
+import type Point from '@hymap/point-geometry';
 import type {FeatureFilter} from '../style-spec/feature_filter';
 import type {TransitionParameters} from './properties';
 import type EvaluationParameters from './evaluation_parameters';
@@ -201,7 +201,7 @@ class StyleLayer extends Evented {
             objectKey: name,
             value: value,
             styleSpec: styleSpec,
-            // Workaround for https://github.com/mapbox/mapbox-gl-js/issues/2407
+            // Workaround for https://github.com/curvemap/curvemap-gl-js/issues/2407
             style: {glyphs: true, sprite: true}
         }));
     }

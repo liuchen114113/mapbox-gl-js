@@ -9,7 +9,7 @@ import Coordinate from '../geo/coordinate';
 import { keysDifference } from '../util/util';
 import EXTENT from '../data/extent';
 import Context from '../gl/context';
-import Point from '@mapbox/point-geometry';
+import Point from '@hymap/point-geometry';
 import browser from '../util/browser';
 import { OverscaledTileID } from './tile_id';
 import assert from 'assert';
@@ -223,7 +223,7 @@ class SourceCache extends Evented {
         const tile = this._tiles[id];
 
         // this potentially does not address all underlying
-        // issues https://github.com/mapbox/mapbox-gl-js/issues/4252
+        // issues https://github.com/curvemap/curvemap-gl-js/issues/4252
         // - hard to tell without repro steps
         if (!tile) return;
 
@@ -255,7 +255,7 @@ class SourceCache extends Evented {
 
         this._source.fire(new Event('data', {dataType: 'source', tile: tile, coord: tile.tileID}));
 
-        // HACK this is necessary to fix https://github.com/mapbox/mapbox-gl-js/issues/2986
+        // HACK this is necessary to fix https://github.com/curvemap/curvemap-gl-js/issues/2986
         if (this.map) this.map.painter.tileExtentVAO.vao = null;
     }
 

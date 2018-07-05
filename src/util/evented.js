@@ -98,8 +98,8 @@ export class Evented {
 
     fire(event: Event) {
         // Compatibility with (type: string, properties: Object) signature from previous versions.
-        // See https://github.com/mapbox/mapbox-gl-js/issues/6522,
-        //     https://github.com/mapbox/mapbox-gl-draw/issues/766
+        // See https://github.com/curvemap/curvemap-gl-js/issues/6522,
+        //     https://github.com/curvemap/curvemap-gl-draw/issues/766
         if (typeof event === 'string') {
             event = new Event(event, arguments[1] || {});
         }

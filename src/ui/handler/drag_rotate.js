@@ -9,7 +9,7 @@ import { Event } from '../../util/evented';
 import assert from 'assert';
 
 import type Map from '../map';
-import type Point from '@mapbox/point-geometry';
+import type Point from '@hymap/point-geometry';
 import type {TaskID} from '../../util/task_queue';
 
 const inertiaLinearity = 0.25,
@@ -38,7 +38,7 @@ class DragRotateHandler {
     _frameId: ?TaskID;
 
     /**
-     * @param {Map} map The Mapbox GL JS map to add the handler to.
+     * @param {Map} map The Curvemap GL JS map to add the handler to.
      * @param {Object} [options]
      * @param {number} [options.bearingSnap] The threshold, measured in degrees, that determines when the map's
      *   bearing will snap to north.

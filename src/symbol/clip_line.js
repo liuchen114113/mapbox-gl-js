@@ -1,6 +1,6 @@
 // @flow
 
-import Point from '@mapbox/point-geometry';
+import Point from '@hymap/point-geometry';
 
 export default clipLine;
 

@@ -1,6 +1,6 @@
 
-#pragma mapbox: define lowp float blur
-#pragma mapbox: define lowp float opacity
+#pragma curvemap: define lowp float blur
+#pragma curvemap: define lowp float opacity
 
 uniform sampler2D u_image;
 
@@ -10,8 +10,8 @@ varying float v_gamma_scale;
 varying highp float v_lineprogress;
 
 void main() {
-    #pragma mapbox: initialize lowp float blur
-    #pragma mapbox: initialize lowp float opacity
+    #pragma curvemap: initialize lowp float blur
+    #pragma curvemap: initialize lowp float opacity
 
     // Calculate the distance of the pixel from the line in pixels.
     float dist = length(v_normal) * v_width2.s;

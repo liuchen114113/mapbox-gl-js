@@ -11,12 +11,12 @@ varying vec2 v_pos_a;
 varying vec2 v_pos_b;
 varying vec4 v_lighting;
 
-#pragma mapbox: define lowp float base
-#pragma mapbox: define lowp float height
+#pragma curvemap: define lowp float base
+#pragma curvemap: define lowp float height
 
 void main() {
-    #pragma mapbox: initialize lowp float base
-    #pragma mapbox: initialize lowp float height
+    #pragma curvemap: initialize lowp float base
+    #pragma curvemap: initialize lowp float height
 
     vec2 imagecoord = mod(v_pos_a, 1.0);
     vec2 pos = mix(u_pattern_tl_a / u_texsize, u_pattern_br_a / u_texsize, imagecoord);

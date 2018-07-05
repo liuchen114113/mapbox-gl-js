@@ -7,8 +7,8 @@ import { bindAll } from '../../util/util';
 import type Map from '../map';
 
 /**
- * A `LogoControl` is a control that adds the Mapbox watermark
- * to the map as required by the [terms of service](https://www.mapbox.com/tos/) for Mapbox
+ * A `LogoControl` is a control that adds the Curvemap watermark
+ * to the map as required by the [terms of service](https://www.curvemap.com/tos/) for Curvemap
  * vector tiles and core styles.
  *
  * @implements {IControl}
@@ -26,11 +26,11 @@ class LogoControl {
 
     onAdd(map: Map) {
         this._map = map;
-        this._container = DOM.create('div', 'mapboxgl-ctrl');
-        const anchor = DOM.create('a', 'mapboxgl-ctrl-logo');
+        this._container = DOM.create('div', 'curvemapgl-ctrl');
+        const anchor = DOM.create('a', 'curvemapgl-ctrl-logo');
         anchor.target = "_blank";
-        anchor.href = "https://www.mapbox.com/";
-        anchor.setAttribute("aria-label", "Mapbox logo");
+        anchor.href = "https://www.curvemap.com/";
+        anchor.setAttribute("aria-label", "Curvemap logo");
         anchor.setAttribute("rel", "noopener");
         this._container.appendChild(anchor);
         this._container.style.display = 'none';
@@ -66,7 +66,7 @@ class LogoControl {
         const sourceCaches = this._map.style.sourceCaches;
         for (const id in sourceCaches) {
             const source = sourceCaches[id].getSource();
-            if (source.mapbox_logo) {
+            if (source.curvemap_logo) {
                 return true;
             }
         }
@@ -79,9 +79,9 @@ class LogoControl {
         if (containerChildren.length) {
             const anchor = containerChildren[0];
             if (this._map.getCanvasContainer().offsetWidth < 250) {
-                anchor.classList.add('mapboxgl-compact');
+                anchor.classList.add('curvemapgl-compact');
             } else {
-                anchor.classList.remove('mapboxgl-compact');
+                anchor.classList.remove('curvemapgl-compact');
             }
         }
     }

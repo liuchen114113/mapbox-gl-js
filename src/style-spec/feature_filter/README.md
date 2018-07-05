@@ -1,6 +1,6 @@
 ## Filter
 
-Filter expressions are used to target specific data in a layer. This library implements the semantics specified by the [Mapbox GL JS spec](https://www.mapbox.com/mapbox-gl-style-spec/#filter).
+Filter expressions are used to target specific data in a layer. This library implements the semantics specified by the [Curvemap GL JS spec](https://www.curvemap.com/curvemap-gl-style-spec/#filter).
 
 ### API
 
@@ -14,7 +14,7 @@ passes its test.
 
 | parameter | type  | description      |
 | --------- | ----- | ---------------- |
-| `filter`  | Array | mapbox gl filter |
+| `filter`  | Array | curvemap gl filter |
 
 **Returns** `Function`, filter-evaluating function
 

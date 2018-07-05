@@ -16,10 +16,10 @@ import bindHandlers from './bind_handlers';
 import Camera from './camera';
 import LngLat from '../geo/lng_lat';
 import LngLatBounds from '../geo/lng_lat_bounds';
-import Point from '@mapbox/point-geometry';
+import Point from '@hymap/point-geometry';
 import AttributionControl from './control/attribution_control';
 import LogoControl from './control/logo_control';
-import isSupported from '@mapbox/mapbox-gl-supported';
+import isSupported from '@hymap/hymap-gl-supported';
 import { RGBAImage } from '../util/image';
 import { Event, ErrorEvent } from '../util/evented';
 import { MapMouseEvent } from './events';
@@ -136,35 +136,35 @@ const defaultOptions = {
  * and fires events as users interact with it.
  *
  * You create a `Map` by specifying a `container` and other options.
- * Then Mapbox GL JS initializes the map on the page and returns your `Map`
+ * Then Curvemap GL JS initializes the map on the page and returns your `Map`
  * object.
  *
  * @extends Evented
  * @param {Object} options
- * @param {HTMLElement|string} options.container The HTML element in which Mapbox GL JS will render the map, or the element's string `id`. The specified element must have no children.
+ * @param {HTMLElement|string} options.container The HTML element in which Curvemap GL JS will render the map, or the element's string `id`. The specified element must have no children.
  * @param {number} [options.minZoom=0] The minimum zoom level of the map (0-24).
  * @param {number} [options.maxZoom=22] The maximum zoom level of the map (0-24).
- * @param {Object|string} [options.style] The map's Mapbox style. This must be an a JSON object conforming to
- * the schema described in the [Mapbox Style Specification](https://mapbox.com/mapbox-gl-style-spec/), or a URL to
+ * @param {Object|string} [options.style] The map's Curvemap style. This must be an a JSON object conforming to
+ * the schema described in the [Curvemap Style Specification](https://curvemap.com/curvemap-gl-style-spec/), or a URL to
  * such JSON.
  *
- * To load a style from the Mapbox API, you can use a URL of the form `mapbox://styles/:owner/:style`,
- * where `:owner` is your Mapbox account name and `:style` is the style ID. Or you can use one of the following
- * [the predefined Mapbox styles](https://www.mapbox.com/maps/):
+ * To load a style from the Curvemap API, you can use a URL of the form `curvemap://styles/:owner/:style`,
+ * where `:owner` is your Curvemap account name and `:style` is the style ID. Or you can use one of the following
+ * [the predefined Curvemap styles](https://www.curvemap.com/maps/):
  *
- *  * `mapbox://styles/mapbox/streets-v10`
- *  * `mapbox://styles/mapbox/outdoors-v10`
- *  * `mapbox://styles/mapbox/light-v9`
- *  * `mapbox://styles/mapbox/dark-v9`
- *  * `mapbox://styles/mapbox/satellite-v9`
- *  * `mapbox://styles/mapbox/satellite-streets-v10`
- *  * `mapbox://styles/mapbox/navigation-preview-day-v2`
- *  * `mapbox://styles/mapbox/navigation-preview-night-v2`
- *  * `mapbox://styles/mapbox/navigation-guidance-day-v2`
- *  * `mapbox://styles/mapbox/navigation-guidance-night-v2`
+ *  * `curvemap://styles/curvemap/streets-v10`
+ *  * `curvemap://styles/curvemap/outdoors-v10`
+ *  * `curvemap://styles/curvemap/light-v9`
+ *  * `curvemap://styles/curvemap/dark-v9`
+ *  * `curvemap://styles/curvemap/satellite-v9`
+ *  * `curvemap://styles/curvemap/satellite-streets-v10`
+ *  * `curvemap://styles/curvemap/navigation-preview-day-v2`
+ *  * `curvemap://styles/curvemap/navigation-preview-night-v2`
+ *  * `curvemap://styles/curvemap/navigation-guidance-day-v2`
+ *  * `curvemap://styles/curvemap/navigation-guidance-night-v2`
  *
- * Tilesets hosted with Mapbox can be style-optimized if you append `?optimize=true` to the end of your style URL, like `mapbox://styles/mapbox/streets-v9?optimize=true`.
- * Learn more about style-optimized vector tiles in our [API documentation](https://www.mapbox.com/api-documentation/#retrieve-tiles).
+ * Tilesets hosted with Curvemap can be style-optimized if you append `?optimize=true` to the end of your style URL, like `curvemap://styles/curvemap/streets-v9?optimize=true`.
+ * Learn more about style-optimized vector tiles in our [API documentation](https://www.curvemap.com/api-documentation/#retrieve-tiles).
  *
  * @param {boolean} [options.hash=false] If `true`, the map's position (zoom, center latitude, center longitude, bearing, and pitch) will be synced with the hash fragment of the page's URL.
  *   For example, `http://path/to/my/page.html#2.59/39.26/53.07/-24.1/60`.
@@ -175,8 +175,8 @@ const defaultOptions = {
  * @param {boolean} [options.pitchWithRotate=true] If `false`, the map's pitch (tilt) control with "drag to rotate" interaction will be disabled.
  * @param {number} [options.clickTolerance=3] The max number of pixels a user can shift the mouse pointer during a click for it to be considered a valid click (as opposed to a mouse drag).
  * @param {boolean} [options.attributionControl=true] If `true`, an {@link AttributionControl} will be added to the map.
- * @param {string} [options.logoPosition='bottom-left'] A string representing the position of the Mapbox wordmark on the map. Valid options are `top-left`,`top-right`, `bottom-left`, `bottom-right`.
- * @param {boolean} [options.failIfMajorPerformanceCaveat=false] If `true`, map creation will fail if the performance of Mapbox
+ * @param {string} [options.logoPosition='bottom-left'] A string representing the position of the Curvemap wordmark on the map. Valid options are `top-left`,`top-right`, `bottom-left`, `bottom-right`.
+ * @param {boolean} [options.failIfMajorPerformanceCaveat=false] If `true`, map creation will fail if the performance of Curvemap
  *   GL JS would be dramatically worse than expected (i.e. a software renderer would be used).
  * @param {boolean} [options.preserveDrawingBuffer=false] If `true`, the map's canvas can be exported to a PNG using `map.getCanvas().toDataURL()`. This is `false` by default as a performance optimization.
  * @param {boolean} [options.refreshExpiredTiles=true] If `false`, the map won't attempt to re-request tiles once they expire per their HTTP `cacheControl`/`expires` headers.
@@ -189,23 +189,23 @@ const defaultOptions = {
  * @param {boolean} [options.doubleClickZoom=true] If `true`, the "double click to zoom" interaction is enabled (see {@link DoubleClickZoomHandler}).
  * @param {boolean|Object} [options.touchZoomRotate=true] If `true`, the "pinch to rotate and zoom" interaction is enabled. An `Object` value is passed as options to {@link TouchZoomRotateHandler#enable}.
  * @param {boolean} [options.trackResize=true]  If `true`, the map will automatically resize when the browser window resizes.
- * @param {LngLatLike} [options.center=[0, 0]] The inital geographical centerpoint of the map. If `center` is not specified in the constructor options, Mapbox GL JS will look for it in the map's style object. If it is not specified in the style, either, it will default to `[0, 0]` Note: Mapbox GL uses longitude, latitude coordinate order (as opposed to latitude, longitude) to match GeoJSON.
- * @param {number} [options.zoom=0] The initial zoom level of the map. If `zoom` is not specified in the constructor options, Mapbox GL JS will look for it in the map's style object. If it is not specified in the style, either, it will default to `0`.
- * @param {number} [options.bearing=0] The initial bearing (rotation) of the map, measured in degrees counter-clockwise from north. If `bearing` is not specified in the constructor options, Mapbox GL JS will look for it in the map's style object. If it is not specified in the style, either, it will default to `0`.
- * @param {number} [options.pitch=0] The initial pitch (tilt) of the map, measured in degrees away from the plane of the screen (0-60). If `pitch` is not specified in the constructor options, Mapbox GL JS will look for it in the map's style object. If it is not specified in the style, either, it will default to `0`.
+ * @param {LngLatLike} [options.center=[0, 0]] The inital geographical centerpoint of the map. If `center` is not specified in the constructor options, Curvemap GL JS will look for it in the map's style object. If it is not specified in the style, either, it will default to `[0, 0]` Note: Curvemap GL uses longitude, latitude coordinate order (as opposed to latitude, longitude) to match GeoJSON.
+ * @param {number} [options.zoom=0] The initial zoom level of the map. If `zoom` is not specified in the constructor options, Curvemap GL JS will look for it in the map's style object. If it is not specified in the style, either, it will default to `0`.
+ * @param {number} [options.bearing=0] The initial bearing (rotation) of the map, measured in degrees counter-clockwise from north. If `bearing` is not specified in the constructor options, Curvemap GL JS will look for it in the map's style object. If it is not specified in the style, either, it will default to `0`.
+ * @param {number} [options.pitch=0] The initial pitch (tilt) of the map, measured in degrees away from the plane of the screen (0-60). If `pitch` is not specified in the constructor options, Curvemap GL JS will look for it in the map's style object. If it is not specified in the style, either, it will default to `0`.
  * @param {boolean} [options.renderWorldCopies=true]  If `true`, multiple copies of the world will be rendered, when zoomed out.
  * @param {number} [options.maxTileCacheSize=null]  The maximum number of tiles stored in the tile cache for a given source. If omitted, the cache will be dynamically sized based on the current viewport.
  * @param {string} [options.localIdeographFontFamily=null] If specified, defines a CSS font-family
  *   for locally overriding generation of glyphs in the 'CJK Unified Ideographs' and 'Hangul Syllables' ranges.
  *   In these ranges, font settings from the map's style will be ignored, except for font-weight keywords (light/regular/medium/bold).
- *   The purpose of this option is to avoid bandwidth-intensive glyph server requests. (see [Use locally generated ideographs](https://www.mapbox.com/mapbox-gl-js/example/local-ideographs))
+ *   The purpose of this option is to avoid bandwidth-intensive glyph server requests. (see [Use locally generated ideographs](https://www.curvemap.com/curvemap-gl-js/example/local-ideographs))
  * @param {RequestTransformFunction} [options.transformRequest=null] A callback run before the Map makes a request for an external URL. The callback can be used to modify the url, set headers, or set the credentials property for cross-origin requests.
  *   Expected to return an object with a `url` property and optionally `headers` and `credentials` properties.
  * @param {boolean} [options.collectResourceTiming=false] If `true`, Resource Timing API information will be collected for requests made by GeoJSON and Vector Tile web workers (this information is normally inaccessible from the main Javascript thread). Information will be returned in a `resourceTiming` property of relevant `data` events.
  * @param {number} [options.fadeDuration=300] Controls the duration of the fade-in/fade-out animation for label collisions, in milliseconds. This setting affects all symbol layers. This setting does not affect the duration of runtime styling transitions or raster tile cross-fading.
  * @param {boolean} [options.crossSourceCollisions=true] If `true`, symbols from multiple sources can collide with each other during collision detection. If `false`, collision detection is run separately for the symbols in each source.
  * @example
- * var map = new mapboxgl.Map({
+ * var map = new curvemapgl.Map({
  *   container: 'map',
  *   center: [-122.420679, 37.772537],
  *   zoom: 13,
@@ -221,7 +221,7 @@ const defaultOptions = {
  *     }
  *   }
  * });
- * @see [Display a map](https://www.mapbox.com/mapbox-gl-js/examples/)
+ * @see [Display a map](https://www.curvemap.com/curvemap-gl-js/examples/)
  */
 class Map extends Camera {
     style: Style;
@@ -400,7 +400,7 @@ class Map extends Camera {
      * @param {string} [position] position on the map to which the control will be added.
      * Valid values are `'top-left'`, `'top-right'`, `'bottom-left'`, and `'bottom-right'`. Defaults to `'top-right'`.
      * @returns {Map} `this`
-     * @see [Display map navigation controls](https://www.mapbox.com/mapbox-gl-js/example/navigation/)
+     * @see [Display map navigation controls](https://www.curvemap.com/curvemap-gl-js/example/navigation/)
      */
     addControl(control: IControl, position?: ControlPosition) {
         if (position === undefined && control.getDefaultPosition) {
@@ -621,7 +621,7 @@ class Map extends Camera {
      *
      * @param {PointLike} point The pixel coordinates to unproject.
      * @returns {LngLat} The {@link LngLat} corresponding to `point`.
-     * @see [Show polygon information on click](https://www.mapbox.com/mapbox-gl-js/example/polygon-popup-on-click/)
+     * @see [Show polygon information on click](https://www.curvemap.com/curvemap-gl-js/example/polygon-popup-on-click/)
      */
     unproject(point: PointLike) {
         return this.transform.pointLocation(Point.convert(point));
@@ -801,7 +801,7 @@ class Map extends Camera {
      * @param {Object} [options]
      * @param {Array<string>} [options.layers] An array of style layer IDs for the query to inspect.
      *   Only features within these layers will be returned. If this parameter is undefined, all layers will be checked.
-     * @param {Array} [options.filter] A [filter](https://www.mapbox.com/mapbox-gl-js/style-spec/#other-filter)
+     * @param {Array} [options.filter] A [filter](https://www.curvemap.com/curvemap-gl-js/style-spec/#other-filter)
      *   to limit query results.
      *
      * @returns {Array<Object>} An array of [GeoJSON](http://geojson.org/)
@@ -858,9 +858,9 @@ class Map extends Camera {
      * @example
      * // Query all rendered features from a single layer
      * var features = map.queryRenderedFeatures({ layers: ['my-layer-name'] });
-     * @see [Get features under the mouse pointer](https://www.mapbox.com/mapbox-gl-js/example/queryrenderedfeatures/)
-     * @see [Highlight features within a bounding box](https://www.mapbox.com/mapbox-gl-js/example/using-box-queryrenderedfeatures/)
-     * @see [Center the map on a clicked symbol](https://www.mapbox.com/mapbox-gl-js/example/center-on-symbol/)
+     * @see [Get features under the mouse pointer](https://www.curvemap.com/curvemap-gl-js/example/queryrenderedfeatures/)
+     * @see [Highlight features within a bounding box](https://www.curvemap.com/curvemap-gl-js/example/using-box-queryrenderedfeatures/)
+     * @see [Center the map on a clicked symbol](https://www.curvemap.com/curvemap-gl-js/example/center-on-symbol/)
      */
     queryRenderedFeatures(geometry?: PointLike | [PointLike, PointLike], options?: Object) {
         // The first parameter can be omitted entirely, making this effectively an overloaded method
@@ -942,7 +942,7 @@ class Map extends Camera {
      * @param {Object} [parameters]
      * @param {string} [parameters.sourceLayer] The name of the vector tile layer to query. *For vector tile
      *   sources, this parameter is required.* For GeoJSON sources, it is ignored.
-     * @param {Array} [parameters.filter] A [filter](https://www.mapbox.com/mapbox-gl-js/style-spec/#other-filter)
+     * @param {Array} [parameters.filter] A [filter](https://www.curvemap.com/curvemap-gl-js/style-spec/#other-filter)
      *   to limit query results.
      *
      * @returns {Array<Object>} An array of [GeoJSON](http://geojson.org/)
@@ -961,21 +961,21 @@ class Map extends Camera {
      * rectangle, even if the highway extends into other tiles, and the portion of the highway within each map tile
      * will be returned as a separate feature. Similarly, a point feature near a tile boundary may appear in multiple
      * tiles due to tile buffering.
-     * @see [Filter features within map view](https://www.mapbox.com/mapbox-gl-js/example/filter-features-within-map-view/)
-     * @see [Highlight features containing similar data](https://www.mapbox.com/mapbox-gl-js/example/query-similar-features/)
+     * @see [Filter features within map view](https://www.curvemap.com/curvemap-gl-js/example/filter-features-within-map-view/)
+     * @see [Highlight features containing similar data](https://www.curvemap.com/curvemap-gl-js/example/query-similar-features/)
      */
     querySourceFeatures(sourceID: string, parameters: ?{sourceLayer: ?string, filter: ?Array<any>}) {
         return this.style.querySourceFeatures(sourceID, parameters);
     }
 
     /**
-     * Updates the map's Mapbox style object with a new value.  If the given
+     * Updates the map's Curvemap style object with a new value.  If the given
      * value is style JSON object, compares it against the the map's current
      * state and perform only the changes necessary to make the map style match
      * the desired state.
      *
      * @param style A JSON object conforming to the schema described in the
-     *   [Mapbox Style Specification](https://mapbox.com/mapbox-gl-style-spec/), or a URL to such JSON.
+     *   [Curvemap Style Specification](https://curvemap.com/curvemap-gl-style-spec/), or a URL to such JSON.
      * @param {Object} [options]
      * @param {boolean} [options.diff=true] If false, force a 'full' update, removing the current style
      *   and adding building the given one instead of attempting a diff-based update.
@@ -983,7 +983,7 @@ class Map extends Camera {
      *   for locally overriding generation of glyphs in the 'CJK Unified Ideographs' and 'Hangul Syllables'
      *   ranges. Forces a full update.
      * @returns {Map} `this`
-     * @see [Change a map's style](https://www.mapbox.com/mapbox-gl-js/example/setstyle/)
+     * @see [Change a map's style](https://www.curvemap.com/curvemap-gl-js/example/setstyle/)
      */
     setStyle(style: StyleSpecification | string | null, options?: {diff?: boolean} & StyleOptions) {
         const shouldTryDiff = (!options || (options.diff !== false && !options.localIdeographFontFamily)) && this.style;
@@ -1024,7 +1024,7 @@ class Map extends Camera {
     }
 
     /**
-     * Returns the map's Mapbox style object, which can be used to recreate the map's style.
+     * Returns the map's Curvemap style object, which can be used to recreate the map's style.
      *
      * @returns {Object} The map's style object.
      */
@@ -1049,13 +1049,13 @@ class Map extends Camera {
      *
      * @param {string} id The ID of the source to add. Must not conflict with existing sources.
      * @param {Object} source The source object, conforming to the
-     * Mapbox Style Specification's [source definition](https://www.mapbox.com/mapbox-gl-style-spec/#sources) or
+     * Curvemap Style Specification's [source definition](https://www.curvemap.com/curvemap-gl-style-spec/#sources) or
      * {@link CanvasSourceOptions}.
      * @fires source.add
      * @returns {Map} `this`
-     * @see [Draw GeoJSON points](https://www.mapbox.com/mapbox-gl-js/example/geojson-markers/)
-     * @see [Style circles using data-driven styling](https://www.mapbox.com/mapbox-gl-js/example/data-driven-circle-colors/)
-     * @see [Set a point after Geocoder result](https://www.mapbox.com/mapbox-gl-js/example/point-from-geocoder-result/)
+     * @see [Draw GeoJSON points](https://www.curvemap.com/curvemap-gl-js/example/geojson-markers/)
+     * @see [Style circles using data-driven styling](https://www.curvemap.com/curvemap-gl-js/example/data-driven-circle-colors/)
+     * @see [Set a point after Geocoder result](https://www.curvemap.com/curvemap-gl-js/example/point-from-geocoder-result/)
      */
     addSource(id: string, source: SourceSpecification) {
         this.style.addSource(id, source);
@@ -1128,9 +1128,9 @@ class Map extends Camera {
      * @param {string} id The ID of the source to get.
      * @returns {?Object} The style source with the specified ID, or `undefined`
      *   if the ID corresponds to no existing sources.
-     * @see [Create a draggable point](https://www.mapbox.com/mapbox-gl-js/example/drag-a-point/)
-     * @see [Animate a point](https://www.mapbox.com/mapbox-gl-js/example/animate-point-along-line/)
-     * @see [Add live realtime data](https://www.mapbox.com/mapbox-gl-js/example/live-geojson/)
+     * @see [Create a draggable point](https://www.curvemap.com/curvemap-gl-js/example/drag-a-point/)
+     * @see [Animate a point](https://www.curvemap.com/curvemap-gl-js/example/animate-point-along-line/)
+     * @see [Add live realtime data](https://www.curvemap.com/curvemap-gl-js/example/live-geojson/)
      */
     getSource(id: string) {
         return this.style.getSource(id);
@@ -1142,8 +1142,8 @@ class Map extends Camera {
      * {@link Map#error} event will be fired if there is not enough space in the
      * sprite to add this image.
      *
-     * @see [Add an icon to the map](https://www.mapbox.com/mapbox-gl-js/example/add-image/)
-     * @see [Add a generated icon to the map](https://www.mapbox.com/mapbox-gl-js/example/add-image-generated/)
+     * @see [Add an icon to the map](https://www.curvemap.com/curvemap-gl-js/example/add-image/)
+     * @see [Add a generated icon to the map](https://www.curvemap.com/curvemap-gl-js/example/add-image-generated/)
      * @param id The ID of the image.
      * @param image The image as an `HTMLImageElement`, `ImageData`, or object with `width`, `height`, and `data`
      * properties with the same format as `ImageData`.
@@ -1196,7 +1196,7 @@ class Map extends Camera {
      *
      * @param {string} url The URL of the image file. Image file must be in png, webp, or jpg format.
      * @param {Function} callback Expecting `callback(error, data)`. Called when the image has loaded or with an error argument if there is an error.
-     * @see [Add an icon to the map](https://www.mapbox.com/mapbox-gl-js/example/add-image/)
+     * @see [Add an icon to the map](https://www.curvemap.com/curvemap-gl-js/example/add-image/)
      */
     loadImage(url: string, callback: Function) {
         getImage(this._transformRequest(url, ResourceType.Image), callback);
@@ -1213,19 +1213,19 @@ class Map extends Camera {
     }
 
     /**
-     * Adds a [Mapbox style layer](https://www.mapbox.com/mapbox-gl-style-spec/#layers)
+     * Adds a [Curvemap style layer](https://www.curvemap.com/curvemap-gl-style-spec/#layers)
      * to the map's style.
      *
      * A layer defines styling for data from a specified source.
      *
-     * @param {Object} layer The style layer to add, conforming to the Mapbox Style Specification's
-     *   [layer definition](https://www.mapbox.com/mapbox-gl-style-spec/#layers).
+     * @param {Object} layer The style layer to add, conforming to the Curvemap Style Specification's
+     *   [layer definition](https://www.curvemap.com/curvemap-gl-style-spec/#layers).
      * @param {string} [before] The ID of an existing layer to insert the new layer before.
      *   If this argument is omitted, the layer will be appended to the end of the layers array.
      * @returns {Map} `this`
-     * @see [Create and style clusters](https://www.mapbox.com/mapbox-gl-js/example/cluster/)
-     * @see [Add a vector tile source](https://www.mapbox.com/mapbox-gl-js/example/vector-source/)
-     * @see [Add a WMS source](https://www.mapbox.com/mapbox-gl-js/example/wms/)
+     * @see [Create and style clusters](https://www.curvemap.com/curvemap-gl-js/example/cluster/)
+     * @see [Add a vector tile source](https://www.curvemap.com/curvemap-gl-js/example/vector-source/)
+     * @see [Add a WMS source](https://www.curvemap.com/curvemap-gl-js/example/wms/)
      */
     addLayer(layer: LayerSpecification, before?: string) {
         this.style.addLayer(layer, before);
@@ -1267,8 +1267,8 @@ class Map extends Camera {
      * @param {string} id The ID of the layer to get.
      * @returns {?Object} The layer with the specified ID, or `undefined`
      *   if the ID corresponds to no existing layers.
-     * @see [Filter symbols by toggling a list](https://www.mapbox.com/mapbox-gl-js/example/filter-markers/)
-     * @see [Filter symbols by text input](https://www.mapbox.com/mapbox-gl-js/example/filter-markers-by-input/)
+     * @see [Filter symbols by toggling a list](https://www.curvemap.com/curvemap-gl-js/example/filter-markers/)
+     * @see [Filter symbols by text input](https://www.curvemap.com/curvemap-gl-js/example/filter-markers-by-input/)
      */
     getLayer(id: string) {
         return this.style.getLayer(id);
@@ -1278,14 +1278,14 @@ class Map extends Camera {
      * Sets the filter for the specified style layer.
      *
      * @param {string} layer The ID of the layer to which the filter will be applied.
-     * @param {Array | null | undefined} filter The filter, conforming to the Mapbox Style Specification's
-     *   [filter definition](https://www.mapbox.com/mapbox-gl-js/style-spec/#other-filter).  If `null` or `undefined` is provided, the function removes any existing filter from the layer.
+     * @param {Array | null | undefined} filter The filter, conforming to the Curvemap Style Specification's
+     *   [filter definition](https://www.curvemap.com/curvemap-gl-js/style-spec/#other-filter).  If `null` or `undefined` is provided, the function removes any existing filter from the layer.
      * @returns {Map} `this`
      * @example
      * map.setFilter('my-layer', ['==', 'name', 'USA']);
-     * @see [Filter features within map view](https://www.mapbox.com/mapbox-gl-js/example/filter-features-within-map-view/)
-     * @see [Highlight features containing similar data](https://www.mapbox.com/mapbox-gl-js/example/query-similar-features/)
-     * @see [Create a timeline animation](https://www.mapbox.com/mapbox-gl-js/example/timeline-animation/)
+     * @see [Filter features within map view](https://www.curvemap.com/curvemap-gl-js/example/filter-features-within-map-view/)
+     * @see [Highlight features containing similar data](https://www.curvemap.com/curvemap-gl-js/example/query-similar-features/)
+     * @see [Create a timeline animation](https://www.curvemap.com/curvemap-gl-js/example/timeline-animation/)
      */
     setFilter(layer: string, filter: ?FilterSpecification) {
         this.style.setFilter(layer, filter);
@@ -1325,13 +1325,13 @@ class Map extends Camera {
      * @param {string} layer The ID of the layer to set the paint property in.
      * @param {string} name The name of the paint property to set.
      * @param {*} value The value of the paint propery to set.
-     *   Must be of a type appropriate for the property, as defined in the [Mapbox Style Specification](https://www.mapbox.com/mapbox-gl-style-spec/).
+     *   Must be of a type appropriate for the property, as defined in the [Curvemap Style Specification](https://www.curvemap.com/curvemap-gl-style-spec/).
      * @returns {Map} `this`
      * @example
      * map.setPaintProperty('my-layer', 'fill-color', '#faafee');
-     * @see [Change a layer's color with buttons](https://www.mapbox.com/mapbox-gl-js/example/color-switcher/)
-     * @see [Adjust a layer's opacity](https://www.mapbox.com/mapbox-gl-js/example/adjust-layer-opacity/)
-     * @see [Create a draggable point](https://www.mapbox.com/mapbox-gl-js/example/drag-a-point/)
+     * @see [Change a layer's color with buttons](https://www.curvemap.com/curvemap-gl-js/example/color-switcher/)
+     * @see [Adjust a layer's opacity](https://www.curvemap.com/curvemap-gl-js/example/adjust-layer-opacity/)
+     * @see [Create a draggable point](https://www.curvemap.com/curvemap-gl-js/example/drag-a-point/)
      */
     setPaintProperty(layer: string, name: string, value: any) {
         this.style.setPaintProperty(layer, name, value);
@@ -1355,7 +1355,7 @@ class Map extends Camera {
      *
      * @param {string} layer The ID of the layer to set the layout property in.
      * @param {string} name The name of the layout property to set.
-     * @param {*} value The value of the layout propery. Must be of a type appropriate for the property, as defined in the [Mapbox Style Specification](https://www.mapbox.com/mapbox-gl-style-spec/).
+     * @param {*} value The value of the layout propery. Must be of a type appropriate for the property, as defined in the [Curvemap Style Specification](https://www.curvemap.com/curvemap-gl-style-spec/).
      * @returns {Map} `this`
      * @example
      * map.setLayoutProperty('my-layer', 'visibility', 'none');
@@ -1380,7 +1380,7 @@ class Map extends Camera {
     /**
      * Sets the any combination of light values.
      *
-     * @param light Light properties to set. Must conform to the [Mapbox Style Specification](https://www.mapbox.com/mapbox-gl-style-spec/#light).
+     * @param light Light properties to set. Must conform to the [Curvemap Style Specification](https://www.curvemap.com/curvemap-gl-style-spec/#light).
      * @returns {Map} `this`
      */
     setLight(light: LightSpecification) {
@@ -1449,8 +1449,8 @@ class Map extends Camera {
      * map controls.
      *
      * @returns {HTMLElement} The container of the map's `<canvas>`.
-     * @see [Create a draggable point](https://www.mapbox.com/mapbox-gl-js/example/drag-a-point/)
-     * @see [Highlight features within a bounding box](https://www.mapbox.com/mapbox-gl-js/example/using-box-queryrenderedfeatures/)
+     * @see [Create a draggable point](https://www.curvemap.com/curvemap-gl-js/example/drag-a-point/)
+     * @see [Highlight features within a bounding box](https://www.curvemap.com/curvemap-gl-js/example/using-box-queryrenderedfeatures/)
      */
     getCanvasContainer() {
         return this._canvasContainer;
@@ -1460,9 +1460,9 @@ class Map extends Camera {
      * Returns the map's `<canvas>` element.
      *
      * @returns {HTMLCanvasElement} The map's `<canvas>` element.
-     * @see [Measure distances](https://www.mapbox.com/mapbox-gl-js/example/measure/)
-     * @see [Display a popup on hover](https://www.mapbox.com/mapbox-gl-js/example/popup-on-hover/)
-     * @see [Center the map on a clicked symbol](https://www.mapbox.com/mapbox-gl-js/example/center-on-symbol/)
+     * @see [Measure distances](https://www.curvemap.com/curvemap-gl-js/example/measure/)
+     * @see [Display a popup on hover](https://www.curvemap.com/curvemap-gl-js/example/popup-on-hover/)
+     * @see [Center the map on a clicked symbol](https://www.curvemap.com/curvemap-gl-js/example/center-on-symbol/)
      */
     getCanvas() {
         return this._canvas;
@@ -1484,26 +1484,26 @@ class Map extends Camera {
         const computedColor = window.getComputedStyle(this._missingCSSCanary).getPropertyValue('background-color');
         if (computedColor !== 'rgb(250, 128, 114)') {
             warnOnce('This page appears to be missing CSS declarations for ' +
-                'Mapbox GL JS, which may cause the map to display incorrectly. ' +
-                'Please ensure your page includes mapbox-gl.css, as described ' +
-                'in https://www.mapbox.com/mapbox-gl-js/api/.');
+                'Curvemap GL JS, which may cause the map to display incorrectly. ' +
+                'Please ensure your page includes curvemap-gl.css, as described ' +
+                'in https://www.curvemap.com/curvemap-gl-js/api/.');
         }
     }
 
     _setupContainer() {
         const container = this._container;
-        container.classList.add('mapboxgl-map');
+        container.classList.add('curvemapgl-map');
 
-        const missingCSSCanary = this._missingCSSCanary = DOM.create('div', 'mapboxgl-canary', container);
+        const missingCSSCanary = this._missingCSSCanary = DOM.create('div', 'curvemapgl-canary', container);
         missingCSSCanary.style.visibility = 'hidden';
         this._detectMissingCSS();
 
-        const canvasContainer = this._canvasContainer = DOM.create('div', 'mapboxgl-canvas-container', container);
+        const canvasContainer = this._canvasContainer = DOM.create('div', 'curvemapgl-canvas-container', container);
         if (this._interactive) {
-            canvasContainer.classList.add('mapboxgl-interactive');
+            canvasContainer.classList.add('curvemapgl-interactive');
         }
 
-        this._canvas = DOM.create('canvas', 'mapboxgl-canvas', canvasContainer);
+        this._canvas = DOM.create('canvas', 'curvemapgl-canvas', canvasContainer);
         this._canvas.style.position = 'absolute';
         this._canvas.addEventListener('webglcontextlost', this._contextLost, false);
         this._canvas.addEventListener('webglcontextrestored', this._contextRestored, false);
@@ -1513,10 +1513,10 @@ class Map extends Camera {
         const dimensions = this._containerDimensions();
         this._resizeCanvas(dimensions[0], dimensions[1]);
 
-        const controlContainer = this._controlContainer = DOM.create('div', 'mapboxgl-control-container', container);
+        const controlContainer = this._controlContainer = DOM.create('div', 'curvemapgl-control-container', container);
         const positions = this._controlPositions = {};
         ['top-left', 'top-right', 'bottom-left', 'bottom-right'].forEach((positionName) => {
-            positions[positionName] = DOM.create('div', `mapboxgl-ctrl-${positionName}`, controlContainer);
+            positions[positionName] = DOM.create('div', `curvemapgl-ctrl-${positionName}`, controlContainer);
         });
     }
 
@@ -1723,7 +1723,7 @@ class Map extends Camera {
         removeNode(this._canvasContainer);
         removeNode(this._controlContainer);
         removeNode(this._missingCSSCanary);
-        this._container.classList.remove('mapboxgl-map');
+        this._container.classList.remove('curvemapgl-map');
         this.fire(new Event('remove'));
     }
 
@@ -1846,8 +1846,8 @@ function removeNode(node) {
  * an exported method or class.
  *
  * Controls must implement `onAdd` and `onRemove`, and must own an
- * element, which is often a `div` element. To use Mapbox GL JS's
- * default control styling, add the `mapboxgl-ctrl` class to your control's
+ * element, which is often a `div` element. To use Curvemap GL JS's
+ * default control styling, add the `curvemapgl-ctrl` class to your control's
  * node.
  *
  * @interface IControl
@@ -1857,7 +1857,7 @@ function removeNode(node) {
  *     onAdd(map) {
  *         this._map = map;
  *         this._container = document.createElement('div');
- *         this._container.className = 'mapboxgl-ctrl';
+ *         this._container.className = 'curvemapgl-ctrl';
  *         this._container.textContent = 'Hello, world';
  *         return this._container;
  *     }
@@ -1874,7 +1874,7 @@ function removeNode(node) {
  * HelloWorldControl.prototype.onAdd = function(map) {
  *     this._map = map;
  *     this._container = document.createElement('div');
- *     this._container.className = 'mapboxgl-ctrl';
+ *     this._container.className = 'curvemapgl-ctrl';
  *     this._container.textContent = 'Hello, world';
  *     return this._container;
  * };
@@ -1928,7 +1928,7 @@ function removeNode(node) {
  */
 
 /**
- * A [`Point` geometry](https://github.com/mapbox/point-geometry) object, which has
+ * A [`Point` geometry](https://github.com/curvemap/point-geometry) object, which has
  * `x` and `y` properties representing screen coordinates in pixels.
  *
  * @typedef {Object} Point

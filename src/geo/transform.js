@@ -2,7 +2,7 @@
 
 import LngLat from './lng_lat';
 
-import Point from '@mapbox/point-geometry';
+import Point from '@hymap/point-geometry';
 import Coordinate from './coordinate';
 import { wrap, clamp } from '../util/util';
 import {number as interpolate} from '../style-spec/util/interpolate';

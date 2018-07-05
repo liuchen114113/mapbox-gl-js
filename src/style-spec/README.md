@@ -1,19 +1,19 @@
-# Mapbox GL style specification & utilities
+# Curvemap GL style specification & utilities
 
-This directory contains code and reference files that define the Mapbox GL style specification and provides some utilities for working with Mapbox styles.
+This directory contains code and reference files that define the Curvemap GL style specification and provides some utilities for working with Curvemap styles.
 
 ## npm package
 
-The Mapbox GL style specification and utilities are published as a seperate npm
+The Curvemap GL style specification and utilities are published as a seperate npm
 package so that they can be installed without the bulk of GL JS.
 
-    npm install @mapbox/mapbox-gl-style-spec
+    npm install @curvemap/curvemap-gl-style-spec
 
 ## CLI Tools
 
 If you install this package globally, you will have access to several CLI tools.
 
-    npm install @mapbox/mapbox-gl-style-spec --global
+    npm install @curvemap/curvemap-gl-style-spec --global
 
 
 ### `gl-style-composite`
@@ -21,7 +21,7 @@ If you install this package globally, you will have access to several CLI tools.
 $ gl-style-composite style.json
 ```
 
-Will take a non-composited style and produce a [composite style](https://www.mapbox.com/blog/better-label-placement-in-mapbox-studio/).
+Will take a non-composited style and produce a [composite style](https://www.curvemap.com/blog/better-label-placement-in-curvemap-studio/).
 
 ### `gl-style-migrate`
 

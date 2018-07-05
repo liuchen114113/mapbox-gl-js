@@ -1,9 +1,9 @@
 // @flow
 
-import UnitBezier from '@mapbox/unitbezier';
+import UnitBezier from '@hymap/unitbezier';
 
 import Coordinate from '../geo/coordinate';
-import Point from '@mapbox/point-geometry';
+import Point from '@hymap/point-geometry';
 
 import type {Callback} from '../types/callback';
 

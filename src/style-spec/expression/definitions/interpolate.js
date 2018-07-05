@@ -1,6 +1,6 @@
 // @flow
 
-import UnitBezier from '@mapbox/unitbezier';
+import UnitBezier from '@hymap/unitbezier';
 
 import * as interpolate from '../../util/interpolate';
 import { toString, NumberType } from '../types';

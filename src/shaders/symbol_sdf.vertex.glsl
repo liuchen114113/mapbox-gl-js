@@ -17,11 +17,11 @@ uniform bool u_is_size_feature_constant;
 uniform highp float u_size_t; // used to interpolate between zoom stops when size is a composite function
 uniform highp float u_size; // used when size is both zoom and feature constant
 
-#pragma mapbox: define highp vec4 fill_color
-#pragma mapbox: define highp vec4 halo_color
-#pragma mapbox: define lowp float opacity
-#pragma mapbox: define lowp float halo_width
-#pragma mapbox: define lowp float halo_blur
+#pragma curvemap: define highp vec4 fill_color
+#pragma curvemap: define highp vec4 halo_color
+#pragma curvemap: define lowp float opacity
+#pragma curvemap: define lowp float halo_width
+#pragma curvemap: define lowp float halo_blur
 
 uniform mat4 u_matrix;
 uniform mat4 u_label_plane_matrix;
@@ -41,11 +41,11 @@ varying vec2 v_data0;
 varying vec3 v_data1;
 
 void main() {
-    #pragma mapbox: initialize highp vec4 fill_color
-    #pragma mapbox: initialize highp vec4 halo_color
-    #pragma mapbox: initialize lowp float opacity
-    #pragma mapbox: initialize lowp float halo_width
-    #pragma mapbox: initialize lowp float halo_blur
+    #pragma curvemap: initialize highp vec4 fill_color
+    #pragma curvemap: initialize highp vec4 halo_color
+    #pragma curvemap: initialize lowp float opacity
+    #pragma curvemap: initialize lowp float halo_width
+    #pragma curvemap: initialize lowp float halo_blur
 
     vec2 a_pos = a_pos_offset.xy;
     vec2 a_offset = a_pos_offset.zw;

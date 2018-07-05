@@ -122,7 +122,7 @@ const breakable: {[number]: boolean} = {
     [0x2027]: true  // interpunct
     // Many other characters may be reasonable breakpoints
     // Consider "neutral orientation" characters at scriptDetection.charHasNeutralVerticalOrientation
-    // See https://github.com/mapbox/mapbox-gl-js/issues/3658
+    // See https://github.com/curvemap/curvemap-gl-js/issues/3658
 };
 
 function determineAverageLineWidth(logicalInput: string,

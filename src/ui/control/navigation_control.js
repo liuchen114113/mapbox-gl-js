@@ -24,10 +24,10 @@ const defaultOptions: Options = {
  * @param {Boolean} [options.showCompass=true] If `true` the compass button is included.
  * @param {Boolean} [options.showZoom=true] If `true` the zoom-in and zoom-out buttons are included.
  * @example
- * var nav = new mapboxgl.NavigationControl();
+ * var nav = new curvemapgl.NavigationControl();
  * map.addControl(nav, 'top-left');
- * @see [Display map navigation controls](https://www.mapbox.com/mapbox-gl-js/example/navigation/)
- * @see [Add a third party vector tile source](https://www.mapbox.com/mapbox-gl-js/example/third-party/)
+ * @see [Display map navigation controls](https://www.curvemap.com/curvemap-gl-js/example/navigation/)
+ * @see [Add a third party vector tile source](https://www.curvemap.com/curvemap-gl-js/example/third-party/)
  */
 class NavigationControl {
     _map: Map;
@@ -42,19 +42,19 @@ class NavigationControl {
     constructor(options: Options) {
         this.options = extend({}, defaultOptions, options);
 
-        this._container = DOM.create('div', 'mapboxgl-ctrl mapboxgl-ctrl-group');
+        this._container = DOM.create('div', 'curvemapgl-ctrl curvemapgl-ctrl-group');
         this._container.addEventListener('contextmenu', (e) => e.preventDefault());
 
         if (this.options.showZoom) {
-            this._zoomInButton = this._createButton('mapboxgl-ctrl-icon mapboxgl-ctrl-zoom-in', 'Zoom In', () => this._map.zoomIn());
-            this._zoomOutButton = this._createButton('mapboxgl-ctrl-icon mapboxgl-ctrl-zoom-out', 'Zoom Out', () => this._map.zoomOut());
+            this._zoomInButton = this._createButton('curvemapgl-ctrl-icon curvemapgl-ctrl-zoom-in', 'Zoom In', () => this._map.zoomIn());
+            this._zoomOutButton = this._createButton('curvemapgl-ctrl-icon curvemapgl-ctrl-zoom-out', 'Zoom Out', () => this._map.zoomOut());
         }
         if (this.options.showCompass) {
             bindAll([
                 '_rotateCompassArrow'
             ], this);
-            this._compass = this._createButton('mapboxgl-ctrl-icon mapboxgl-ctrl-compass', 'Reset North', () => this._map.resetNorth());
-            this._compassArrow = DOM.create('span', 'mapboxgl-ctrl-compass-arrow', this._compass);
+            this._compass = this._createButton('curvemapgl-ctrl-icon curvemapgl-ctrl-compass', 'Reset North', () => this._map.resetNorth());
+            this._compassArrow = DOM.create('span', 'curvemapgl-ctrl-compass-arrow', this._compass);
         }
     }
 

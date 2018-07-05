@@ -3,7 +3,7 @@
 import { symbolLayoutAttributes, collisionVertexAttributes, collisionBoxLayout, collisionCircleLayout, dynamicLayoutAttributes } from './symbol_attributes';
 
 import { SymbolLayoutArray, SymbolDynamicLayoutArray, SymbolOpacityArray, CollisionBoxLayoutArray, CollisionCircleLayoutArray, CollisionVertexArray, PlacedSymbolArray, GlyphOffsetArray, SymbolLineVertexArray } from '../array_types';
-import Point from '@mapbox/point-geometry';
+import Point from '@hymap/point-geometry';
 import SegmentVector from '../segment';
 import { ProgramConfigurationSet } from '../program_configuration';
 import { TriangleIndexArray, LineIndexArray } from '../index_array_type';
@@ -11,7 +11,7 @@ import transformText from '../../symbol/transform_text';
 import mergeLines from '../../symbol/mergelines';
 import {allowsVerticalWritingMode} from '../../util/script_detection';
 import loadGeometry from '../load_geometry';
-import mvt from '@mapbox/vector-tile';
+import mvt from '@hymap/vector-tile';
 const vectorTileFeatureTypes = mvt.VectorTileFeature.types;
 import {verticalizedCharacterMap} from '../../util/verticalize_punctuation';
 import Anchor from '../../symbol/anchor';
@@ -716,7 +716,7 @@ register('SymbolBucket', SymbolBucket, {
 // this constant is based on the size of StructArray indexes used in a symbol
 // bucket--namely, glyphOffsetArrayStart
 // eg the max valid UInt16 is 65,535
-// See https://github.com/mapbox/mapbox-gl-js/issues/2907 for motivation
+// See https://github.com/curvemap/curvemap-gl-js/issues/2907 for motivation
 // lineStartIndex and textBoxStartIndex could potentially be concerns
 // but we expect there to be many fewer boxes/lines than glyphs
 SymbolBucket.MAX_GLYPHS = 65535;

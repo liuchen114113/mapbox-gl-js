@@ -3,7 +3,7 @@
 import DOM from '../util/dom';
 import window from '../util/window';
 import LngLat from '../geo/lng_lat';
-import Point from '@mapbox/point-geometry';
+import Point from '@hymap/point-geometry';
 import smartWrap from '../util/smart_wrap';
 import { bindAll, extend } from '../util/util';
 import { type Anchor, anchorTranslate, applyAnchorClass } from './anchor';
@@ -31,10 +31,10 @@ type Options = {
  * @param {string} [options.color='#3FB1CE'] The color to use for the default marker if options.element is not provided. The default is light blue.
  * @param {boolean} [options.draggable=false] A boolean indicating whether or not a marker is able to be dragged to a new position on the map.
  * @example
- * var marker = new mapboxgl.Marker()
+ * var marker = new curvemapgl.Marker()
  *   .setLngLat([30.5, 50.5])
  *   .addTo(map);
- * @see [Add custom icons with Markers](https://www.mapbox.com/mapbox-gl-js/example/custom-marker-icons/)
+ * @see [Add custom icons with Markers](https://www.curvemap.com/curvemap-gl-js/example/custom-marker-icons/)
  */
 export default class Marker extends Evented {
     _map: Map;
@@ -178,7 +178,7 @@ export default class Marker extends Evented {
             this._offset = Point.convert(options && options.offset || [0, 0]);
         }
 
-        this._element.classList.add('mapboxgl-marker');
+        this._element.classList.add('curvemapgl-marker');
 
         this._popup = null;
     }
@@ -208,7 +208,7 @@ export default class Marker extends Evented {
     /**
      * Removes the marker from a map
      * @example
-     * var marker = new mapboxgl.Marker().addTo(map);
+     * var marker = new curvemapgl.Marker().addTo(map);
      * marker.remove();
      * @returns {Marker} `this`
      */

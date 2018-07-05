@@ -29,7 +29,7 @@ import type {ImagePosition} from '../render/image_atlas';
 import type {GlyphPosition} from '../render/glyph_atlas';
 import type {PossiblyEvaluatedPropertyValue} from '../style/properties';
 
-import Point from '@mapbox/point-geometry';
+import Point from '@hymap/point-geometry';
 
 // The symbol layout process needs `text-size` evaluated at up to five different zoom levels, and
 // `icon-size` at up to three:
@@ -255,7 +255,7 @@ function addFeature(bucket: SymbolBucket,
             addSymbolAtAnchor(polygon[0], new Anchor(poi.x, poi.y, 0));
         }
     } else if (feature.type === 'LineString') {
-        // https://github.com/mapbox/mapbox-gl-js/issues/3808
+        // https://github.com/curvemap/curvemap-gl-js/issues/3808
         for (const line of feature.geometry) {
             addSymbolAtAnchor(line, new Anchor(line[0].x, line[0].y, 0));
         }
@@ -407,7 +407,7 @@ function addSymbol(bucket: SymbolBucket,
     const iconBoxEndIndex = iconCollisionFeature ? iconCollisionFeature.boxEndIndex : bucket.collisionBoxArray.length;
 
     if (bucket.glyphOffsetArray.length >= SymbolBucket.MAX_GLYPHS) warnOnce(
-        "Too many glyphs being rendered in a tile. See https://github.com/mapbox/mapbox-gl-js/issues/2907"
+        "Too many glyphs being rendered in a tile. See https://github.com/curvemap/curvemap-gl-js/issues/2907"
     );
 
     const textOpacityState = new OpacityState();

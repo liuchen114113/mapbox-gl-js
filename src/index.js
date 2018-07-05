@@ -1,7 +1,7 @@
 // @flow
 
 import assert from 'assert';
-import supported from '@mapbox/mapbox-gl-supported';
+import supported from '@hymap/hymap-gl-supported';
 
 import browser from './util/browser';
 import { version } from '../package.json';
@@ -16,7 +16,7 @@ import Marker from './ui/marker';
 import Style from './style/style';
 import LngLat from './geo/lng_lat';
 import LngLatBounds from './geo/lng_lat_bounds';
-import Point from '@mapbox/point-geometry';
+import Point from '@hymap/point-geometry';
 import {Evented} from './util/evented';
 import config from './util/config';
 import {setRTLTextPlugin} from './source/rtl_text_plugin';
@@ -42,12 +42,12 @@ const exported = {
     config,
 
     /**
-     * Gets and sets the map's [access token](https://www.mapbox.com/help/define-access-token/).
+     * Gets and sets the map's [access token](https://www.curvemap.com/help/define-access-token/).
      *
      * @var {string} accessToken
      * @example
-     * mapboxgl.accessToken = myAccessToken;
-     * @see [Display a map](https://www.mapbox.com/mapbox-gl-js/examples/)
+     * curvemapgl.accessToken = myAccessToken;
+     * @see [Display a map](https://www.curvemap.com/curvemap-gl-js/examples/)
      */
     get accessToken() {
         return config.ACCESS_TOKEN;
@@ -61,36 +61,36 @@ const exported = {
 };
 
 /**
- * The version of Mapbox GL JS in use as specified in `package.json`,
+ * The version of Curvemap GL JS in use as specified in `package.json`,
  * `CHANGELOG.md`, and the GitHub release.
  *
  * @var {string} version
  */
 
 /**
- * Test whether the browser [supports Mapbox GL JS](https://www.mapbox.com/help/mapbox-browser-support/#mapbox-gl-js).
+ * Test whether the browser [supports Curvemap GL JS](https://www.curvemap.com/help/curvemap-browser-support/#curvemap-gl-js).
  *
  * @function supported
  * @param {Object} [options]
  * @param {boolean} [options.failIfMajorPerformanceCaveat=false] If `true`,
- *   the function will return `false` if the performance of Mapbox GL JS would
+ *   the function will return `false` if the performance of Curvemap GL JS would
  *   be dramatically worse than expected (e.g. a software WebGL renderer would be used).
  * @return {boolean}
  * @example
- * mapboxgl.supported() // = true
- * @see [Check for browser support](https://www.mapbox.com/mapbox-gl-js/example/check-for-support/)
+ * curvemapgl.supported() // = true
+ * @see [Check for browser support](https://www.curvemap.com/curvemap-gl-js/example/check-for-support/)
  */
 
 /**
- * Sets the map's [RTL text plugin](https://www.mapbox.com/mapbox-gl-js/plugins/#mapbox-gl-rtl-text).
+ * Sets the map's [RTL text plugin](https://www.curvemap.com/curvemap-gl-js/plugins/#curvemap-gl-rtl-text).
  * Necessary for supporting languages like Arabic and Hebrew that are written right-to-left.
  *
  * @function setRTLTextPlugin
- * @param {string} pluginURL URL pointing to the Mapbox RTL text plugin source.
+ * @param {string} pluginURL URL pointing to the Curvemap RTL text plugin source.
  * @param {Function} callback Called with an error argument if there is an error.
  * @example
- * mapboxgl.setRTLTextPlugin('https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-rtl-text/v0.1.2/mapbox-gl-rtl-text.js');
- * @see [Add support for right-to-left scripts](https://www.mapbox.com/mapbox-gl-js/example/mapbox-gl-rtl-text/)
+ * curvemapgl.setRTLTextPlugin('https://api.curvemap.com/curvemap-gl-js/plugins/curvemap-gl-rtl-text/v0.1.2/curvemap-gl-rtl-text.js');
+ * @see [Add support for right-to-left scripts](https://www.curvemap.com/curvemap-gl-js/example/curvemap-gl-rtl-text/)
  */
 
 export default exported;

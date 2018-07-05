@@ -1,6 +1,6 @@
 // @flow
 
-import {getTileBBox} from '@mapbox/whoots-js';
+import {getTileBBox} from '@hymap/whoots-js';
 
 import assert from 'assert';
 import { register } from '../util/web_worker_transfer';

@@ -4,7 +4,7 @@ import { getCoordinatesCenter } from '../util/util';
 
 import { CanonicalTileID } from './tile_id';
 import LngLat from '../geo/lng_lat';
-import Point from '@mapbox/point-geometry';
+import Point from '@hymap/point-geometry';
 import { Event, ErrorEvent, Evented } from '../util/evented';
 import { getImage, ResourceType } from '../util/ajax';
 import browser from '../util/browser';
@@ -25,13 +25,13 @@ import type VertexBuffer from '../gl/vertex_buffer';
 
 /**
  * A data source containing an image.
- * (See the [Style Specification](https://www.mapbox.com/mapbox-gl-style-spec/#sources-image) for detailed documentation of options.)
+ * (See the [Style Specification](https://www.curvemap.com/curvemap-gl-style-spec/#sources-image) for detailed documentation of options.)
  *
  * @example
  * // add to map
  * map.addSource('some id', {
  *    type: 'image',
- *    url: 'https://www.mapbox.com/images/foo.png',
+ *    url: 'https://www.curvemap.com/images/foo.png',
  *    coordinates: [
  *        [-76.54, 39.18],
  *        [-76.52, 39.18],
@@ -50,7 +50,7 @@ import type VertexBuffer from '../gl/vertex_buffer';
  * ]);
  *
  * map.removeSource('some id');  // remove
- * @see [Add an image](https://www.mapbox.com/mapbox-gl-js/example/image-on-a-map/)
+ * @see [Add an image](https://www.curvemap.com/curvemap-gl-js/example/image-on-a-map/)
  */
 class ImageSource extends Evented implements Source {
     type: string;

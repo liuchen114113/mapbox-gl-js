@@ -317,7 +317,7 @@ class CompositeExpressionBinder<T> implements Binder<T> {
  *
  * Non-data-driven property values are bound to shader uniforms. Data-driven property
  * values are bound to vertex attributes. In order to support a uniform GLSL syntax over
- * both, [Mapbox GL Shaders](https://github.com/mapbox/mapbox-gl-shaders) defines a `#pragma`
+ * both, [Curvemap GL Shaders](https://github.com/curvemap/curvemap-gl-shaders) defines a `#pragma`
  * abstraction, which ProgramConfiguration is responsible for implementing. At runtime,
  * it examines the attributes of a particular layer, combines this with fixed knowledge
  * about how layers of the particular type are implemented, and determines which uniforms
@@ -412,7 +412,7 @@ export default class ProgramConfiguration {
                     const binder = this.binders[property];
                     if (binder instanceof ConstantBinder) continue;
                     if ((binder: any).expression.isStateDependent === true) {
-                        //AHM: Remove after https://github.com/mapbox/mapbox-gl-js/issues/6255
+                        //AHM: Remove after https://github.com/curvemap/curvemap-gl-js/issues/6255
                         const value = layer.paint.get(property);
                         (binder: any).expression = value.value;
                         binder.updatePaintArray(pos.start, pos.end, feature, featureState);

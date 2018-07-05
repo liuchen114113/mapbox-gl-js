@@ -10,7 +10,7 @@ import { Transitionable, Transitioning, PossiblyEvaluated } from '../properties'
 
 import type { FeatureState } from '../../style-spec/expression';
 import type {BucketParameters} from '../../data/bucket';
-import type Point from '@mapbox/point-geometry';
+import type Point from '@hymap/point-geometry';
 import type {PaintProps} from './fill_style_layer_properties';
 import type EvaluationParameters from '../evaluation_parameters';
 import type Transform from '../../geo/transform';

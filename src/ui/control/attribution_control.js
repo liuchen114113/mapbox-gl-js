@@ -11,14 +11,14 @@ type Options = {
 };
 
 /**
- * An `AttributionControl` control presents the map's [attribution information](https://www.mapbox.com/help/attribution/).
+ * An `AttributionControl` control presents the map's [attribution information](https://www.curvemap.com/help/attribution/).
  *
  * @implements {IControl}
  * @param {Object} [options]
  * @param {boolean} [options.compact] If `true` force a compact attribution that shows the full attribution on mouse hover, or if `false` force the full attribution control. The default is a responsive attribution that collapses when the map is less than 640 pixels wide.
  * @example
- * var map = new mapboxgl.Map({attributionControl: false})
- *     .addControl(new mapboxgl.AttributionControl({
+ * var map = new curvemapgl.Map({attributionControl: false})
+ *     .addControl(new curvemapgl.AttributionControl({
  *         compact: true
  *     }));
  */
@@ -48,10 +48,10 @@ class AttributionControl {
         const compact = this.options && this.options.compact;
 
         this._map = map;
-        this._container = DOM.create('div', 'mapboxgl-ctrl mapboxgl-ctrl-attrib');
+        this._container = DOM.create('div', 'curvemapgl-ctrl curvemapgl-ctrl-attrib');
 
         if (compact) {
-            this._container.classList.add('mapboxgl-compact');
+            this._container.classList.add('curvemapgl-compact');
         }
 
         this._updateAttributions();
@@ -81,7 +81,7 @@ class AttributionControl {
     _updateEditLink() {
         let editLink = this._editLink;
         if (!editLink) {
-            editLink = this._editLink = (this._container.querySelector('.mapbox-improve-map'): any);
+            editLink = this._editLink = (this._container.querySelector('.curvemap-improve-map'): any);
         }
 
         const params = [
@@ -97,7 +97,7 @@ class AttributionControl {
                 }
                 return acc;
             }, `?`);
-            editLink.href = `https://www.mapbox.com/feedback/${paramString}${this._map._hash ? this._map._hash.getHashString(true) : ''}`;
+            editLink.href = `https://www.curvemap.com/feedback/${paramString}${this._map._hash ? this._map._hash.getHashString(true) : ''}`;
         }
     }
 
@@ -137,9 +137,9 @@ class AttributionControl {
         });
         if (attributions.length) {
             this._container.innerHTML = attributions.join(' | ');
-            this._container.classList.remove('mapboxgl-attrib-empty');
+            this._container.classList.remove('curvemapgl-attrib-empty');
         } else {
-            this._container.classList.add('mapboxgl-attrib-empty');
+            this._container.classList.add('curvemapgl-attrib-empty');
         }
         // remove old DOM node from _editLink
         this._editLink = null;
@@ -147,9 +147,9 @@ class AttributionControl {
 
     _updateCompact() {
         if (this._map.getCanvasContainer().offsetWidth <= 640) {
-            this._container.classList.add('mapboxgl-compact');
+            this._container.classList.add('curvemapgl-compact');
         } else {
-            this._container.classList.remove('mapboxgl-compact');
+            this._container.classList.remove('curvemapgl-compact');
         }
     }
 

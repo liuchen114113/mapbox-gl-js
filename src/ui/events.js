@@ -3,7 +3,7 @@
 import { Event } from '../util/evented';
 
 import DOM from '../util/dom';
-import Point from '@mapbox/point-geometry';
+import Point from '@hymap/point-geometry';
 import { extend } from '../util/util';
 
 import type Map from './map';
@@ -217,12 +217,12 @@ export class MapWheelEvent extends Event {
 }
 
 /**
- * @typedef {Object} MapBoxZoomEvent
+ * @typedef {Object} CurveMapZoomEvent
  * @property {MouseEvent} originalEvent
  * @property {LngLatBounds} boxZoomBounds The bounding box of the "box zoom" interaction.
  *   This property is only provided for `boxzoomend` events.
  */
-export type MapBoxZoomEvent = {
+export type CurveMapZoomEvent = {
     type: 'boxzoomstart'
         | 'boxzoomend'
         | 'boxzoomcancel',
@@ -237,13 +237,13 @@ export type MapBoxZoomEvent = {
  * `dataType`s are:
  *
  * - `'source'`: The non-tile data associated with any source
- * - `'style'`: The [style](https://www.mapbox.com/mapbox-gl-style-spec/) used by the map
+ * - `'style'`: The [style](https://www.curvemap.com/curvemap-gl-style-spec/) used by the map
  *
  * @typedef {Object} MapDataEvent
  * @property {string} type The event type.
  * @property {string} dataType The type of data that has changed. One of `'source'`, `'style'`.
  * @property {boolean} [isSourceLoaded] True if the event has a `dataType` of `source` and the source has no outstanding network requests.
- * @property {Object} [source] The [style spec representation of the source](https://www.mapbox.com/mapbox-gl-style-spec/#sources) if the event has a `dataType` of `source`.
+ * @property {Object} [source] The [style spec representation of the source](https://www.curvemap.com/curvemap-gl-style-spec/#sources) if the event has a `dataType` of `source`.
  * @property {string} [sourceDataType] Included if the event has a `dataType` of `source` and the event signals
  * that internal data has been received or changed. Possible values are `metadata` and `content`.
  * @property {Object} [tile] The tile being loaded or changed, if the event has a `dataType` of `source` and
@@ -269,8 +269,8 @@ export type MapEvent =
      * @memberof Map
      * @instance
      * @property {MapMouseEvent} data
-     * @see [Highlight features within a bounding box](https://www.mapbox.com/mapbox-gl-js/example/using-box-queryrenderedfeatures/)
-     * @see [Create a draggable point](https://www.mapbox.com/mapbox-gl-js/example/drag-a-point/)
+     * @see [Highlight features within a bounding box](https://www.curvemap.com/curvemap-gl-js/example/using-box-queryrenderedfeatures/)
+     * @see [Create a draggable point](https://www.curvemap.com/curvemap-gl-js/example/drag-a-point/)
      */
     | 'mousedown'
 
@@ -281,8 +281,8 @@ export type MapEvent =
      * @memberof Map
      * @instance
      * @property {MapMouseEvent} data
-     * @see [Highlight features within a bounding box](https://www.mapbox.com/mapbox-gl-js/example/using-box-queryrenderedfeatures/)
-     * @see [Create a draggable point](https://www.mapbox.com/mapbox-gl-js/example/drag-a-point/)
+     * @see [Highlight features within a bounding box](https://www.curvemap.com/curvemap-gl-js/example/using-box-queryrenderedfeatures/)
+     * @see [Create a draggable point](https://www.curvemap.com/curvemap-gl-js/example/drag-a-point/)
      */
     | 'mouseup'
 
@@ -293,9 +293,9 @@ export type MapEvent =
      * @memberof Map
      * @instance
      * @property {MapMouseEvent} data
-     * @see [Get coordinates of the mouse pointer](https://www.mapbox.com/mapbox-gl-js/example/mouse-position/)
-     * @see [Highlight features under the mouse pointer](https://www.mapbox.com/mapbox-gl-js/example/hover-styles/)
-     * @see [Display a popup on hover](https://www.mapbox.com/mapbox-gl-js/example/popup-on-hover/)
+     * @see [Get coordinates of the mouse pointer](https://www.curvemap.com/curvemap-gl-js/example/mouse-position/)
+     * @see [Highlight features under the mouse pointer](https://www.curvemap.com/curvemap-gl-js/example/hover-styles/)
+     * @see [Display a popup on hover](https://www.curvemap.com/curvemap-gl-js/example/popup-on-hover/)
      */
     | 'mouseover'
 
@@ -306,9 +306,9 @@ export type MapEvent =
      * @memberof Map
      * @instance
      * @property {MapMouseEvent} data
-     * @see [Get coordinates of the mouse pointer](https://www.mapbox.com/mapbox-gl-js/example/mouse-position/)
-     * @see [Highlight features under the mouse pointer](https://www.mapbox.com/mapbox-gl-js/example/hover-styles/)
-     * @see [Display a popup on over](https://www.mapbox.com/mapbox-gl-js/example/popup-on-hover/)
+     * @see [Get coordinates of the mouse pointer](https://www.curvemap.com/curvemap-gl-js/example/mouse-position/)
+     * @see [Highlight features under the mouse pointer](https://www.curvemap.com/curvemap-gl-js/example/hover-styles/)
+     * @see [Display a popup on over](https://www.curvemap.com/curvemap-gl-js/example/popup-on-hover/)
      */
     | 'mousemove'
 
@@ -319,8 +319,8 @@ export type MapEvent =
      * @memberof Map
      * @instance
      * @property {MapMouseEvent} data
-     * @see [Measure distances](https://www.mapbox.com/mapbox-gl-js/example/measure/)
-     * @see [Center the map on a clicked symbol](https://www.mapbox.com/mapbox-gl-js/example/center-on-symbol/)
+     * @see [Measure distances](https://www.curvemap.com/curvemap-gl-js/example/measure/)
+     * @see [Center the map on a clicked symbol](https://www.curvemap.com/curvemap-gl-js/example/center-on-symbol/)
      */
     | 'click'
 
@@ -355,7 +355,7 @@ export type MapEvent =
      * @memberof Map
      * @instance
      * @property {MapMouseEvent} data
-     * @see [Highlight features under the mouse pointer](https://www.mapbox.com/mapbox-gl-js/example/hover-styles/)
+     * @see [Highlight features under the mouse pointer](https://www.curvemap.com/curvemap-gl-js/example/hover-styles/)
      */
     | 'mouseleave'
 
@@ -469,8 +469,8 @@ export type MapEvent =
      * @memberof Map
      * @instance
      * @property {{originalEvent: DragEvent}} data
-     * @see [Play map locations as a slideshow](https://www.mapbox.com/mapbox-gl-js/example/playback-locations/)
-     * @see [Filter features within map view](https://www.mapbox.com/mapbox-gl-js/example/filter-features-within-map-view/)
+     * @see [Play map locations as a slideshow](https://www.curvemap.com/curvemap-gl-js/example/playback-locations/)
+     * @see [Filter features within map view](https://www.curvemap.com/curvemap-gl-js/example/filter-features-within-map-view/)
      */
     | 'moveend'
 
@@ -523,7 +523,7 @@ export type MapEvent =
      * @memberof Map
      * @instance
      * @property {MapMouseEvent | MapTouchEvent} data
-     * @see [Update a choropleth layer by zoom level](https://www.mapbox.com/mapbox-gl-js/example/updating-choropleth/)
+     * @see [Update a choropleth layer by zoom level](https://www.curvemap.com/curvemap-gl-js/example/updating-choropleth/)
      */
     | 'zoom'
 
@@ -607,7 +607,7 @@ export type MapEvent =
      * @event boxzoomstart
      * @memberof Map
      * @instance
-     * @property {MapBoxZoomEvent} data
+     * @property {CurveMapZoomEvent} data
      */
     | 'boxzoomstart'
 
@@ -618,7 +618,7 @@ export type MapEvent =
      * @memberof Map
      * @instance
      * @type {Object}
-     * @property {MapBoxZoomEvent} data
+     * @property {CurveMapZoomEvent} data
      */
     | 'boxzoomend'
 
@@ -629,7 +629,7 @@ export type MapEvent =
      * @event boxzoomcancel
      * @memberof Map
      * @instance
-     * @property {MapBoxZoomEvent} data
+     * @property {CurveMapZoomEvent} data
      */
     | 'boxzoomcancel'
 
@@ -668,9 +668,9 @@ export type MapEvent =
      * @memberof Map
      * @instance
      * @type {Object}
-     * @see [Draw GeoJSON points](https://www.mapbox.com/mapbox-gl-js/example/geojson-markers/)
-     * @see [Add live realtime data](https://www.mapbox.com/mapbox-gl-js/example/live-geojson/)
-     * @see [Animate a point](https://www.mapbox.com/mapbox-gl-js/example/animate-point-along-line/)
+     * @see [Draw GeoJSON points](https://www.curvemap.com/curvemap-gl-js/example/geojson-markers/)
+     * @see [Add live realtime data](https://www.curvemap.com/curvemap-gl-js/example/live-geojson/)
+     * @see [Animate a point](https://www.curvemap.com/curvemap-gl-js/example/animate-point-along-line/)
      */
     | 'load'
 

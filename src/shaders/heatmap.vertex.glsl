@@ -1,5 +1,5 @@
-#pragma mapbox: define highp float weight
-#pragma mapbox: define mediump float radius
+#pragma curvemap: define highp float weight
+#pragma curvemap: define mediump float radius
 
 uniform mat4 u_matrix;
 uniform float u_extrude_scale;
@@ -19,8 +19,8 @@ const highp float ZERO = 1.0 / 255.0 / 16.0;
 #define GAUSS_COEF 0.3989422804014327
 
 void main(void) {
-    #pragma mapbox: initialize highp float weight
-    #pragma mapbox: initialize mediump float radius
+    #pragma curvemap: initialize highp float weight
+    #pragma curvemap: initialize mediump float radius
 
     // unencode the extrusion vector that we snuck into the a_pos vector
     vec2 unscaled_extrude = vec2(mod(a_pos, 2.0) * 2.0 - 1.0);

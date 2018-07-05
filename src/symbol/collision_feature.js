@@ -1,7 +1,7 @@
 // @flow
 
 import type {CollisionBoxArray} from '../data/array_types';
-import Point from '@mapbox/point-geometry';
+import Point from '@hymap/point-geometry';
 import type Anchor from './anchor';
 
 /**
@@ -60,7 +60,7 @@ class CollisionFeature {
         } else {
             if (rotate) {
                 // Account for *-rotate in point collision boxes
-                // See https://github.com/mapbox/mapbox-gl-js/issues/6075
+                // See https://github.com/curvemap/curvemap-gl-js/issues/6075
                 // Doesn't account for icon-text-fit
 
                 const tl = new Point(x1, y1);

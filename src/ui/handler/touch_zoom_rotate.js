@@ -7,7 +7,7 @@ import browser from '../../util/browser';
 import { Event } from '../../util/evented';
 
 import type Map from '../map';
-import type Point from '@mapbox/point-geometry';
+import type Point from '@hymap/point-geometry';
 import type {TaskID} from '../../util/task_queue';
 
 const inertiaLinearity = 0.15,
@@ -71,7 +71,7 @@ class TouchZoomRotateHandler {
      */
     enable(options: ?{around?: 'center'}) {
         if (this.isEnabled()) return;
-        this._el.classList.add('mapboxgl-touch-zoom-rotate');
+        this._el.classList.add('curvemapgl-touch-zoom-rotate');
         this._enabled = true;
         this._aroundCenter = !!options && options.around === 'center';
     }
@@ -84,7 +84,7 @@ class TouchZoomRotateHandler {
      */
     disable() {
         if (!this.isEnabled()) return;
-        this._el.classList.remove('mapboxgl-touch-zoom-rotate');
+        this._el.classList.remove('curvemapgl-touch-zoom-rotate');
         this._enabled = false;
     }
 

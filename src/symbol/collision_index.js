@@ -1,6 +1,6 @@
 // @flow
 
-import Point from '@mapbox/point-geometry';
+import Point from '@hymap/point-geometry';
 
 import * as intersectionTests from '../util/intersection_tests';
 import Grid from './grid_index';
@@ -88,7 +88,7 @@ class CollisionIndex {
         // This is a quick and dirty solution for chosing which collision circles to use (since collision circles are
         // laid out in tile units). Ideally, I think we should generate collision circles on the fly in viewport coordinates
         // at the time we do collision detection.
-        // See https://github.com/mapbox/mapbox-gl-js/issues/5474
+        // See https://github.com/curvemap/curvemap-gl-js/issues/5474
 
         // incidenceStretch is the ratio of how much y space a label takes up on a tile while drawn perpendicular to the viewport vs
         //  how much space it would take up if it were drawn flat on the tile

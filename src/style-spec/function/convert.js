@@ -209,7 +209,7 @@ function fixupDegenerateStepCurve(expression) {
 
 function appendStopPair(curve, input, output, isStep) {
     // Skip duplicate stop values. They were not validated for functions, but they are for expressions.
-    // https://github.com/mapbox/mapbox-gl-js/issues/4107
+    // https://github.com/curvemap/curvemap-gl-js/issues/4107
     if (curve.length > 3 && input === curve[curve.length - 2]) {
         return;
     }

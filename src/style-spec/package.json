@@ -1,12 +1,12 @@
 {
-  "name": "@mapbox/mapbox-gl-style-spec",
-  "description": "a specification for mapbox gl styles",
+  "name": "@curvemap/curvemap-gl-style-spec",
+  "description": "a specification for curvemap gl styles",
   "version": "13.0.1",
-  "author": "Mapbox",
+  "author": "Curvemap",
   "keywords": [
-    "mapbox",
-    "mapbox-gl",
-    "mapbox-gl-js"
+    "curvemap",
+    "curvemap-gl",
+    "curvemap-gl-js"
   ],
   "license": "ISC",
   "main": "./dist/index.js",
@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:mapbox/mapbox-gl-style-spec.git"
+    "url": "git@github.com:curvemap/curvemap-gl-style-spec.git"
   },
   "bin": {
     "gl-style-migrate": "bin/gl-style-migrate",
@@ -27,8 +27,8 @@
     "gl-style-composite": "bin/gl-style-composite"
   },
   "dependencies": {
-    "@mapbox/jsonlint-lines-primitives": "~2.0.1",
-    "@mapbox/unitbezier": "^0.0.0",
+    "@hymap/jsonlint-lines-primitives": "~2.0.1",
+    "@hymap/unitbezier": "^0.0.0",
     "csscolorparser": "~1.0.2",
     "minimist": "0.0.8",
     "rw": "^1.3.3",

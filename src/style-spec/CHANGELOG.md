@@ -1,16 +1,16 @@
 ## 13.0.1
 
 ### ⚠️ Breaking changes
-* Align implicit type behavior of `match` expressions with with `case/==` ([#6684](https://github.com/mapbox/mapbox-gl-js/pull/6684))
-* Update spec so that documentation can automatically capture which functions and expressions can be used with which properties ([#6521](https://github.com/mapbox/mapbox-gl-js/pull/6521))
+* Align implicit type behavior of `match` expressions with with `case/==` ([#6684](https://github.com/curvemap/curvemap-gl-js/pull/6684))
+* Update spec so that documentation can automatically capture which functions and expressions can be used with which properties ([#6521](https://github.com/curvemap/curvemap-gl-js/pull/6521))
 
 ### ✨ Features and improvements
-* Add `feature-state` [#6263](https://github.com/mapbox/mapbox-gl-js/pull/6263)
-* Add support for GeoJSON attribution ([#6364](https://github.com/mapbox/mapbox-gl-js/pull/6364)) (h/t [andrewharvey](https://github.com/andrewharvey))
-* Upgrade to Flow 0.69 ([#6594](https://github.com/mapbox/mapbox-gl-js/pull/6594))
+* Add `feature-state` [#6263](https://github.com/curvemap/curvemap-gl-js/pull/6263)
+* Add support for GeoJSON attribution ([#6364](https://github.com/curvemap/curvemap-gl-js/pull/6364)) (h/t [andrewharvey](https://github.com/andrewharvey))
+* Upgrade to Flow 0.69 ([#6594](https://github.com/curvemap/curvemap-gl-js/pull/6594))
 
 ### 🐛 Bug fixes
-* Use named exports for style-spec entrypoint module ([#6601](https://github.com/mapbox/mapbox-gl-js/issues/6601)
+* Use named exports for style-spec entrypoint module ([#6601](https://github.com/curvemap/curvemap-gl-js/issues/6601)
 
 ## 13.0.0
 Malformed package published to NPM.
@@ -18,18 +18,18 @@ Malformed package published to NPM.
 ## 12.0.0
 
 ### ⚠️ Breaking changes
-* The `"to-string"` expression operator now converts null to an empty string rather than to `"null"`. [#6534](https://github.com/mapbox/mapbox-gl-js/pull/6534)
+* The `"to-string"` expression operator now converts null to an empty string rather than to `"null"`. [#6534](https://github.com/curvemap/curvemap-gl-js/pull/6534)
 
 ### ✨ Features and improvements
-* 🌈 Add line-gradient property [#6303](https://github.com/mapbox/mapbox-gl-js/pull/6303)
-* Add collator expression for controlling case and diacritic sensitivity in string comparisons [#6270](https://github.com/mapbox/mapbox-gl-js/pull/6270)
-* Add `is-supported-script` expression for determining if a script is supported. [#6260](https://github.com/mapbox/mapbox-gl-js/pull/6260)
-* Add `collator` expression for controlling case and diacritic sensitivity in string comparisons [#6270](https://github.com/mapbox/mapbox-gl-js/pull/6270)
-* Add `abs`, `round`, `floor`, and `ceil` expression operators [#6496](https://github.com/mapbox/mapbox-gl-js/pull/6496)
-* Add support for Mapzen Terrarium tiles in raster-dem sources [#6110](https://github.com/mapbox/mapbox-gl-js/pull/6110)
+* 🌈 Add line-gradient property [#6303](https://github.com/curvemap/curvemap-gl-js/pull/6303)
+* Add collator expression for controlling case and diacritic sensitivity in string comparisons [#6270](https://github.com/curvemap/curvemap-gl-js/pull/6270)
+* Add `is-supported-script` expression for determining if a script is supported. [#6260](https://github.com/curvemap/curvemap-gl-js/pull/6260)
+* Add `collator` expression for controlling case and diacritic sensitivity in string comparisons [#6270](https://github.com/curvemap/curvemap-gl-js/pull/6270)
+* Add `abs`, `round`, `floor`, and `ceil` expression operators [#6496](https://github.com/curvemap/curvemap-gl-js/pull/6496)
+* Add support for Mapzen Terrarium tiles in raster-dem sources [#6110](https://github.com/curvemap/curvemap-gl-js/pull/6110)
 
 ### 🐛 Bug fixes
-- Fix Rollup build [6575](https://github.com/mapbox/mapbox-gl-js/pull/6575)
+- Fix Rollup build [6575](https://github.com/curvemap/curvemap-gl-js/pull/6575)
 
 ## 11.1.1
 
@@ -41,59 +41,59 @@ Malformed package published to NPM.
 
 ### ✨ Features and improvements
 
-* Avoid use of `new Function` for filters by converting old-style filters to expressions [#5665](https://github.com/mapbox/mapbox-gl-js/pull/5665).
+* Avoid use of `new Function` for filters by converting old-style filters to expressions [#5665](https://github.com/curvemap/curvemap-gl-js/pull/5665).
 
 ## 11.0.0
 
 ### ⚠️ Breaking changes
 
-* Remove constants validating code [#5885](https://github.com/mapbox/mapbox-gl-js/pull/5885)
-* `"colorSpace": "hcl"` now uses shortest-path interpolation for hue [#5811](https://github.com/mapbox/mapbox-gl-js/issues/5811)
+* Remove constants validating code [#5885](https://github.com/curvemap/curvemap-gl-js/pull/5885)
+* `"colorSpace": "hcl"` now uses shortest-path interpolation for hue [#5811](https://github.com/curvemap/curvemap-gl-js/issues/5811)
 
 ### ✨ Features and improvements
 
-* Introduce client-side hillshading with `raster-dem` source type and `hillshade` layer type [#5286](https://github.com/mapbox/mapbox-gl-js/pull/5286)
-* Add Color#toString and expose Color publicly [#5866](https://github.com/mapbox/mapbox-gl-js/pull/5866)
-* Improve typing for `==` and `!=` expressions [#5840](https://github.com/mapbox/mapbox-gl-js/pull/5840)
-* Made `coalesce` expressions more useful [#5755](https://github.com/mapbox/mapbox-gl-js/issues/5755)
-* Enable implicit type assertions for array types [#5738](https://github.com/mapbox/mapbox-gl-js/pull/5738)
+* Introduce client-side hillshading with `raster-dem` source type and `hillshade` layer type [#5286](https://github.com/curvemap/curvemap-gl-js/pull/5286)
+* Add Color#toString and expose Color publicly [#5866](https://github.com/curvemap/curvemap-gl-js/pull/5866)
+* Improve typing for `==` and `!=` expressions [#5840](https://github.com/curvemap/curvemap-gl-js/pull/5840)
+* Made `coalesce` expressions more useful [#5755](https://github.com/curvemap/curvemap-gl-js/issues/5755)
+* Enable implicit type assertions for array types [#5738](https://github.com/curvemap/curvemap-gl-js/pull/5738)
 
 ### 🐛 Bug fixes
 
-* Fix standalone browser build [#5736](https://github.com/mapbox/mapbox-gl-js/pull/5736), [#5906](https://github.com/mapbox/mapbox-gl-js/pull/5906)
-* Handle NaN as input to step and interpolate expressions [#5757](https://github.com/mapbox/mapbox-gl-js/pull/5757)
-* Fix style diffing for changes to GeoJSON sources [#5745](https://github.com/mapbox/mapbox-gl-js/pull/5745)
-* Mark layer "type" property as required [#5849](https://github.com/mapbox/mapbox-gl-js/pull/5849)
+* Fix standalone browser build [#5736](https://github.com/curvemap/curvemap-gl-js/pull/5736), [#5906](https://github.com/curvemap/curvemap-gl-js/pull/5906)
+* Handle NaN as input to step and interpolate expressions [#5757](https://github.com/curvemap/curvemap-gl-js/pull/5757)
+* Fix style diffing for changes to GeoJSON sources [#5745](https://github.com/curvemap/curvemap-gl-js/pull/5745)
+* Mark layer "type" property as required [#5849](https://github.com/curvemap/curvemap-gl-js/pull/5849)
 
 ## 10.1.0
 
-* Remove support for validating and migrating v6 styles [#5604](https://github.com/mapbox/mapbox-gl-js/pull/5604)
-* Remove support for validating v7 styles [#5604](https://github.com/mapbox/mapbox-gl-js/pull/5604)
-* Remove spaces after commas in `to-string` representation of colors [#5480](https://github.com/mapbox/mapbox-gl-js/pull/5480)
-* Fix bugs preventing `mapbox-gl-style-spec` package on NPM from being used externally [#5502](https://github.com/mapbox/mapbox-gl-js/pull/5502)
-* Fix flow-typed interface generator [#5478](https://github.com/mapbox/mapbox-gl-js/pull/5478)
-* Export `function` [#5584](https://github.com/mapbox/mapbox-gl-js/pull/5584)
-* Export `StylePropertySpecification` type [#5593](https://github.com/mapbox/mapbox-gl-js/pull/5593)
-* Split the `source_tile` entry in the JSON schema into `source_vector` and `source_raster` [#5604](https://github.com/mapbox/mapbox-gl-js/pull/5604)
+* Remove support for validating and migrating v6 styles [#5604](https://github.com/curvemap/curvemap-gl-js/pull/5604)
+* Remove support for validating v7 styles [#5604](https://github.com/curvemap/curvemap-gl-js/pull/5604)
+* Remove spaces after commas in `to-string` representation of colors [#5480](https://github.com/curvemap/curvemap-gl-js/pull/5480)
+* Fix bugs preventing `curvemap-gl-style-spec` package on NPM from being used externally [#5502](https://github.com/curvemap/curvemap-gl-js/pull/5502)
+* Fix flow-typed interface generator [#5478](https://github.com/curvemap/curvemap-gl-js/pull/5478)
+* Export `function` [#5584](https://github.com/curvemap/curvemap-gl-js/pull/5584)
+* Export `StylePropertySpecification` type [#5593](https://github.com/curvemap/curvemap-gl-js/pull/5593)
+* Split the `source_tile` entry in the JSON schema into `source_vector` and `source_raster` [#5604](https://github.com/curvemap/curvemap-gl-js/pull/5604)
 
 ### Validation Changes
 
-* Require that `heatmap-color` use expressions instead of stop functions [#5624](https://github.com/mapbox/mapbox-gl-js/issues/5624)
-* Remove support for including `{tokens}` in expressions for `text-field` and `icon-image` [#5599](https://github.com/mapbox/mapbox-gl-js/issues/5599)
-* Disallow interpolation in expressions for `line-dasharray` [#5519](https://github.com/mapbox/mapbox-gl-js/pull/5519)
-* Validate that zoom expressions only appear at the top level of an expression [#5609](https://github.com/mapbox/mapbox-gl-js/issues/5609)
-* Validate that `step` and `interpolate` expressions don't have any duplicate stops [#5605](https://github.com/mapbox/mapbox-gl-js/issues/5605)
-* Split `curve` expression into `step` and `interpolate` expressions [#5542](https://github.com/mapbox/mapbox-gl-js/pull/5542)
-* Validate expression values for enum-typed properties [#5589](https://github.com/mapbox/mapbox-gl-js/pull/5589)
-* Improve validation to catch uses of deprecated function syntax [#5667](https://github.com/mapbox/mapbox-gl-js/pull/5667)
+* Require that `heatmap-color` use expressions instead of stop functions [#5624](https://github.com/curvemap/curvemap-gl-js/issues/5624)
+* Remove support for including `{tokens}` in expressions for `text-field` and `icon-image` [#5599](https://github.com/curvemap/curvemap-gl-js/issues/5599)
+* Disallow interpolation in expressions for `line-dasharray` [#5519](https://github.com/curvemap/curvemap-gl-js/pull/5519)
+* Validate that zoom expressions only appear at the top level of an expression [#5609](https://github.com/curvemap/curvemap-gl-js/issues/5609)
+* Validate that `step` and `interpolate` expressions don't have any duplicate stops [#5605](https://github.com/curvemap/curvemap-gl-js/issues/5605)
+* Split `curve` expression into `step` and `interpolate` expressions [#5542](https://github.com/curvemap/curvemap-gl-js/pull/5542)
+* Validate expression values for enum-typed properties [#5589](https://github.com/curvemap/curvemap-gl-js/pull/5589)
+* Improve validation to catch uses of deprecated function syntax [#5667](https://github.com/curvemap/curvemap-gl-js/pull/5667)
 
 ## 10.0.1
 
-* Fix bug preventing @mapbox/mapbox-gl-style-spec package from being usable outside of mapbox-gl-js (#5502)
+* Fix bug preventing @curvemap/curvemap-gl-style-spec package from being usable outside of curvemap-gl-js (#5502)
 
 ## 10.0.0
 
-* Add expression and heatmap layer support. See Mapbox GL JS v0.40.1 changelog entry for details.
+* Add expression and heatmap layer support. See Curvemap GL JS v0.40.1 changelog entry for details.
 
 ## 9.0.1
 
@@ -135,7 +135,7 @@ v8.0.0 styles are fully compatible with v8.10.0.
 
 * Added `deref` utility
 * Added `group_by_layout` utility
-* Merge `mapbox-gl-function` repository into this repository
+* Merge `curvemap-gl-function` repository into this repository
 
 ## 8.9.0
 
@@ -210,8 +210,8 @@ v8.0.0 styles are fully compatible with v8.2.0.
 * Create minified style specs with `doc` and `example` properties removed.
 * `validate` now validates against minified style spec.
 * `format` now accepts `space` option to use with `JSON.stringify`.
-* Remove `gl-style-spritify`. Mapbox GL sprites are now created automatically by
-  the Mapbox style APIs, or for hand-crafted styles, by [spritezero-cli](https://github.com/mapbox/spritezero-cli).
+* Remove `gl-style-spritify`. Curvemap GL sprites are now created automatically by
+  the Curvemap style APIs, or for hand-crafted styles, by [spritezero-cli](https://github.com/curvemap/spritezero-cli).
 
 ## 8.1.0
 
@@ -227,7 +227,7 @@ v8.0.0 styles are fully compatible with v8.1.0.
 
 ## 8.0.0
 
-Introduction of Mapbox GL style specification v8. To migrate a v7 style to v8,
+Introduction of Curvemap GL style specification v8. To migrate a v7 style to v8,
 use the `gl-style-migrate` script as described in the README.
 
 * [BREAKING] The value of the `text-font` property is now an array of
@@ -244,15 +244,15 @@ use the `gl-style-migrate` script as described in the README.
 * [BREAKING] Constants are no longer supported. If you are editing styles by
   hand and want to use constants, you can use a preprocessing step with a tool
   like [ScreeSS](https://github.com/screee/screess).
-* [BREAKING] The format for `mapbox://` glyphs URLs has changed; you should
-  now use `mapbox://fonts/mapbox/{fontstack}/{range}.pbf`.
+* [BREAKING] The format for `curvemap://` glyphs URLs has changed; you should
+  now use `curvemap://fonts/curvemap/{fontstack}/{range}.pbf`.
 * [BREAKING] Reversed the priority of layers for calculating label placement:
   labels for layers that appear later in the style now have priority over earlier
   layers.
 * Added a new `image` source type.
 * Added a new `circle` layer type.
 * Default map center location can now be set in the style.
-* Added `mapbox://` sprite URLs `mapbox://sprite/{user | "mapbox"}/{id}`
+* Added `curvemap://` sprite URLs `curvemap://sprite/{user | "curvemap"}/{id}`
 
 ## 7.5.0
 
@@ -264,7 +264,7 @@ use the `gl-style-migrate` script as described in the README.
 
 ## 7.0.0
 
-Introduction of Mapbox GL style specification v7.
+Introduction of Curvemap GL style specification v7.
 
 * [BREAKING] Improve dashed lines (#234)
 * [BREAKING] Remove prerendered layers (#232)
@@ -273,7 +273,7 @@ Introduction of Mapbox GL style specification v7.
 
 ## 6.0.0 (Style spec v6)
 
-Introduction of Mapbox GL style specification v6.
+Introduction of Curvemap GL style specification v6.
 
 * [BREAKING] New filter syntax (#178)
 * [BREAKING] Line gap property (#131)
@@ -286,9 +286,9 @@ Introduction of Mapbox GL style specification v6.
 ## 0.0.5 (in progress)
 
 * [BREAKING] Switch to suffix for transition properties (`transition-*` -> `*-transition`).
-* Added support for remote, non-Mapbox TileJSON sources.
+* Added support for remote, non-Curvemap TileJSON sources.
 * [BREAKING] Source `minZoom` and `maxZoom` renamed to `minzoom` and `maxzoom to match TileJSON.
-* Added support for `mapbox://` glyph URLs.
+* Added support for `curvemap://` glyph URLs.
 * [BREAKING] Renamed `raster-fade` to `raster-fade-duration`.
 * Added background-opacity property.
 * Added "tokens" property to string values that can autocomplete fields from layers

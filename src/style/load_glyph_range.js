@@ -1,6 +1,6 @@
 // @flow
 
-import { normalizeGlyphsURL } from '../util/mapbox';
+import { normalizeGlyphsURL } from '../util/curvemap';
 
 import { getArrayBuffer, ResourceType } from '../util/ajax';
 import parseGlyphPBF from './parse_glyph_pbf';

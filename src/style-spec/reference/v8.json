@@ -17,7 +17,7 @@
     },
     "metadata": {
       "type": "*",
-      "doc": "Arbitrary properties useful to track with the stylesheet, but do not influence rendering. Properties should be prefixed to avoid collisions, like 'mapbox:'."
+      "doc": "Arbitrary properties useful to track with the stylesheet, but do not influence rendering. Properties should be prefixed to avoid collisions, like 'curvemap:'."
     },
     "center": {
       "type": "array",
@@ -62,21 +62,21 @@
       "type": "sources",
       "doc": "Data source specifications.",
       "example": {
-        "mapbox-streets": {
+        "curvemap-streets": {
           "type": "vector",
-          "url": "mapbox://mapbox.mapbox-streets-v6"
+          "url": "curvemap://curvemap.curvemap-streets-v6"
         }
       }
     },
     "sprite": {
       "type": "string",
       "doc": "A base URL for retrieving the sprite image and metadata. The extensions `.png`, `.json` and scale factor `@2x.png` will be automatically appended. This property is required if any layer uses the `background-pattern`, `fill-pattern`, `line-pattern`, `fill-extrusion-pattern`, or `icon-image` properties.",
-      "example": "mapbox://sprites/mapbox/bright-v8"
+      "example": "curvemap://sprites/curvemap/bright-v8"
     },
     "glyphs": {
       "type": "string",
       "doc": "A URL template for loading signed-distance-field glyph sets in PBF format. The URL must include `{fontstack}` and `{range}` tokens. This property is required if any layer uses the `text-field` layout property.",
-      "example": "mapbox://fonts/mapbox/{fontstack}/{range}.pbf"
+      "example": "curvemap://fonts/curvemap/{fontstack}/{range}.pbf"
     },
     "transition": {
       "type": "transition",
@@ -94,7 +94,7 @@
       "example": [
         {
           "id": "water",
-          "source": "mapbox-streets",
+          "source": "curvemap-streets",
           "source-layer": "water",
           "type": "fill",
           "paint": {
@@ -131,7 +131,7 @@
     },
     "url": {
       "type": "string",
-      "doc": "A URL to a TileJSON resource. Supported protocols are `http:`, `https:`, and `mapbox://<mapid>`."
+      "doc": "A URL to a TileJSON resource. Supported protocols are `http:`, `https:`, and `curvemap://<mapid>`."
     },
     "tiles": {
       "type": "array",
@@ -148,7 +148,7 @@
         180,
         85.0511
       ],
-      "doc": "An array containing the longitude and latitude of the southwest and northeast corners of the source's bounding box in the following order: `[sw.lng, sw.lat, ne.lng, ne.lat]`. When this property is included in a source, no tiles outside of the given bounds are requested by Mapbox GL."
+      "doc": "An array containing the longitude and latitude of the southwest and northeast corners of the source's bounding box in the following order: `[sw.lng, sw.lat, ne.lng, ne.lat]`. When this property is included in a source, no tiles outside of the given bounds are requested by Curvemap GL."
     },
     "minzoom": {
       "type": "number",
@@ -182,7 +182,7 @@
     },
     "url": {
       "type": "string",
-      "doc": "A URL to a TileJSON resource. Supported protocols are `http:`, `https:`, and `mapbox://<mapid>`."
+      "doc": "A URL to a TileJSON resource. Supported protocols are `http:`, `https:`, and `curvemap://<mapid>`."
     },
     "tiles": {
       "type": "array",
@@ -199,7 +199,7 @@
         180,
         85.0511
       ],
-      "doc": "An array containing the longitude and latitude of the southwest and northeast corners of the source's bounding box in the following order: `[sw.lng, sw.lat, ne.lng, ne.lat]`. When this property is included in a source, no tiles outside of the given bounds are requested by Mapbox GL."
+      "doc": "An array containing the longitude and latitude of the southwest and northeast corners of the source's bounding box in the following order: `[sw.lng, sw.lat, ne.lng, ne.lat]`. When this property is included in a source, no tiles outside of the given bounds are requested by Curvemap GL."
     },
     "minzoom": {
       "type": "number",
@@ -252,7 +252,7 @@
     },
     "url": {
       "type": "string",
-      "doc": "A URL to a TileJSON resource. Supported protocols are `http:`, `https:`, and `mapbox://<mapid>`."
+      "doc": "A URL to a TileJSON resource. Supported protocols are `http:`, `https:`, and `curvemap://<mapid>`."
     },
     "tiles": {
       "type": "array",
@@ -269,7 +269,7 @@
         180,
         85.0511
       ],
-      "doc": "An array containing the longitude and latitude of the southwest and northeast corners of the source's bounding box in the following order: `[sw.lng, sw.lat, ne.lng, ne.lat]`. When this property is included in a source, no tiles outside of the given bounds are requested by Mapbox GL."
+      "doc": "An array containing the longitude and latitude of the southwest and northeast corners of the source's bounding box in the following order: `[sw.lng, sw.lat, ne.lng, ne.lat]`. When this property is included in a source, no tiles outside of the given bounds are requested by Curvemap GL."
     },
     "minzoom": {
       "type": "number",
@@ -297,12 +297,12 @@
         "terrarium": {
           "doc": "Terrarium format PNG tiles. See https://aws.amazon.com/es/public-datasets/terrain/ for more info."
         },
-        "mapbox": {
-          "doc": "Mapbox Terrain RGB tiles. See https://www.mapbox.com/help/access-elevation-data/#mapbox-terrain-rgb for more info."
+        "curvemap": {
+          "doc": "Curvemap Terrain RGB tiles. See https://www.curvemap.com/help/access-elevation-data/#curvemap-terrain-rgb for more info."
         }
       },
-      "default": "mapbox",
-      "doc": "The encoding used by this source. Mapbox Terrain RGB is used by default"
+      "default": "curvemap",
+      "doc": "The encoding used by this source. Curvemap Terrain RGB is used by default"
     },
     "*": {
       "type": "*",
@@ -512,7 +512,7 @@
           }
         },
         "hillshade": {
-          "doc": "Client-side hillshading visualization based on DEM data. Currently, the implementation only supports Mapbox Terrain RGB and Mapzen Terrarium tiles.",
+          "doc": "Client-side hillshading visualization based on DEM data. Currently, the implementation only supports Curvemap Terrain RGB and Mapzen Terrarium tiles.",
           "sdk-support": {
             "basic functionality": {
               "js": "0.43.0",
@@ -539,7 +539,7 @@
     },
     "metadata": {
       "type": "*",
-      "doc": "Arbitrary properties useful to track with the layer, but do not influence rendering. Properties should be prefixed to avoid collisions, like 'mapbox:'."
+      "doc": "Arbitrary properties useful to track with the layer, but do not influence rendering. Properties should be prefixed to avoid collisions, like 'curvemap:'."
     },
     "source": {
       "type": "string",
@@ -3058,7 +3058,7 @@
         }
       },
       "is-supported-script": {
-        "doc": "Returns `true` if the input string is expected to render legibly. Returns `false` if the input string contains sections that cannot be rendered without potential loss of meaning (e.g. Indic scripts that require complex text shaping, or right-to-left scripts if the the `mapbox-gl-rtl-text` plugin is not in use in Mapbox GL JS).",
+        "doc": "Returns `true` if the input string is expected to render legibly. Returns `false` if the input string contains sections that cannot be rendered without potential loss of meaning (e.g. Indic scripts that require complex text shaping, or right-to-left scripts if the the `curvemap-gl-rtl-text` plugin is not in use in Curvemap GL JS).",
         "group": "String"
       },
       "upcase": {

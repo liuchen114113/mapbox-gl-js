@@ -1,15 +1,15 @@
-#pragma mapbox: define highp vec4 color
-#pragma mapbox: define lowp float blur
-#pragma mapbox: define lowp float opacity
+#pragma curvemap: define highp vec4 color
+#pragma curvemap: define lowp float blur
+#pragma curvemap: define lowp float opacity
 
 varying vec2 v_width2;
 varying vec2 v_normal;
 varying float v_gamma_scale;
 
 void main() {
-    #pragma mapbox: initialize highp vec4 color
-    #pragma mapbox: initialize lowp float blur
-    #pragma mapbox: initialize lowp float opacity
+    #pragma curvemap: initialize highp vec4 color
+    #pragma curvemap: initialize lowp float blur
+    #pragma curvemap: initialize lowp float opacity
 
     // Calculate the distance of the pixel from the line in pixels.
     float dist = length(v_normal) * v_width2.s;

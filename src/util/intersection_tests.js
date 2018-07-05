@@ -2,7 +2,7 @@
 
 import { isCounterClockwise } from './util';
 
-import type Point from '@mapbox/point-geometry';
+import type Point from '@hymap/point-geometry';
 
 export { multiPolygonIntersectsBufferedPoint, multiPolygonIntersectsBufferedMultiPoint, multiPolygonIntersectsMultiPolygon, multiPolygonIntersectsBufferedMultiLine, polygonIntersectsPolygon, distToSegmentSquared };
 

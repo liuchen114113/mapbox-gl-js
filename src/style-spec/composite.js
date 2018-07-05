@@ -10,7 +10,7 @@ export default function (style) {
         if (source.type !== "vector")
             continue;
 
-        const match = /^mapbox:\/\/(.*)/.exec(source.url);
+        const match = /^curvemap:\/\/(.*)/.exec(source.url);
         if (!match)
             continue;
 
@@ -29,7 +29,7 @@ export default function (style) {
 
     style.sources[compositeID] = {
         "type": "vector",
-        "url": `mapbox://${compositeID}`
+        "url": `curvemap://${compositeID}`
     };
 
     style.layers.forEach((layer) => {

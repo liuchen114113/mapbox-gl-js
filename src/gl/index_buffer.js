@@ -44,7 +44,7 @@ class IndexBuffer {
         const gl = this.context.gl;
         assert(this.dynamicDraw);
         // The right VAO will get this buffer re-bound later in VertexArrayObject#bind
-        // See https://github.com/mapbox/mapbox-gl-js/issues/5620
+        // See https://github.com/curvemap/curvemap-gl-js/issues/5620
         this.unbindVAO();
         this.bind();
         gl.bufferSubData(gl.ELEMENT_ARRAY_BUFFER, 0, array.arrayBuffer);

@@ -3,7 +3,7 @@
 import { getImage, ResourceType } from '../util/ajax';
 import { extend } from '../util/util';
 import { Evented } from '../util/evented';
-import { normalizeTileURL as normalizeURL } from '../util/mapbox';
+import { normalizeTileURL as normalizeURL } from '../util/curvemap';
 import browser from '../util/browser';
 import { OverscaledTileID } from './tile_id';
 import RasterTileSource from './raster_tile_source';
@@ -17,14 +17,14 @@ import type {Callback} from '../types/callback';
 
 
 class RasterDEMTileSource extends RasterTileSource implements Source {
-    encoding: "mapbox" | "terrarium";
+    encoding: "curvemap" | "terrarium";
 
     constructor(id: string, options: RasterDEMSourceSpecification, dispatcher: Dispatcher, eventedParent: Evented) {
         super(id, options, dispatcher, eventedParent);
         this.type = 'raster-dem';
         this.maxzoom = 22;
         this._options = extend({}, options);
-        this.encoding = options.encoding || "mapbox";
+        this.encoding = options.encoding || "curvemap";
     }
 
     serialize() {

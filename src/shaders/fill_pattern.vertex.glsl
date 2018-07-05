@@ -12,10 +12,10 @@ attribute vec2 a_pos;
 varying vec2 v_pos_a;
 varying vec2 v_pos_b;
 
-#pragma mapbox: define lowp float opacity
+#pragma curvemap: define lowp float opacity
 
 void main() {
-    #pragma mapbox: initialize lowp float opacity
+    #pragma curvemap: initialize lowp float opacity
 
     gl_Position = u_matrix * vec4(a_pos, 0, 1);
 

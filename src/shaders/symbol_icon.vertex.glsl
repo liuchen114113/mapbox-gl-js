@@ -15,7 +15,7 @@ uniform bool u_rotate_symbol;
 uniform highp float u_aspect_ratio;
 uniform float u_fade_change;
 
-#pragma mapbox: define lowp float opacity
+#pragma curvemap: define lowp float opacity
 
 uniform mat4 u_matrix;
 uniform mat4 u_label_plane_matrix;
@@ -30,7 +30,7 @@ varying vec2 v_tex;
 varying float v_fade_opacity;
 
 void main() {
-    #pragma mapbox: initialize lowp float opacity
+    #pragma curvemap: initialize lowp float opacity
 
     vec2 a_pos = a_pos_offset.xy;
     vec2 a_offset = a_pos_offset.zw;

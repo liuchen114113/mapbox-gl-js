@@ -2,7 +2,7 @@
 
 import LngLat from '../geo/lng_lat';
 
-import type Point from '@mapbox/point-geometry';
+import type Point from '@hymap/point-geometry';
 import type Transform from '../geo/transform';
 
 /**

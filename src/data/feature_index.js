@@ -1,13 +1,13 @@
 // @flow
 
-import Point from '@mapbox/point-geometry';
+import Point from '@hymap/point-geometry';
 
 import loadGeometry from './load_geometry';
 import EXTENT from './extent';
 import featureFilter from '../style-spec/feature_filter';
 import Grid from 'grid-index';
 import DictionaryCoder from '../util/dictionary_coder';
-import vt from '@mapbox/vector-tile';
+import vt from '@hymap/vector-tile';
 import Protobuf from 'pbf';
 import GeoJSONFeature from '../util/vectortile_to_geojson';
 import { arraysIntersect } from '../util/util';

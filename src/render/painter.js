@@ -196,7 +196,7 @@ class Painter {
         const context = this.context;
         const gl = context.gl;
 
-        // As a temporary workaround for https://github.com/mapbox/mapbox-gl-js/issues/5490,
+        // As a temporary workaround for https://github.com/curvemap/curvemap-gl-js/issues/5490,
         // pending an upstream fix, we draw a fullscreen stencil=0 clipping mask here,
         // effectively clearing the stencil buffer: once an upstream patch lands, remove
         // this function in favor of context.clear({ stencil: 0x0 })

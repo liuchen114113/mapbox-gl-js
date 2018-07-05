@@ -8,7 +8,7 @@ import { getMaximumPaintValue, translateDistance, translate } from '../query_uti
 import properties from './circle_style_layer_properties';
 import { Transitionable, Transitioning, PossiblyEvaluated } from '../properties';
 import { vec4 } from 'gl-matrix';
-import Point from '@mapbox/point-geometry';
+import Point from '@hymap/point-geometry';
 
 import type { FeatureState } from '../../style-spec/expression';
 import type Transform from '../../geo/transform';
