@@ -1,4 +1,4 @@
-declare module "@mapbox/point-geometry" {
+declare module "@hymap/point-geometry" {
     declare class Point {
         x: number;
         y: number;
