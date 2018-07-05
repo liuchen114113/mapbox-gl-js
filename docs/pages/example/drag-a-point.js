@@ -5,7 +5,7 @@ description: >-
   display.
 tags:
   - user-interaction
-pathname: /mapbox-gl-js/example/drag-a-point/
+pathname: /curvemap-gl-js/example/drag-a-point/
 ---*/
 import Example from '../../components/example';
 import html from './drag-a-point.html';

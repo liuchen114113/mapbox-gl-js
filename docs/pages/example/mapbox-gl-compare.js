@@ -1,11 +1,11 @@
 /*---
 title: Swipe between maps
 description: >-
-  Use [mapbox-gl-compare](https://github.com/mapbox/mapbox-gl-compare) to swipe between and synchronize two maps.
+  Use [curvemap-gl-compare](https://github.com/curvemap/curvemap-gl-compare) to swipe between and synchronize two maps.
 tags:
   - controls-and-overlays
-pathname: /mapbox-gl-js/example/mapbox-gl-compare/
+pathname: /curvemap-gl-js/example/curvemap-gl-compare/
 ---*/
 import Example from '../../components/example';
-import html from './mapbox-gl-compare.html';
+import html from './curvemap-gl-compare.html';
 export default Example(html);

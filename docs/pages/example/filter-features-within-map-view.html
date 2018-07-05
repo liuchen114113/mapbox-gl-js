@@ -71,9 +71,9 @@
 </div>
 
 <script>
-var map = new mapboxgl.Map({
+var map = new curvemapgl.Map({
     container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v9',
+    style: 'curvemap://styles/curvemap/streets-v9',
     center: [-98, 38.88],
     maxZoom: 5,
     minZoom: 1,
@@ -84,7 +84,7 @@ var map = new mapboxgl.Map({
 var airports = [];
 
 // Create a popup, but don't add it to the map yet.
-var popup = new mapboxgl.Popup({
+var popup = new curvemapgl.Popup({
     closeButton: false
 });
 
@@ -152,7 +152,7 @@ map.on('load', function() {
         "id": "airport",
         "source": {
             "type": "vector",
-            "url": "mapbox://mapbox.04w69w5j"
+            "url": "curvemap://curvemap.04w69w5j"
         },
         "source-layer": "ne_10m_airports",
         "type": "symbol",

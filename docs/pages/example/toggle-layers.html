@@ -46,9 +46,9 @@
 <div id="map"></div>
 
 <script>
-var map = new mapboxgl.Map({
+var map = new curvemapgl.Map({
     container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v9',
+    style: 'curvemap://styles/curvemap/streets-v9',
     zoom: 15,
     center: [-71.97722138410576, -13.517379300798098]
 });
@@ -56,7 +56,7 @@ var map = new mapboxgl.Map({
 map.on('load', function () {
     map.addSource('museums', {
         type: 'vector',
-        url: 'mapbox://mapbox.2opop9hr'
+        url: 'curvemap://curvemap.2opop9hr'
     });
     map.addLayer({
         'id': 'museums',
@@ -74,7 +74,7 @@ map.on('load', function () {
 
     map.addSource('contours', {
         type: 'vector',
-        url: 'mapbox://mapbox.mapbox-terrain-v2'
+        url: 'curvemap://curvemap.curvemap-terrain-v2'
     });
     map.addLayer({
         'id': 'contours',

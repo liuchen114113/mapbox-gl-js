@@ -3,11 +3,11 @@ import React from 'react';
 // Disable Raven if this isn't a production build, so we don't send development
 // errors to Sentry.
 if (process.env.DEPLOY_ENV !== 'production' && typeof window !== 'undefined') {
-    window.MapboxPageShell.disableRaven();
+    window.CurvemapPageShell.disableRaven();
 }
 
 if (typeof window !== 'undefined') {
-    window.MapboxPageShellProduction = true;
+    window.CurvemapPageShellProduction = true;
 }
 
 class ApplicationWrapper extends React.Component {

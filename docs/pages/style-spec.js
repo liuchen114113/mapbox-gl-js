@@ -11,7 +11,7 @@ import entries from 'object.entries';
 import ref from '../../src/style-spec/reference/latest';
 
 const meta = {
-    title: 'Mapbox Style Specification',
+    title: 'Curvemap Style Specification',
     description: '',
     pathname: '/style-spec'
 };
@@ -404,7 +404,7 @@ export default class extends React.Component {
                 .doc.dark .keyline-bottom { border-color: rgba(0,0,0,0.15); }
 
                 /* Supress \`err\` styling rouge applies from
-                 * mapbox.com/base/ to favor shorthand documentation
+                 * curvemap.com/base/ to favor shorthand documentation
                  * that doesn't always support formal syntax */
                 pre .err {
                   background-color:transparent;
@@ -430,38 +430,38 @@ export default class extends React.Component {
                     <div className='contain margin3 col9'>
                         <div className='prose'>
                             <h1>{meta.title}</h1>
-                            <p>A Mapbox style is a document that defines the visual appearance of a map: what data to
+                            <p>A Curvemap style is a document that defines the visual appearance of a map: what data to
                                 draw, the order to draw it in, and how to style the data when drawing it. A style
                                 document is a <a href="http://www.json.org/">JSON</a> object with specific root level
                                 and nested properties. This specification defines and describes these properties.</p>
                             <p>The intended audience of this specification includes:</p>
                             <ul>
                                 <li>Advanced designers and cartographers who want to write styles by hand rather
-                                    than use <a href='https://www.mapbox.com/studio'>Mapbox Studio</a></li>
+                                    than use <a href='https://www.curvemap.com/studio'>Curvemap Studio</a></li>
                                 <li>Developers using style-related features of <a
-                                    href='https://www.mapbox.com/mapbox-gl-js/'>Mapbox GL JS</a> or the <a
-                                    href='https://www.mapbox.com/android-sdk/'>Mapbox Maps SDK for Android</a></li>
-                                <li>Authors of software that generates or processes Mapbox styles.</li>
+                                    href='https://www.curvemap.com/curvemap-gl-js/'>Curvemap GL JS</a> or the <a
+                                    href='https://www.curvemap.com/android-sdk/'>Curvemap Maps SDK for Android</a></li>
+                                <li>Authors of software that generates or processes Curvemap styles.</li>
                             </ul>
-                            <p>Developers using the <a href='https://www.mapbox.com/ios-sdk/'>Mapbox Maps SDK for iOS</a> or <a
-                                href='https://github.com/mapbox/mapbox-gl-native/tree/master/platform/macos/'>
-                                Mapbox Maps SDK for macOS</a> should consult the iOS SDK API reference for platform-appropriate
+                            <p>Developers using the <a href='https://www.curvemap.com/ios-sdk/'>Curvemap Maps SDK for iOS</a> or <a
+                                href='https://github.com/curvemap/curvemap-gl-native/tree/master/platform/macos/'>
+                                Curvemap Maps SDK for macOS</a> should consult the iOS SDK API reference for platform-appropriate
                                 documentation of style-related features.</p>
                         </div>
 
                         <div className='prose'>
                             <a id='root' className='anchor'/>
                             <h2><a href='#root' title='link to root'>Root Properties</a></h2>
-                            <p>Root level properties of a Mapbox style specify the map's layers, tile sources and other
+                            <p>Root level properties of a Curvemap style specify the map's layers, tile sources and other
                                 resources, and default values for the initial camera position when not specified
                                 elsewhere.</p>
                             <div className='space-bottom1 clearfix'>
                                 {highlightJSON(`
                                 {
                                     "version": ${ref.$version},
-                                    "name": "Mapbox Streets",
-                                    "sprite": "mapbox://sprites/mapbox/streets-v${ref.$version}",
-                                    "glyphs": "mapbox://fonts/mapbox/{fontstack}/{range}.pbf",
+                                    "name": "Curvemap Streets",
+                                    "sprite": "curvemap://sprites/curvemap/streets-v${ref.$version}",
+                                    "glyphs": "curvemap://fonts/curvemap/{fontstack}/{range}.pbf",
                                     "sources": {...},
                                     "layers": [...]
                                 }
@@ -503,7 +503,7 @@ export default class extends React.Component {
                             </p>
                             <p>
                                 Tiled sources (vector and raster) must specify
-                                their details in terms of the <a href="https://github.com/mapbox/tilejson-spec">TileJSON
+                                their details in terms of the <a href="https://github.com/curvemap/tilejson-spec">TileJSON
                                 specification</a>.
                                 This can be done in several ways:
                             </p>
@@ -513,7 +513,7 @@ export default class extends React.Component {
                                     <code>"maxzoom"</code> directly in the source:
                                     <div className='space-bottom1 clearfix'>
                                         {highlightJSON(`
-                                            "mapbox-streets": {
+                                            "curvemap-streets": {
                                                 "type": "vector",
                                                 "tiles": [
                                                 "http://a.example.com/tiles/{z}/{x}/{y}.pbf",
@@ -527,7 +527,7 @@ export default class extends React.Component {
                                     By providing a <code>"url"</code> to a TileJSON resource:
                                     <div className='space-bottom1 clearfix'>
                                         {highlightJSON(`
-                                            "mapbox-streets": {
+                                            "curvemap-streets": {
                                                 "type": "vector",
                                                 "url": "http://api.example.com/tilejson.json"
                                             }`)}
@@ -554,19 +554,19 @@ export default class extends React.Component {
                                     <h3 className='space-bottom1'><a href='#sources-vector' title='link to vector'>vector</a></h3>
                                     <p>
                                         A vector tile source. Tiles must be in <a
-                                            href="https://www.mapbox.com/developers/vector-tiles/">Mapbox
+                                            href="https://www.curvemap.com/developers/vector-tiles/">Curvemap
                                         Vector Tile format</a>. All geometric coordinates in vector tiles must be
                                         between <code>-1 * extent</code> and <code>(extent * 2) - 1</code> inclusive.
                                         All layers that use a vector source must specify a <a href='#layer-source-layer'><code>"source-layer"</code></a>
                                         value.
-                                        For vector tiles hosted by Mapbox, the <code>"url"</code> value should be of the
-                                        form <code>mapbox://<var>mapid</var></code>.
+                                        For vector tiles hosted by Curvemap, the <code>"url"</code> value should be of the
+                                        form <code>curvemap://<var>mapid</var></code>.
                                     </p>
                                     <div className='space-bottom1 clearfix'>
                                         {highlightJSON(`
-                                            "mapbox-streets": {
+                                            "curvemap-streets": {
                                                 "type": "vector",
-                                                "url": "mapbox://mapbox.mapbox-streets-v6"
+                                                "url": "curvemap://curvemap.curvemap-streets-v6"
                                             }`)}
                                     </div>
                                     <div className='space-bottom1 clearfix'>
@@ -587,14 +587,14 @@ export default class extends React.Component {
                                 <div id='sources-raster' className='pad2 keyline-bottom'>
                                     <h3 className='space-bottom1'><a href='#sources-raster' title='link to raster'>raster</a></h3>
                                     <p>
-                                        A raster tile source. For raster tiles hosted by Mapbox, the <code>"url"</code> value should be of the
-                                        form <code>mapbox://<var>mapid</var></code>.
+                                        A raster tile source. For raster tiles hosted by Curvemap, the <code>"url"</code> value should be of the
+                                        form <code>curvemap://<var>mapid</var></code>.
                                     </p>
                                     <div className='space-bottom1 clearfix'>
                                         {highlightJSON(`
-                                            "mapbox-satellite": {
+                                            "curvemap-satellite": {
                                                 "type": "raster",
-                                                "url": "mapbox://mapbox.satellite",
+                                                "url": "curvemap://curvemap.satellite",
                                                 "tileSize": 256
                                             }`)}
                                     </div>
@@ -616,13 +616,13 @@ export default class extends React.Component {
                                 <div id='sources-raster-dem' className='pad2 keyline-bottom'>
                                     <h3 className='space-bottom1'><a href='#sources-raster-dem' title='link to raster-dem'>raster-dem</a></h3>
                                     <p>
-                                        A raster DEM source. Currently only supports <a href="https://blog.mapbox.com/global-elevation-data-6689f1d0ba65">Mapbox Terrain RGB</a> (<code>mapbox://mapbox.terrain-rgb</code>)
+                                        A raster DEM source. Currently only supports <a href="https://blog.curvemap.com/global-elevation-data-6689f1d0ba65">Curvemap Terrain RGB</a> (<code>curvemap://curvemap.terrain-rgb</code>)
                                     </p>
                                     <div className='space-bottom1 clearfix'>
                                         {highlightJSON(`
-                                            "mapbox-terrain-rgb": {
+                                            "curvemap-terrain-rgb": {
                                                 "type": "raster-dem",
-                                                "url": "mapbox://mapbox.terrain-rgb"
+                                                "url": "curvemap://curvemap.terrain-rgb"
                                             }`)}
                                     </div>
                                     <div className='space-bottom1 clearfix'>
@@ -654,7 +654,7 @@ export default class extends React.Component {
                                                         "coordinates": [-77.0323, 38.9131]
                                                     },
                                                     "properties": {
-                                                        "title": "Mapbox DC",
+                                                        "title": "Curvemap DC",
                                                         "marker-symbol": "monument"
                                                     }
                                                 }
@@ -705,7 +705,7 @@ export default class extends React.Component {
                                         {highlightJSON(`
                                             "image": {
                                                 "type": "image",
-                                                "url": "/mapbox-gl-js/assets/radar.gif",
+                                                "url": "/curvemap-gl-js/assets/radar.gif",
                                                 "coordinates": [
                                                     [-80.425, 46.437],
                                                     [-71.516, 46.437],
@@ -745,8 +745,8 @@ export default class extends React.Component {
                                             "video": {
                                                 "type": "video",
                                                 "urls": [
-                                                    "https://www.mapbox.com/drone/video/drone.mp4",
-                                                    "https://www.mapbox.com/drone/video/drone.webm"
+                                                    "https://www.curvemap.com/drone/video/drone.mp4",
+                                                    "https://www.curvemap.com/drone/video/drone.webm"
                                                 ],
                                                 "coordinates": [
                                                     [-122.51596391201019, 37.56238816766053],
@@ -813,7 +813,7 @@ export default class extends React.Component {
                                 </li>
                             </ul>
                             <p>
-                                Mapbox SDKs will use the value of the <code>sprite</code> property in the style to generate the URLs for
+                                Curvemap SDKs will use the value of the <code>sprite</code> property in the style to generate the URLs for
                                 loading both files. First, for both file types, it will append <code>@2x</code> to the URL on high-DPI devices.
                                 Second, it will append a file extension: <code>.json</code> for the index file, and <code>.png</code> for the
                                 image file. For example, if you specified <code>"sprite": "https://example.com/sprite"</code>, renderers would
@@ -821,10 +821,10 @@ export default class extends React.Component {
                                 <code>https://example.com/sprite@2x.json</code> and <code>https://example.com/sprite@2x.png</code>.
                             </p>
                             <p>
-                                If you are using Mapbox Studio, you will use prebuilt sprites provided by Mapbox, or you can upload custom SVG
-                                images to build your own sprite. In either case, the sprite will be built automatically and supplied by Mapbox
+                                If you are using Curvemap Studio, you will use prebuilt sprites provided by Curvemap, or you can upload custom SVG
+                                images to build your own sprite. In either case, the sprite will be built automatically and supplied by Curvemap
                                 APIs. If you want to build a sprite by hand and self-host the files, you can
-                                use <a href="https://github.com/mapbox/spritezero-cli">spritezero-cli</a>, a command line utility that builds Mapbox
+                                use <a href="https://github.com/curvemap/spritezero-cli">spritezero-cli</a>, a command line utility that builds Curvemap
                                 GL compatible sprite PNGs and index files from a directory of SVGs.
                             </p>
                         </div>
@@ -928,7 +928,7 @@ export default class extends React.Component {
                         <div className='pad2 prose'>
                             <a id='types' className='anchor'/>
                             <h2><a href='#types' title='link to types'>Types</a></h2>
-                            <p>A Mapbox style contains values of various types, most commonly as values for the style properties of a layer.</p>
+                            <p>A Curvemap style contains values of various types, most commonly as values for the style properties of a layer.</p>
 
                             <div className='keyline-all fill-white'>
                                 <div className='pad2 keyline-bottom'>
@@ -953,7 +953,7 @@ export default class extends React.Component {
                                 <div className='pad2 keyline-bottom'>
                                     <a id='types-string' className='anchor'/>
                                     <h3 className='space-bottom1'><a href='#types-string' title='link to string'>String</a></h3>
-                                    <p>A string is basically just text. In Mapbox styles, you're going to put it in quotes.</p>
+                                    <p>A string is basically just text. In Curvemap styles, you're going to put it in quotes.</p>
                                     {highlightJSON(`
                                         {
                                             "icon-image": "marker"
@@ -1001,7 +1001,7 @@ export default class extends React.Component {
                                 href="#paint-property">paint property</a>, or <a href="#layer-filter">filter</a> may be
                                 specified as an <em>expression</em>. An expression defines a formula for computing the
                                 value of the property using the <em>operators</em> described below. The set of expression
-                                operators provided by Mapbox GL includes:
+                                operators provided by Curvemap GL includes:
                             </p>
 
                             <ul>

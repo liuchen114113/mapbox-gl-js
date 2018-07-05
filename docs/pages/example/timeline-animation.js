@@ -6,7 +6,7 @@ description: >-
 tags:
   - user-interaction
   - sources
-pathname: /mapbox-gl-js/example/timeline-animation/
+pathname: /curvemap-gl-js/example/timeline-animation/
 ---*/
 import Example from '../../components/example';
 import html from './timeline-animation.html';

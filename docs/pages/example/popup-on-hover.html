@@ -1,5 +1,5 @@
 <style>
-    .mapboxgl-popup {
+    .curvemapgl-popup {
         max-width: 400px;
         font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
     }
@@ -7,9 +7,9 @@
 <div id='map'></div>
 <script>
 
-var map = new mapboxgl.Map({
+var map = new curvemapgl.Map({
     container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v9',
+    style: 'curvemap://styles/curvemap/streets-v9',
     center: [-77.04, 38.907],
     zoom: 11.15
 });
@@ -124,7 +124,7 @@ map.on('load', function() {
     });
 
     // Create a popup, but don't add it to the map yet.
-    var popup = new mapboxgl.Popup({
+    var popup = new curvemapgl.Popup({
         closeButton: false,
         closeOnClick: false
     });

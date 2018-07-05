@@ -1,8 +1,8 @@
 <div id='map'></div>
 <script>
-var map = new mapboxgl.Map({
+var map = new curvemapgl.Map({
     container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v9',
+    style: 'curvemap://styles/curvemap/streets-v9',
     center: [-100.486052, 37.830348],
     zoom: 2
 });
@@ -11,7 +11,7 @@ var hoveredStateId =  null;
 map.on('load', function () {
     map.addSource("states", {
         "type": "geojson",
-        "data": "/mapbox-gl-js/assets/us_states.geojson"
+        "data": "/curvemap-gl-js/assets/us_states.geojson"
     });
 
     // The feature-state dependent fill-opacity expression will render the hover effect

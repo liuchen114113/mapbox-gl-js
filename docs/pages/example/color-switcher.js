@@ -4,7 +4,7 @@ description: Using setPaintProperty to change a layer's fill color
 tags:
   - layers
   - user-interaction
-pathname: /mapbox-gl-js/example/color-switcher/
+pathname: /curvemap-gl-js/example/color-switcher/
 ---*/
 import Example from '../../components/example';
 import html from './color-switcher.html';

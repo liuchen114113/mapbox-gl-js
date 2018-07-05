@@ -33,9 +33,9 @@
 </div>
 
 <script>
-var map = new mapboxgl.Map({
+var map = new curvemapgl.Map({
     container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v9',
+    style: 'curvemap://styles/curvemap/streets-v9',
     center: [-74.0315, 40.6989],
     maxZoom: 16,
     minZoom: 9,
@@ -136,7 +136,7 @@ map.on('load', function() {
         "type": "fill",
         "source": {
             "type": "vector",
-            "url": "mapbox://mapbox.8ibmsn6u"
+            "url": "curvemap://curvemap.8ibmsn6u"
         },
         "source-layer": "original",
         "paint": {

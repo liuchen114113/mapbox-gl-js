@@ -2,9 +2,9 @@
 
 <script src='//d3js.org/d3.v3.min.js' charset='utf-8'></script>
 <script>
-var map = new mapboxgl.Map({
+var map = new curvemapgl.Map({
     container: 'map',
-    style: 'mapbox://styles/mapbox/satellite-v9',
+    style: 'curvemap://styles/curvemap/satellite-v9',
     zoom: 0
 });
 
@@ -12,7 +12,7 @@ map.on('load', function () {
     // We use D3 to fetch the JSON here so that we can parse and use it separately
     // from GL JS's use in the added source. You can use any request method (library
     // or otherwise) that you want.
-    d3.json('/mapbox-gl-js/assets/hike.geojson', function(err, data) {
+    d3.json('/curvemap-gl-js/assets/hike.geojson', function(err, data) {
         if (err) throw err;
 
         // save full coordinate list for later

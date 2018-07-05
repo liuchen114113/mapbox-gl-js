@@ -10,7 +10,7 @@ import createFormatters from 'documentation/lib/output/util/formatters';
 import LinkerStack from 'documentation/lib/output/util/linker_stack';
 
 const meta = {
-    title: 'Mapbox GL JS API',
+    title: 'Curvemap GL JS API',
     description: '',
     pathname: '/api'
 };

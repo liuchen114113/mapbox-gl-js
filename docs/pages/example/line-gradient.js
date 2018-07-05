@@ -4,7 +4,7 @@ description: >-
   Use the line-gradient paint property and an expression to visualize distance from the starting point of a line.
 tags:
   - layers
-pathname: /mapbox-gl-js/example/line-gradient/
+pathname: /curvemap-gl-js/example/line-gradient/
 ---*/
 import Example from '../../components/example';
 import html from './line-gradient.html';

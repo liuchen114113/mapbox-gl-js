@@ -1,13 +1,13 @@
 /*---
 title: Display driving directions
 description: >-
-  Use the [mapbox-gl-directions](https://github.com/mapbox/mapbox-gl-directions)
-  plugin to show results from the Mapbox Directions API. Click the map to add an
+  Use the [curvemap-gl-directions](https://github.com/curvemap/curvemap-gl-directions)
+  plugin to show results from the Curvemap Directions API. Click the map to add an
   origin and destination.
 tags:
   - controls-and-overlays
-pathname: /mapbox-gl-js/example/mapbox-gl-directions/
+pathname: /curvemap-gl-js/example/curvemap-gl-directions/
 ---*/
 import Example from '../../components/example';
-import html from './mapbox-gl-directions.html';
+import html from './curvemap-gl-directions.html';
 export default Example(html);

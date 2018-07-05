@@ -5,7 +5,7 @@ description: >-
   typing in an input
 tags:
   - user-interaction
-pathname: /mapbox-gl-js/example/filter-features-within-map-view/
+pathname: /curvemap-gl-js/example/filter-features-within-map-view/
 ---*/
 import Example from '../../components/example';
 import html from './filter-features-within-map-view.html';

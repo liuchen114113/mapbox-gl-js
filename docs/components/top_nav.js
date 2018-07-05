@@ -8,7 +8,7 @@ export default class extends React.Component {
                 <nav className='contain margin3 col9 fill-gradient space-bottom round small'>
                     <div className='col3 dark round-left keyline-right pad1 center truncate'>
                         <div className='pad0y'>
-                            <span className='icon gl fill-lighten0 dot inline pad0'/> Mapbox GL JS
+                            <span className='icon gl fill-lighten0 dot inline pad0'/> Curvemap GL JS
                         </div>
                     </div>
                     <div className='col9 dark tabs mobile-cols pad1'>

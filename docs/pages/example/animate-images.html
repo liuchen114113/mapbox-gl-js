@@ -1,8 +1,8 @@
 <div id='map'></div>
 <script>
-var map = new mapboxgl.Map({
+var map = new curvemapgl.Map({
     container: 'map',
-    style: 'mapbox://styles/mapbox/dark-v9',
+    style: 'curvemap://styles/curvemap/dark-v9',
     maxZoom: 5.99,
     minZoom: 4,
     zoom: 5,
@@ -18,7 +18,7 @@ map.on('load', function() {
             id: 'radar' + i,
             source: {
                 type: 'image',
-                url: '/mapbox-gl-js/assets/radar' + i + '.gif',
+                url: '/curvemap-gl-js/assets/radar' + i + '.gif',
                 coordinates: [
                     [-80.425, 46.437],
                     [-71.516, 46.437],

@@ -5,7 +5,7 @@ description: >-
 tags:
   - animate
   - camera
-pathname: /mapbox-gl-js/example/animate-point-along-route/
+pathname: /curvemap-gl-js/example/animate-point-along-route/
 ---*/
 import Example from '../../components/example';
 import html from './animate-point-along-route.html';

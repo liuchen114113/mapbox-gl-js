@@ -2,9 +2,9 @@
 <div id='map'>
 </div>
 <script>
-var map = new mapboxgl.Map({
+var map = new curvemapgl.Map({
     container: 'map',
-    style: 'mapbox://styles/mapbox/light-v9',
+    style: 'curvemap://styles/curvemap/light-v9',
     center: [-99.9, 41.5],
     zoom: 1
 });
@@ -68,11 +68,11 @@ var data = [
 
 map.on('load', function() {
 
-    // Add source for state polygons hosted on Mapbox, based on US Census Data:
+    // Add source for state polygons hosted on Curvemap, based on US Census Data:
     // https://www.census.gov/geo/maps-data/data/cbf/cbf_state.html
     map.addSource("states", {
         type: "vector",
-        url: "mapbox://mapbox.us_census_states_2015"
+        url: "curvemap://curvemap.us_census_states_2015"
     });
 
     // Add layer from the vector tile source with data-driven style

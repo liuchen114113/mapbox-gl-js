@@ -4,7 +4,7 @@ description: Add an icon to the map from an external URL and use it in a symbol 
 tags:
   - styles
   - layers
-pathname: /mapbox-gl-js/example/add-image/
+pathname: /curvemap-gl-js/example/add-image/
 ---*/
 import Example from '../../components/example';
 import html from './add-image.html';

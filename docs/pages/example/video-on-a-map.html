@@ -5,12 +5,12 @@ var videoStyle = {
     "sources": {
         "satellite": {
             "type": "raster",
-            "url": "mapbox://mapbox.satellite",
+            "url": "curvemap://curvemap.satellite",
             "tileSize": 256
         },
         "video": {
             "type": "video",
-            "urls": ["https://www.mapbox.com/drone/video/drone.mp4", "https://www.mapbox.com/drone/video/drone.webm"],
+            "urls": ["https://www.curvemap.com/drone/video/drone.mp4", "https://www.curvemap.com/drone/video/drone.webm"],
             "coordinates": [
                 [-122.51596391201019, 37.56238816766053],
                 [-122.51467645168304, 37.56410183312965],
@@ -36,7 +36,7 @@ var videoStyle = {
     }]
 };
 
-var map = new mapboxgl.Map({
+var map = new curvemapgl.Map({
     container: 'map',
     minZoom: 14,
     zoom: 17,

@@ -4,7 +4,7 @@ description: Add an icon to the map that was generated at runtime.
 tags:
   - styles
   - layers
-pathname: /mapbox-gl-js/example/add-image-generated/
+pathname: /curvemap-gl-js/example/add-image-generated/
 ---*/
 import Example from '../../components/example';
 import html from './add-image-generated.html';

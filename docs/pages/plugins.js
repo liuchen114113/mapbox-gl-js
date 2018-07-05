@@ -8,77 +8,77 @@ import TopNav from "../components/top_nav";
 import entries from 'object.entries';
 
 const meta = {
-    title: 'Mapbox GL JS Plugins',
+    title: 'Curvemap GL JS Plugins',
     description: '',
     pathname: '/plugins'
 };
 
 const plugins = {
     "User Interface Plugins": {
-        "mapbox-gl-accessibility": {
-            "website": "https://github.com/mapbox/mapbox-gl-accessibility/",
+        "curvemap-gl-accessibility": {
+            "website": "https://github.com/curvemap/curvemap-gl-accessibility/",
             "description": "integrates with ARIA-compatible screen readers for users with visual impairments"
         },
-        "mapbox-gl-boundaries": {
-            "website": "https://github.com/mapbox/mapbox-gl-boundaries",
+        "curvemap-gl-boundaries": {
+            "website": "https://github.com/curvemap/curvemap-gl-boundaries",
             "description": "enables users to show/hide disputed borders"
         },
-        "mapbox-gl-compare": {
-            "website": "https://github.com/mapbox/mapbox-gl-compare",
+        "curvemap-gl-compare": {
+            "website": "https://github.com/curvemap/curvemap-gl-compare",
             "description": "enables users to compare two maps by swiping left and right",
-            "example": "mapbox-gl-compare"
+            "example": "curvemap-gl-compare"
         },
-        "mapbox-gl-directions": {
-            "website": "https://github.com/mapbox/mapbox-gl-directions",
+        "curvemap-gl-directions": {
+            "website": "https://github.com/curvemap/curvemap-gl-directions",
             "description": "adds a control which allows users to plot driving, walking, and cycling directions on the map",
-            "example": "mapbox-gl-directions"
+            "example": "curvemap-gl-directions"
         },
-        "mapbox-gl-draw": {
-            "website": "https://github.com/mapbox/mapbox-gl-draw",
-            "description": "adds support for drawing and editing features on Mapbox GL JS maps",
-            "example": "mapbox-gl-draw"
+        "curvemap-gl-draw": {
+            "website": "https://github.com/curvemap/curvemap-gl-draw",
+            "description": "adds support for drawing and editing features on Curvemap GL JS maps",
+            "example": "curvemap-gl-draw"
         },
-        "mapbox-gl-geocoder": {
-            "website": "https://github.com/mapbox/mapbox-gl-geocoder",
-            "description": "adds a Geocoder control to Mapbox GL JS",
-            "example": "mapbox-gl-geocoder"
+        "curvemap-gl-geocoder": {
+            "website": "https://github.com/curvemap/curvemap-gl-geocoder",
+            "description": "adds a Geocoder control to Curvemap GL JS",
+            "example": "curvemap-gl-geocoder"
         }
     },
     "Map Rendering Plugins": {
-        "mapbox-gl-language": {
-            "website": "https://github.com/mapbox/mapbox-gl-language/",
+        "curvemap-gl-language": {
+            "website": "https://github.com/curvemap/curvemap-gl-language/",
             "description": "automatically localizes the map into the user’s language"
         },
-        "mapbox-gl-rtl-text": {
-            "website": "https://github.com/mapbox/mapbox-gl-rtl-text",
-            "description": "adds right-to-left text support to Mapbox GL JS",
-            "example": "mapbox-gl-rtl-text"
+        "curvemap-gl-rtl-text": {
+            "website": "https://github.com/curvemap/curvemap-gl-rtl-text",
+            "description": "adds right-to-left text support to Curvemap GL JS",
+            "example": "curvemap-gl-rtl-text"
         },
         "deck.gl": {
             "website": "https://github.com/uber/deck.gl",
-            "description": "adds advanced WebGL visualization layers to Mapbox GL JS"
+            "description": "adds advanced WebGL visualization layers to Curvemap GL JS"
         }
     },
     "Framework Integrations": {
         "echartslayer": {
             "website": "https://github.com/lzxue/echartLayer",
-            "description": md`provides an [echarts](https://ecomfe.github.io/echarts/index-en.html) integration for Mapbox GL JS`
+            "description": md`provides an [echarts](https://ecomfe.github.io/echarts/index-en.html) integration for Curvemap GL JS`
         },
-        "wtMapbox": {
-            "website": "https://github.com/yvanvds/wtMapbox",
-            "description": md`provides a [Webtoolkit](https://www.webtoolkit.eu/wt) integration for Mapbox GL JS`
+        "wtCurvemap": {
+            "website": "https://github.com/yvanvds/wtCurvemap",
+            "description": md`provides a [Webtoolkit](https://www.webtoolkit.eu/wt) integration for Curvemap GL JS`
         },
-        "react-mapbox-gl": {
-            "website": "https://github.com/alex3165/react-mapbox-gl",
-            "description": md`provides a [React](https://facebook.github.io/react/) integration for Mapbox GL JS`
+        "react-curvemap-gl": {
+            "website": "https://github.com/alex3165/react-curvemap-gl",
+            "description": md`provides a [React](https://facebook.github.io/react/) integration for Curvemap GL JS`
         },
-        "angular-mapboxgl-directive": {
-            "website": "https://github.com/Naimikan/angular-mapboxgl-directive",
-            "description": md`provides an [AngularJS](https://angularjs.org/) directive for Mapbox GL JS`
+        "angular-curvemapgl-directive": {
+            "website": "https://github.com/Naimikan/angular-curvemapgl-directive",
+            "description": md`provides an [AngularJS](https://angularjs.org/) directive for Curvemap GL JS`
         },
-        "ngx-mapbox-gl": {
-            "website": "https://github.com/Wykks/ngx-mapbox-gl",
-            "description": md`provides an [Angular](https://angular.io/) integration for Mapbox GL JS`
+        "ngx-curvemap-gl": {
+            "website": "https://github.com/Wykks/ngx-curvemap-gl",
+            "description": md`provides an [Angular](https://angular.io/) integration for Curvemap GL JS`
         }
     },
     "Utility Libraries": {
@@ -86,39 +86,39 @@ const plugins = {
             "website": "http://turfjs.org/",
             "description": "provides advanced geospatial analysis tools"
         },
-        "mapbox-gl-layer-groups": {
-            "website": "https://github.com/mapbox/mapbox-gl-layer-groups",
-            "description": "manages layer groups in Mapbox GL JS"
+        "curvemap-gl-layer-groups": {
+            "website": "https://github.com/curvemap/curvemap-gl-layer-groups",
+            "description": "manages layer groups in Curvemap GL JS"
         },
         "expression-jamsession": {
-            "website": "https://github.com/mapbox/expression-jamsession/",
-            "description": md`converts [Mapbox Studio formulas](https://www.mapbox.com/help/studio-manual-styles/#use-a-formula) into [expressions](https://www.mapbox.com/mapbox-gl-js/style-spec/#expressions)`
+            "website": "https://github.com/curvemap/expression-jamsession/",
+            "description": md`converts [Curvemap Studio formulas](https://www.curvemap.com/help/studio-manual-styles/#use-a-formula) into [expressions](https://www.curvemap.com/curvemap-gl-js/style-spec/#expressions)`
         },
         "simplespec-to-gl-style": {
-            "website": "https://github.com/mapbox/simplespec-to-gl-style",
-            "description": md`converts GeoJSON styled with [\`simplestyle-spec\`](https://github.com/mapbox/simplestyle-spec/) to a Mapbox GL Style`
+            "website": "https://github.com/curvemap/simplespec-to-gl-style",
+            "description": md`converts GeoJSON styled with [\`simplestyle-spec\`](https://github.com/curvemap/simplestyle-spec/) to a Curvemap GL Style`
         },
-        "mapbox-gl-supported": {
-            "website": "https://github.com/mapbox/mapbox-gl-supported",
-            "description": "determines if the current browser supports Mapbox GL JS",
-            "example": "mapbox-gl-supported"
+        "curvemap-gl-supported": {
+            "website": "https://github.com/curvemap/curvemap-gl-supported",
+            "description": "determines if the current browser supports Curvemap GL JS",
+            "example": "curvemap-gl-supported"
         },
-        "mapbox-gl-sync-move": {
-            "website": "https://github.com/mapbox/mapbox-gl-sync-move",
-            "description": "syncs movement between two Mapbox GL JS maps"
+        "curvemap-gl-sync-move": {
+            "website": "https://github.com/curvemap/curvemap-gl-sync-move",
+            "description": "syncs movement between two Curvemap GL JS maps"
         }
     },
     "Development Tools": {
-        "mapbox-gl-js-mock": {
-            "website": "https://github.com/mapbox/mapbox-gl-js-mock",
-            "description": md`is a [mock](https://en.wikipedia.org/wiki/Mock_object) of Mapbox GL JS`
+        "curvemap-gl-js-mock": {
+            "website": "https://github.com/curvemap/curvemap-gl-js-mock",
+            "description": md`is a [mock](https://en.wikipedia.org/wiki/Mock_object) of Curvemap GL JS`
         },
-        "mapbox-gl-inspect": {
-            "website": "https://github.com/lukasmartinelli/mapbox-gl-inspect",
+        "curvemap-gl-inspect": {
+            "website": "https://github.com/lukasmartinelli/curvemap-gl-inspect",
             "description": "adds an inspect control to view vector source features and properties"
         },
-        "mapbox-gl-fps": {
-            "website": "https://github.com/MazeMap/mapbox-gl-fps",
+        "curvemap-gl-fps": {
+            "website": "https://github.com/MazeMap/curvemap-gl-fps",
             "description": "A frames-per-seconds GUI control and measurer with statistic report output."
         }
     }

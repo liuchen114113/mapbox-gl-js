@@ -3,13 +3,13 @@
 
 <script>
 
-var map = new mapboxgl.Map({
+var map = new curvemapgl.Map({
     container: 'map', // container id
-    style: 'mapbox://styles/mapbox/outdoors-v9', //stylesheet location
+    style: 'curvemap://styles/curvemap/outdoors-v9', //stylesheet location
     center: [11.255, 43.77], // starting position
     zoom: 13 // starting zoom
 });
 
-map.addControl(new mapboxgl.FullscreenControl());
+map.addControl(new curvemapgl.FullscreenControl());
 
 </script>

@@ -1,9 +1,9 @@
 <div id='map'></div>
 
 <script>
-var map = new mapboxgl.Map({
+var map = new curvemapgl.Map({
     container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v9',
+    style: 'curvemap://styles/curvemap/streets-v9',
     center: [-98, 38.88],
     minZoom: 2,
     zoom: 3
@@ -14,7 +14,7 @@ map.on('load', function() {
     // county polygons uploaded as vector tiles
     map.addSource('counties', {
         "type": "vector",
-        "url": "mapbox://mapbox.82pkq93d"
+        "url": "curvemap://curvemap.82pkq93d"
     });
 
     map.addLayer({

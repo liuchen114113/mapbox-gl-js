@@ -5,7 +5,7 @@ description: >-
   pixel size of the map.
 tags:
   - camera
-pathname: /mapbox-gl-js/example/fitbounds/
+pathname: /curvemap-gl-js/example/fitbounds/
 ---*/
 import Example from '../../components/example';
 import html from './fitbounds.html';

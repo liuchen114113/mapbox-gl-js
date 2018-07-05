@@ -16,7 +16,7 @@ export default class SDKSupportTable extends React.Component {
                 <thead>
                     <tr className='fill-light'>
                         <th>SDK Support</th>
-                        <td className='center'>Mapbox GL JS</td>
+                        <td className='center'>Curvemap GL JS</td>
                         <td className='center'>Android SDK</td>
                         <td className='center'>iOS SDK</td>
                         <td className='center'>macOS SDK</td>

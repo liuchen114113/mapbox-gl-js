@@ -6,7 +6,7 @@ description: >-
 tags:
   - layers
   - user-interaction
-pathname: /mapbox-gl-js/example/updating-choropleth/
+pathname: /curvemap-gl-js/example/updating-choropleth/
 ---*/
 import Example from '../../components/example';
 import html from './updating-choropleth.html';

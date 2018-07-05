@@ -4,7 +4,7 @@ import LeftNav from "../components/left_nav";
 import TopNav from "../components/top_nav";
 
 const meta = {
-    title: 'Mapbox GL JS Roadmap',
+    title: 'Curvemap GL JS Roadmap',
     description: '',
     pathname: '/roadmap'
 };
@@ -91,7 +91,7 @@ export default class extends React.Component {
                         <div className='pad2y col12'>
                             <div className='pad1 contain space-bottom2'>
                                 <h1 className='space-bottom2'>
-                                    Mapbox GL JS Roadmap
+                                    Curvemap GL JS Roadmap
                                 </h1>
                                 <p className='prose'>The GL JS team is focused on making our priorities transparent and
                                     reliable. Below is a list of which major projects and features are currently in
@@ -118,10 +118,10 @@ export default class extends React.Component {
                                                     <div className="space-top">
                                                         {item.issues && item.issues.map((issue, i) =>
                                                             <code key={i}><a target="_blank" className="roadmap-issue"
-                                                                href={`https://github.com/mapbox/mapbox-gl-js/issues/${issue}`}>#{issue}</a></code>)}
+                                                                href={`https://github.com/curvemap/curvemap-gl-js/issues/${issue}`}>#{issue}</a></code>)}
                                                         {item.project &&
                                                         <code><a target="_blank"
-                                                            href={`https://github.com/mapbox/mapbox-gl-js/projects/${item.project}`}>project#{item.project}</a></code>}
+                                                            href={`https://github.com/curvemap/curvemap-gl-js/projects/${item.project}`}>project#{item.project}</a></code>}
                                                     </div>
                                                 </div>
                                             )}

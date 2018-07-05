@@ -17,9 +17,9 @@
     }
 </style>
 
-<script src='https://api.tiles.mapbox.com/mapbox.js/plugins/turf/v3.0.11/turf.min.js'></script>
-<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.0.9/mapbox-gl-draw.js'></script>
-<link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.0.9/mapbox-gl-draw.css' type='text/css'/>
+<script src='https://api.tiles.curvemap.com/curvemap.js/plugins/turf/v3.0.11/turf.min.js'></script>
+<script src='https://api.curvemap.com/curvemap-gl-js/plugins/curvemap-gl-draw/v1.0.9/curvemap-gl-draw.js'></script>
+<link rel='stylesheet' href='https://api.curvemap.com/curvemap-gl-js/plugins/curvemap-gl-draw/v1.0.9/curvemap-gl-draw.css' type='text/css'/>
 <div id='map'></div>
 <div class='calculation-box'>
     <p>Draw a polygon using the draw tools.</p>
@@ -28,14 +28,14 @@
 
 <script>
 /* eslint-disable */
-var map = new mapboxgl.Map({
+var map = new curvemapgl.Map({
     container: 'map', // container id
-    style: 'mapbox://styles/mapbox/satellite-v9', //hosted style id
+    style: 'curvemap://styles/curvemap/satellite-v9', //hosted style id
     center: [-91.874, 42.760], // starting position
     zoom: 12 // starting zoom
 });
 
-var draw = new MapboxDraw({
+var draw = new CurvemapDraw({
     displayControlsDefault: false,
     controls: {
         polygon: true,

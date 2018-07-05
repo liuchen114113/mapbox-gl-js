@@ -1,8 +1,8 @@
 <div id='map'></div>
 <script>
-var map = new mapboxgl.Map({
+var map = new curvemapgl.Map({
     container: 'map',
-    style: 'mapbox://styles/mapbox/light-v9',
+    style: 'curvemap://styles/curvemap/light-v9',
     zoom: 12,
     center: [-122.447303, 37.753574]
 });
@@ -14,7 +14,7 @@ map.on('load', function () {
         'type': 'circle',
         'source': {
             type: 'vector',
-            url: 'mapbox://examples.8fgz4egr'
+            url: 'curvemap://examples.8fgz4egr'
         },
         'source-layer': 'sf2010',
         'paint': {
@@ -24,7 +24,7 @@ map.on('load', function () {
                 'stops': [[12, 2], [22, 180]]
             },
             // color circles by ethnicity, using a match expression
-            // https://www.mapbox.com/mapbox-gl-js/style-spec/#expressions-match
+            // https://www.curvemap.com/curvemap-gl-js/style-spec/#expressions-match
             'circle-color': [
                 'match',
                 ['get', 'ethnicity'],

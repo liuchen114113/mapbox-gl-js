@@ -56,9 +56,9 @@
 
 <script src='//d3js.org/d3.v3.min.js' charset='utf-8'></script>
 <script>
-var map = new mapboxgl.Map({
+var map = new curvemapgl.Map({
     container: 'map',
-    style: 'mapbox://styles/mapbox/light-v9',
+    style: 'curvemap://styles/curvemap/light-v9',
     center: [31.4606, 20.7927],
     zoom: 0.5
 });
@@ -100,7 +100,7 @@ map.on('load', function() {
     //
     // Here we're using d3 to help us make the ajax request but you can use
     // Any request method (library or otherwise) you wish.
-    d3.json('/mapbox-gl-js/assets/significant-earthquakes-2015.geojson', function(err, data) {
+    d3.json('/curvemap-gl-js/assets/significant-earthquakes-2015.geojson', function(err, data) {
         if (err) throw err;
 
         // Create a month property value based on time

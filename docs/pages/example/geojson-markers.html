@@ -1,8 +1,8 @@
 <div id='map'></div>
 <script>
-var map = new mapboxgl.Map({
+var map = new curvemapgl.Map({
     container: 'map',
-    style: 'mapbox://styles/mapbox/light-v9',
+    style: 'curvemap://styles/curvemap/light-v9',
     center: [-96, 37.8],
     zoom: 3
 });
@@ -23,7 +23,7 @@ map.on('load', function () {
                         "coordinates": [-77.03238901390978, 38.913188059745586]
                     },
                     "properties": {
-                        "title": "Mapbox DC",
+                        "title": "Curvemap DC",
                         "icon": "monument"
                     }
                 }, {
@@ -33,7 +33,7 @@ map.on('load', function () {
                         "coordinates": [-122.414, 37.776]
                     },
                     "properties": {
-                        "title": "Mapbox SF",
+                        "title": "Curvemap SF",
                         "icon": "harbor"
                     }
                 }]

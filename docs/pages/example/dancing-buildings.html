@@ -3,9 +3,9 @@
 <script>
 /* global Promise */
 
-// Use a minimal variant of the Mapbox Dark style, with certain features removed.
-var map = new mapboxgl.Map({
-    style: 'mapbox://styles/examples/cj68bstx01a3r2rndlud0pwpv',
+// Use a minimal variant of the Curvemap Dark style, with certain features removed.
+var map = new curvemapgl.Map({
+    style: 'curvemap://styles/examples/cj68bstx01a3r2rndlud0pwpv',
     center: {
         lng: -74.00649562332922,
         lat: 40.70811328605049
@@ -15,7 +15,7 @@ var map = new mapboxgl.Map({
     container: 'map'
 });
 
-map.addControl(new mapboxgl.FullscreenControl());
+map.addControl(new curvemapgl.FullscreenControl());
 
 map.on('load', function() {
     var bins = 16;

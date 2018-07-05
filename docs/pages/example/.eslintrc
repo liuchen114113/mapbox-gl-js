@@ -8,9 +8,9 @@
       },
       "plugins": ["html"],
       "globals": {
-        "mapboxgl": true,
-        "MapboxGeocoder": true,
-        "MapboxDirections": true,
+        "curvemapgl": true,
+        "CurvemapGeocoder": true,
+        "CurvemapDirections": true,
         "turf": true,
         "d3": true,
         "Uint8Array": true

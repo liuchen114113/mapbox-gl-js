@@ -1,8 +1,8 @@
 <div id='map'></div>
 <script>
-var map = new mapboxgl.Map({
+var map = new curvemapgl.Map({
     container: 'map',
-    style: 'mapbox://styles/mapbox/light-v9',
+    style: 'curvemap://styles/curvemap/light-v9',
     zoom: 13,
     center: [-122.447303, 37.753574]
 });
@@ -14,7 +14,7 @@ map.on('load', function () {
         "type": "line",
         "source": {
             type: 'vector',
-            url: 'mapbox://mapbox.mapbox-terrain-v2'
+            url: 'curvemap://curvemap.curvemap-terrain-v2'
         },
         "source-layer": "contour",
         "layout": {

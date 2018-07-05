@@ -4,7 +4,7 @@ description: Control a symbol with keybindings and rotate it
 tags:
   - layers
   - sources
-pathname: /mapbox-gl-js/example/rotating-controllable-marker/
+pathname: /curvemap-gl-js/example/rotating-controllable-marker/
 ---*/
 import Example from '../../components/example';
 import html from './rotating-controllable-marker.html';

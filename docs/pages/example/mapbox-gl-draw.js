@@ -5,8 +5,8 @@ description: >-
   meters.
 tags:
   - controls-and-overlays
-pathname: /mapbox-gl-js/example/mapbox-gl-draw/
+pathname: /curvemap-gl-js/example/curvemap-gl-draw/
 ---*/
 import Example from '../../components/example';
-import html from './mapbox-gl-draw.html';
+import html from './curvemap-gl-draw.html';
 export default Example(html);

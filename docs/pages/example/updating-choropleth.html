@@ -55,9 +55,9 @@
 </div>
 
 <script>
-var map = new mapboxgl.Map({
+var map = new curvemapgl.Map({
     container: 'map',
-    style: 'mapbox://styles/mapbox/light-v9',
+    style: 'curvemap://styles/curvemap/light-v9',
     center: [-98, 38.88],
     minZoom: 3,
     zoom: 3
@@ -69,7 +69,7 @@ map.on('load', function() {
 
     map.addSource('population', {
         'type': 'vector',
-        'url': 'mapbox://mapbox.660ui7x6'
+        'url': 'curvemap://curvemap.660ui7x6'
     });
 
     map.addLayer({

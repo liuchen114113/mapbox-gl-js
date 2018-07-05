@@ -4,13 +4,13 @@ var mapStyle = {
     "version": 8,
     "name": "Dark",
     "sources": {
-        "mapbox": {
+        "curvemap": {
             "type": "vector",
-            "url": "mapbox://mapbox.mapbox-streets-v6"
+            "url": "curvemap://curvemap.curvemap-streets-v6"
         },
         "overlay": {
             "type": "image",
-            "url": "/mapbox-gl-js/assets/radar.gif",
+            "url": "/curvemap-gl-js/assets/radar.gif",
             "coordinates": [
                 [-80.425, 46.437],
                 [-71.516, 46.437],
@@ -19,8 +19,8 @@ var mapStyle = {
             ]
         }
     },
-    "sprite": "mapbox://sprites/mapbox/dark-v9",
-    "glyphs": "mapbox://fonts/mapbox/{fontstack}/{range}.pbf",
+    "sprite": "curvemap://sprites/curvemap/dark-v9",
+    "glyphs": "curvemap://fonts/curvemap/{fontstack}/{range}.pbf",
     "layers": [
         {
             "id": "background",
@@ -29,14 +29,14 @@ var mapStyle = {
         },
         {
             "id": "water",
-            "source": "mapbox",
+            "source": "curvemap",
             "source-layer": "water",
             "type": "fill",
             "paint": {"fill-color": "#2c2c2c"}
         },
         {
             "id": "boundaries",
-            "source": "mapbox",
+            "source": "curvemap",
             "source-layer": "admin",
             "type": "line",
             "paint": {"line-color": "#797979", "line-dasharray": [2, 2, 6, 2]},
@@ -50,7 +50,7 @@ var mapStyle = {
         },
         {
             "id": "cities",
-            "source": "mapbox",
+            "source": "curvemap",
             "source-layer": "place_label",
             "type": "symbol",
             "layout": {
@@ -72,7 +72,7 @@ var mapStyle = {
         },
         {
             "id": "states",
-            "source": "mapbox",
+            "source": "curvemap",
             "source-layer": "state_label",
             "type": "symbol",
             "layout": {
@@ -99,7 +99,7 @@ var mapStyle = {
     ]
 };
 
-var map = new mapboxgl.Map({
+var map = new curvemapgl.Map({
     container: 'map',
     maxZoom: 5.99,
     minZoom: 4,

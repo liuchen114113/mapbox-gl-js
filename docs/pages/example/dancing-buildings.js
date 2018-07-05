@@ -5,7 +5,7 @@ description: >-
   the 3D buildings dance to the rhythm of your ambient environment.
 tags:
   - user-interaction
-pathname: /mapbox-gl-js/example/dancing-buildings/
+pathname: /curvemap-gl-js/example/dancing-buildings/
 ---*/
 import Example from '../../components/example';
 import html from './dancing-buildings.html';

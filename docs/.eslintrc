@@ -18,6 +18,6 @@
   },
   "globals": {
     "analytics": false,
-    "MapboxPageShell": false
+    "CurvemapPageShell": false
   }
 }

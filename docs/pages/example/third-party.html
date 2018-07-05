@@ -1,8 +1,8 @@
 <div id='map'></div>
 <script>
-var map = new mapboxgl.Map({
+var map = new curvemapgl.Map({
     container: 'map',
-    style: 'mapbox://styles/mapbox/light-v9',
+    style: 'curvemap://styles/curvemap/light-v9',
     zoom: 12,
     center: [-87.622088, 41.878781]
 });
@@ -32,5 +32,5 @@ map.on('load', function() {
     }, 'waterway-label');
 });
 
-map.addControl(new mapboxgl.NavigationControl());
+map.addControl(new curvemapgl.NavigationControl());
 </script>

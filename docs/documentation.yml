@@ -57,5 +57,5 @@ toc:
   - Evented
   - MapMouseEvent
   - MapTouchEvent
-  - MapBoxZoomEvent
+  - CurveMapZoomEvent
   - MapDataEvent

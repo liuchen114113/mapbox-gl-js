@@ -59,9 +59,9 @@ var geojson = {
     ]
 };
 
-var map = new mapboxgl.Map({
+var map = new curvemapgl.Map({
     container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v9',
+    style: 'curvemap://styles/curvemap/streets-v9',
     center: [-65.017, -16.457],
     zoom: 5
 });
@@ -80,7 +80,7 @@ geojson.features.forEach(function(marker) {
     });
 
     // add marker to map
-    new mapboxgl.Marker(el)
+    new curvemapgl.Marker(el)
         .setLngLat(marker.geometry.coordinates)
         .addTo(map);
 });

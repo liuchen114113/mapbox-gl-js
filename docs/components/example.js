@@ -6,7 +6,7 @@ import PageShell from './page_shell';
 import LeftNav from './left_nav';
 import TopNav from './top_nav';
 import {highlightMarkup} from './prism_highlight';
-import supported from '@mapbox/mapbox-gl-supported';
+import supported from '@hymap/hymap-gl-supported';
 import {copy} from 'execcommand-copy';
 import examples from '@mapbox/batfish/data/examples'; // eslint-disable-line import/no-unresolved
 import entries from 'object.entries';
@@ -35,7 +35,7 @@ export default function (html) {
         }
 
         // Display HTML with production URLs and the logged-in user's access token (if available).
-        // Render HTML with possibly-local URLs and a Mapbox access token (don't bill the user for looking at examples).
+        // Render HTML with possibly-local URLs and a Curvemap access token (don't bill the user for looking at examples).
 
         displayHTML() {
             return `<!DOCTYPE html>
@@ -53,7 +53,7 @@ export default function (html) {
 </head>
 <body>
 
-${html.replace("<script>", `<script>\nmapboxgl.accessToken = '${this.state.token}';`)}
+${html.replace("<script>", `<script>\ncurvemapgl.accessToken = '${this.state.token}';`)}
 </body>
 </html>`;
         }
@@ -71,7 +71,7 @@ ${html.replace("<script>", `<script>\nmapboxgl.accessToken = '${this.state.token
         body { margin:0; padding:0; }
         #map { position:absolute; top:0; bottom:0; width:100%; }
     </style>
-    <script>mapboxgl.accessToken = '${MapboxPageShell.getMapboxAccessToken()}'</script>
+    <script>curvemapgl.accessToken = '${CurvemapPageShell.getCurvemapAccessToken()}'</script>
 </head>
 <body>
 ${html}
@@ -118,8 +118,8 @@ ${html}
                                     {!supported() &&
                                         <div id='unsupported' className='pad2 hidden dark'>
                                             <div className='note error round pad1'>
-                                                <div className='strong space-bottom1 icon alert'>Mapbox GL unsupported</div>
-                                                <div className='small strong'>Mapbox GL requires <a href='http://caniuse.com/webgl'>WebGL support</a>. Please check that you are using a supported browser and that WebGL is <a href='http://get.webgl.org/'>enabled</a>.</div>
+                                                <div className='strong space-bottom1 icon alert'>Curvemap GL unsupported</div>
+                                                <div className='small strong'>Curvemap GL requires <a href='http://caniuse.com/webgl'>WebGL support</a>. Please check that you are using a supported browser and that WebGL is <a href='http://get.webgl.org/'>enabled</a>.</div>
                                             </div>
                                         </div>}
                                 </div>

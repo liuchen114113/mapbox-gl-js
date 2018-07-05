@@ -5,7 +5,7 @@ description: >-
   elements.
 tags:
   - user-interaction
-pathname: /mapbox-gl-js/example/queryrenderedfeatures/
+pathname: /curvemap-gl-js/example/queryrenderedfeatures/
 ---*/
 import Example from '../../components/example';
 import html from './queryrenderedfeatures.html';
