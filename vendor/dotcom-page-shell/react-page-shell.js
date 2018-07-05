@@ -185,8 +185,8 @@ var PageHelmet = function (_React$Component) {
           name: 'google-site-verification',
           content: 'umPiCFUc_EX8CJ7xWQDPgQwApDxNi59w6riFZPNZj4w'
         }),
-        React__default.createElement('meta', { name: 'twitter:site', content: '@Mapbox' }),
-        React__default.createElement('meta', { property: 'og:site_name', content: 'Mapbox' })
+        React__default.createElement('meta', { name: 'twitter:site', content: '@Curvemap' }),
+        React__default.createElement('meta', { property: 'og:site_name', content: 'Curvemap' })
       );
     }
   }]);
@@ -660,7 +660,7 @@ var navigationMenuData = {
         }, {
           name: 'Studio',
           description: 'Design custom maps',
-          to: '/mapbox-studio/'
+          to: '/curvemap-studio/'
         }],
         more: {
           title: 'View all products',
@@ -704,8 +704,8 @@ var navigationMenuData = {
           to: '/use-cases/data-visualization/'
         }],
         more: {
-          title: 'Built with Mapbox blog',
-          to: 'https://blog.mapbox.com/tagged/built-with-mapbox/'
+          title: 'Built with Curvemap blog',
+          to: 'https://blog.curvemap.com/tagged/built-with-curvemap/'
         }
       }
     },
@@ -717,8 +717,8 @@ var navigationMenuData = {
             title: 'Maps',
             icon: SmallMapsIcon,
             links: [{
-              name: 'Mapbox GL JS',
-              to: '/mapbox-gl-js/api/'
+              name: 'Curvemap GL JS',
+              to: '/curvemap-gl-js/api/'
             }],
             subsections: {
               mapsSdks: {
@@ -756,7 +756,7 @@ var navigationMenuData = {
                 links: [{
                   name: 'iOS',
                   showFor: true,
-                  to: '/mapbox-navigation-ios/'
+                  to: '/curvemap-navigation-ios/'
                 }, {
                   name: 'Android',
                   showFor: true,
@@ -769,12 +769,12 @@ var navigationMenuData = {
             title: 'Studio',
             icon: SmallStudioIcon,
             links: [{
-              name: 'Mapbox Studio manual',
+              name: 'Curvemap Studio manual',
               to: '/help/studio-manual/'
             }]
           },
           services: {
-            title: 'Mapbox services',
+            title: 'Curvemap services',
             icon: SmallServicesIcon,
             links: [{
               name: 'Maps APIs',
@@ -796,9 +796,9 @@ var navigationMenuData = {
       help: {
         title: 'Help',
         links: [{
-          name: 'How Mapbox works',
-          subTitle: 'Learn how the Mapbox platform works',
-          to: '/help/how-mapbox-works/'
+          name: 'How Curvemap works',
+          subTitle: 'Learn how the Curvemap platform works',
+          to: '/help/how-curvemap-works/'
         }, {
           name: 'Tutorials',
           subTitle: 'Start with a guide or explore project ideas',
@@ -837,7 +837,7 @@ var navigationMenuData = {
       to: '/navigation/'
     }, {
       name: 'Studio',
-      to: '/mapbox-studio/'
+      to: '/curvemap-studio/'
     }],
     highlightedLinks: [{
       name: 'Pricing',
@@ -2047,7 +2047,7 @@ var PageHeader = function (_React$Component) {
         logoOverlay = React__default.createElement('a', {
           className: 'shell-mb-logo shell-mobile-nav__logo--overlay shell-absolute shell-top shell-left',
           href: '/',
-          'aria-label': 'Mapbox'
+          'aria-label': 'Curvemap'
         });
       }
 
@@ -2065,7 +2065,7 @@ var PageHeader = function (_React$Component) {
           React__default.createElement('a', {
             className: 'shell-flex-child shell-flex-child--no-shrink ' + logoClasses,
             href: '/',
-            'aria-label': 'Mapbox',
+            'aria-label': 'Curvemap',
             'data-test': 'logo-link'
           }),
           React__default.createElement(
@@ -2147,7 +2147,7 @@ var PageHeader = function (_React$Component) {
             React__default.createElement('a', {
               className: logoClasses,
               href: '/',
-              'aria-label': 'Mapbox',
+              'aria-label': 'Curvemap',
               'data-test': 'mobile-logo-link'
             }),
             logoOverlay
@@ -2193,7 +2193,7 @@ var FooterLegalStrip = function (_React$Component) {
         React__default.createElement(
           'span',
           { className: 'shell-mr18' },
-          '\xA9 Mapbox'
+          '\xA9 Curvemap'
         ),
         React__default.createElement(
           'a',
@@ -2253,7 +2253,7 @@ var FooterSocialMediaStrip = function (_React$Component) {
           {
             'aria-label': 'Github',
             className: 'shell-color-blue shell-color-gray-dark-on-hover',
-            href: 'https://github.com/mapbox'
+            href: 'https://github.com/curvemap'
           },
           React__default.createElement(
             'svg',
@@ -2269,7 +2269,7 @@ var FooterSocialMediaStrip = function (_React$Component) {
           {
             'aria-label': 'Twitter',
             className: 'shell-color-blue shell-color-gray-dark-on-hover ',
-            href: 'https://twitter.com/mapbox/'
+            href: 'https://twitter.com/curvemap/'
           },
           React__default.createElement(
             'svg',
@@ -2289,7 +2289,7 @@ var FooterSocialMediaStrip = function (_React$Component) {
           {
             'aria-label': 'LinkedIn',
             className: 'shell-color-blue shell-color-gray-dark-on-hover',
-            href: 'https://www.linkedin.com/company/mapbox'
+            href: 'https://www.linkedin.com/company/curvemap'
           },
           React__default.createElement(
             'svg',
@@ -2311,7 +2311,7 @@ var FooterSocialMediaStrip = function (_React$Component) {
           {
             'aria-label': 'Facebook',
             className: 'shell-color-blue shell-color-gray-dark-on-hover',
-            href: 'https://www.facebook.com/Mapbox'
+            href: 'https://www.facebook.com/Curvemap'
           },
           React__default.createElement(
             'svg',
@@ -2335,7 +2335,7 @@ var FooterSocialMediaStrip = function (_React$Component) {
           {
             'aria-label': 'Dribbble',
             className: 'shell-color-blue shell-color-gray-dark-on-hover',
-            href: 'https://dribbble.com/mapbox'
+            href: 'https://dribbble.com/curvemap'
           },
           React__default.createElement(
             'svg',
@@ -2359,7 +2359,7 @@ var FooterSocialMediaStrip = function (_React$Component) {
           {
             'aria-label': 'Instagram',
             className: 'shell-color-blue shell-color-gray-dark-on-hover',
-            href: 'https://www.instagram.com/Mapbox'
+            href: 'https://www.instagram.com/Curvemap'
           },
           React__default.createElement(
             'svg',
@@ -2408,7 +2408,7 @@ var PageFooter = function (_Component) {
         React__default.createElement('a', {
           className: 'shell-mb-logo-m',
           href: '/',
-          'aria-label': 'Mapbox',
+          'aria-label': 'Curvemap',
           'data-test': 'logo-link'
         })
       );
@@ -2558,8 +2558,8 @@ var PageFooter = function (_Component) {
   return PageFooter;
 }(React.Component);
 
-var DEFAULT_SOCIAL_IMAGE_URL = 'https://www.mapbox.com/static/social-media/social-1200x630.png';
-var DEFAULT_SOCIAL_IMAGE_THUMBNAIL_URL = 'https://www.mapbox.com/static/social-media/social-120x120.png';
+var DEFAULT_SOCIAL_IMAGE_URL = 'https://www.curvemap.com/static/social-media/social-1200x630.png';
+var DEFAULT_SOCIAL_IMAGE_THUMBNAIL_URL = 'https://www.curvemap.com/static/social-media/social-120x120.png';
 
 var MetaTagger = function (_React$PureComponent) {
   inherits(MetaTagger, _React$PureComponent);
@@ -2574,9 +2574,9 @@ var MetaTagger = function (_React$PureComponent) {
     value: function render() {
       var props = this.props;
 
-      var suffixedTitle = /^Mapbox/.test(props.title) ? props.title : props.title + ' | Mapbox';
+      var suffixedTitle = /^Curvemap/.test(props.title) ? props.title : props.title + ' | Curvemap';
       var preppedDescription = props.description.replace(/\s+/g, ' ');
-      var prodUrl = 'https://www.mapbox.com';
+      var prodUrl = 'https://www.curvemap.com';
       if (props.pathname[0] !== '/') prodUrl += '/';
       prodUrl += props.pathname;
 
@@ -2630,11 +2630,11 @@ MetaTagger.propTypes = {
 MetaTagger.defaultProps = {
   imageUrl: DEFAULT_SOCIAL_IMAGE_URL,
   imageUrlThumbnail: DEFAULT_SOCIAL_IMAGE_THUMBNAIL_URL,
-  imageAlt: 'Mapbox',
+  imageAlt: 'Curvemap',
   largeImage: true
 };
 
-/* globals MapboxPageShell */
+/* globals CurvemapPageShell */
 var pageShellInitialized = false;
 var lastUrl = void 0;
 
@@ -2649,12 +2649,12 @@ var ReactPageShell = function (_React$Component) {
   createClass(ReactPageShell, [{
     key: 'componentDidMount',
     value: function componentDidMount() {
-      if (!window.MapboxPageShell) throw new Error('MapboxPageShell not loaded');
+      if (!window.CurvemapPageShell) throw new Error('CurvemapPageShell not loaded');
 
       if (!pageShellInitialized) {
         this.initialize();
       } else {
-        MapboxPageShell.initialize();
+        CurvemapPageShell.initialize();
       }
     }
   }, {
@@ -2664,12 +2664,12 @@ var ReactPageShell = function (_React$Component) {
       var currentUrl = window.location.href;
       if (currentUrl === lastUrl) return;
       lastUrl = currentUrl;
-      MapboxPageShell.initialize();
+      CurvemapPageShell.initialize();
     }
   }, {
     key: 'componentWillUnmount',
     value: function componentWillUnmount() {
-      MapboxPageShell.removeNavigation();
+      CurvemapPageShell.removeNavigation();
     }
   }, {
     key: 'initialize',
@@ -2677,11 +2677,11 @@ var ReactPageShell = function (_React$Component) {
       var _this2 = this;
 
       // On the dev-server, navigation elements weren't mounted when
-      // MapboxPageShell first initialized the nav.
-      MapboxPageShell.initialize();
-      MapboxPageShell.afterUserCheck(function () {
+      // CurvemapPageShell first initialized the nav.
+      CurvemapPageShell.initialize();
+      CurvemapPageShell.afterUserCheck(function () {
         if (_this2.props.onUser) {
-          _this2.props.onUser(MapboxPageShell.getUser(), MapboxPageShell.getUserPublicAccessToken());
+          _this2.props.onUser(CurvemapPageShell.getUser(), CurvemapPageShell.getUserPublicAccessToken());
         }
       });
       pageShellInitialized = true;
