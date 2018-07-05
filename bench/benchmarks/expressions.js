@@ -21,7 +21,7 @@ class ExpressionBenchmark extends Benchmark {
     }>;
 
     setup() {
-        return fetch(`https://api.mapbox.com/styles/v1/mapbox/streets-v9?access_token=${accessToken}`)
+        return fetch(`https://api.curvemap.com/styles/v1/curvemap/streets-v9?access_token=${accessToken}`)
             .then(response => response.json())
             .then(json => {
                 this.data = [];

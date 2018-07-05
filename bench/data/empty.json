@@ -3,11 +3,11 @@
   "name": "Empty",
   "sources": {
     "composite": {
-      "url": "mapbox://mapbox.mapbox-streets-v7",
+      "url": "curvemap://curvemap.curvemap-streets-v7",
       "type": "vector"
     }
   },
-  "sprite": "mapbox://sprites/mapbox/light-v9",
-  "glyphs": "mapbox://fonts/mapbox/{fontstack}/{range}.pbf",
+  "sprite": "curvemap://sprites/curvemap/light-v9",
+  "glyphs": "curvemap://fonts/curvemap/{fontstack}/{range}.pbf",
   "layers": []
 }

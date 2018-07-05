@@ -13,7 +13,7 @@ export default function (options: any): Promise<Map> {
 
         const map = new Map(Object.assign({
             container,
-            style: 'mapbox://styles/mapbox/streets-v9'
+            style: 'curvemap://styles/curvemap/streets-v9'
         }, options));
 
         map

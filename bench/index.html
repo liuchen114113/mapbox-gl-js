@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Mapbox GL JS Benchmarks</title>
+    <title>Curvemap GL JS Benchmarks</title>
 
     <meta charset='utf-8'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href='https://www.mapbox.com/base/latest/base.css' rel='stylesheet' />
-    <link rel='stylesheet' href='/dist/mapbox-gl.css'/>
+    <link href='https://www.curvemap.com/base/latest/base.css' rel='stylesheet' />
+    <link rel='stylesheet' href='/dist/curvemap-gl.css'/>
     <script href='https://unpkg.com/url-search-params@0.10.0/build/url-search-params.js'></script>
 </head>
 
@@ -21,7 +21,7 @@
             .then(response => response.json())
             .then(pkg => [`v${pkg.version}`, 'master']))
         .then(versions => {
-            const scripts = versions.map(v => `https://s3.amazonaws.com/mapbox-gl-js/${v}/benchmarks.js`)
+            const scripts = versions.map(v => `https://s3.amazonaws.com/curvemap-gl-js/${v}/benchmarks.js`)
                 .concat('/bench/benchmarks_generated.js', '/bench/benchmarks_view_generated.js');
             return scripts.reduce((p, script) => p.then(() => loadScript(script)), Promise.resolve());
         })

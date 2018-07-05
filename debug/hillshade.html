@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Mapbox GL JS debug page</title>
+    <title>Curvemap GL JS debug page</title>
     <meta charset='utf-8'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <link rel='stylesheet' href='/dist/mapbox-gl.css' />
+    <link rel='stylesheet' href='/dist/curvemap-gl.css' />
     <style>
         body { margin: 0; padding: 0; }
         html, body, #map { height: 100%; }
@@ -60,30 +60,30 @@
 <nav id="menu"></nav>
 <div id='map'></div>
 
-<script src='/dist/mapbox-gl-dev.js'></script>
+<script src='/dist/curvemap-gl-dev.js'></script>
 <script src='/debug/access_token_generated.js'></script>
 <script>
 
-var map = new mapboxgl.Map({
+var map = new curvemapgl.Map({
     container: 'map',
-    style: 'mapbox://styles/mapbox/cjaudgl840gn32rnrepcb9b9g', // the outdoors-v10 style but without Hillshade layers
+    style: 'curvemap://styles/curvemap/cjaudgl840gn32rnrepcb9b9g', // the outdoors-v10 style but without Hillshade layers
     center: [-119.5591, 37.715],
     zoom: 9
 });
 
 map.on('load', function () {
 
-    map.addSource('mapbox-dem', {
+    map.addSource('curvemap-dem', {
         "type": "raster-dem",
-        "url": "mapbox://mapbox.terrain-rgb",
+        "url": "curvemap://curvemap.terrain-rgb",
         "tileSize": 256
     });
     map.addLayer({
-        "id": "Mapbox data",
-        "source": "mapbox-dem",
+        "id": "Curvemap data",
+        "source": "curvemap-dem",
         "type": "hillshade"
     // insert below waterway-river-canal-shadow;
-    // where hillshading sits in the Mapbox Outdoors style
+    // where hillshading sits in the Curvemap Outdoors style
     }, 'waterway-river-canal-shadow');
 
     map.addSource('terrarium-dem', {
@@ -102,12 +102,12 @@ map.on('load', function () {
             "visibility": "none"
         }
     // insert below waterway-river-canal-shadow;
-    // where hillshading sits in the Mapbox Outdoors style
+    // where hillshading sits in the Curvemap Outdoors style
     }, 'waterway-river-canal-shadow');
 
 });
 
-var toggleableLayerIds = ['Mapbox data', 'Terrarium data'];
+var toggleableLayerIds = ['Curvemap data', 'Terrarium data'];
 
 for (var i = 0; i < toggleableLayerIds.length; i++) {
     var id = toggleableLayerIds[i];

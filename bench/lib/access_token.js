@@ -1,7 +1,7 @@
 
 const accessToken = (
-    process.env.MapboxAccessToken ||
-    process.env.MAPBOX_ACCESS_TOKEN ||
+    process.env.CurvemapAccessToken ||
+    process.env.CURVEMAP_ACCESS_TOKEN ||
     getURLParameter('access_token') ||
     localStorage.getItem('accessToken')
 );

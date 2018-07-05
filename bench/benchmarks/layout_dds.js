@@ -14,14 +14,14 @@ export default class LayoutDDS extends Layout {
     }
 
     sourceID(): string {
-        return 'mapbox';
+        return 'curvemap';
     }
 
     fetchStyle(): Promise<StyleSpecification> {
         const style = {
             "version": 8,
             "sources": {
-                "mapbox": { "type": "vector", "url": "mapbox://mapbox.mapbox-streets-v7" }
+                "curvemap": { "type": "vector", "url": "curvemap://curvemap.curvemap-streets-v7" }
             },
             "layers": []
         };
@@ -30,7 +30,7 @@ export default class LayoutDDS extends Layout {
             {
                 "id": "road",
                 "type": "line",
-                "source": "mapbox",
+                "source": "curvemap",
                 "source-layer": "road",
                 "paint": {
                     "line-width": 3,
@@ -56,7 +56,7 @@ export default class LayoutDDS extends Layout {
             {
                 "id": "poi",
                 "type": "circle",
-                "source": "mapbox",
+                "source": "curvemap",
                 "source-layer": "poi_label",
                 "paint": {
                     "circle-radius": {

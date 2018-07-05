@@ -1,18 +1,18 @@
 // @flow
 
-import mapboxgl from '../src';
+import curvemapgl from '../src';
 import accessToken from './lib/access_token';
-mapboxgl.accessToken = accessToken;
+curvemapgl.accessToken = accessToken;
 
-window.mapboxglVersions = window.mapboxglVersions || [];
-window.mapboxglBenchmarks = window.mapboxglBenchmarks || {};
+window.curvemapglVersions = window.curvemapglVersions || [];
+window.curvemapglBenchmarks = window.curvemapglBenchmarks || {};
 
 const version = process.env.BENCHMARK_VERSION;
-window.mapboxglVersions.push(version);
+window.curvemapglVersions.push(version);
 
 function register(Benchmark) {
-    window.mapboxglBenchmarks[Benchmark.name] = window.mapboxglBenchmarks[Benchmark.name] || {};
-    window.mapboxglBenchmarks[Benchmark.name][version] = new Benchmark();
+    window.curvemapglBenchmarks[Benchmark.name] = window.curvemapglBenchmarks[Benchmark.name] || {};
+    window.curvemapglBenchmarks[Benchmark.name][version] = new Benchmark();
 }
 
 import Layout from './benchmarks/layout';
@@ -53,5 +53,5 @@ setTimeout(() => {
     getWorkerPool().acquire(-1);
 }, 0);
 
-export default mapboxgl;
+export default curvemapgl;
 

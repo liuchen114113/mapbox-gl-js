@@ -21,7 +21,7 @@
     "browser": true
   },
   "globals": {
-    "mapboxgl": false,
+    "curvemapgl": false,
     "React": false,
     "ReactDOM": false
   }

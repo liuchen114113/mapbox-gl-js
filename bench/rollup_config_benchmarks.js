@@ -6,8 +6,8 @@ import {plugins as basePlugins} from '../build/rollup_plugins';
 const plugins = () => basePlugins().concat(
     replace({
         'process.env.BENCHMARK_VERSION': JSON.stringify(process.env.BENCHMARK_VERSION),
-        'process.env.MAPBOX_ACCESS_TOKEN': JSON.stringify(process.env.MAPBOX_ACCESS_TOKEN),
-        'process.env.MapboxAccessToken': JSON.stringify(process.env.MapboxAccessToken),
+        'process.env.CURVEMAP_ACCESS_TOKEN': JSON.stringify(process.env.CURVEMAP_ACCESS_TOKEN),
+        'process.env.CurvemapAccessToken': JSON.stringify(process.env.CurvemapAccessToken),
         'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
     })
 );

@@ -13,7 +13,7 @@ import minifyStyleSpec from './rollup_plugin_minify_style_spec';
 const production = process.env.BUILD === 'production';
 
 // Common set of plugins/transformations shared across different rollup
-// builds (main mapboxgl bundle, style-spec package, benchmarks bundle)
+// builds (main curvemapgl bundle, style-spec package, benchmarks bundle)
 
 export const plugins = () => [
     flow(),
@@ -30,7 +30,7 @@ export const plugins = () => [
     }),
     commonjs({
         namedExports: {
-            '@mapbox/whoots-js': ['getTileBBox']
+            '@hymap/whoots-js': ['getTileBBox']
         }
     }),
     production ? uglify() : false

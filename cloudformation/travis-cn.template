@@ -1,6 +1,6 @@
 {
   "AWSTemplateFormatVersion": "2010-09-09",
-  "Description": "mapbox-gl-js build user",
+  "Description": "curvemap-gl-js build user",
   "Resources": {
     "BuildUser": {
       "Type": "AWS::IAM::User",
@@ -16,7 +16,7 @@
                   ],
                   "Effect": "Allow",
                   "Resource": [
-                    "arn:aws-cn:s3:::mapbox-gl-js-cn-north-1"
+                    "arn:aws-cn:s3:::curvemap-gl-js-cn-north-1"
                   ]
                 }
               ]
@@ -35,7 +35,7 @@
                   ],
                   "Effect": "Allow",
                   "Resource": [
-                    "arn:aws-cn:s3:::mapbox-gl-js-cn-north-1/*"
+                    "arn:aws-cn:s3:::curvemap-gl-js-cn-north-1/*"
                   ]
                 }
               ]

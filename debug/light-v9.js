@@ -1,10 +1,10 @@
 window.lightv9 = {
   "version": 8,
-  "name": "Mapbox Light",
+  "name": "Curvemap Light",
   "metadata": {
-    "mapbox:autocomposite": true,
-    "mapbox:type": "default",
-    "mapbox:groups": {
+    "curvemap:autocomposite": true,
+    "curvemap:type": "default",
+    "curvemap:groups": {
       "1444934828655.3389": {
         "name": "Aeroways",
         "collapsed": true
@@ -77,12 +77,12 @@ window.lightv9 = {
   },
   "sources": {
     "composite": {
-      "url": "mapbox://mapbox.mapbox-terrain-v2,mapbox.mapbox-streets-v7",
+      "url": "curvemap://curvemap.curvemap-terrain-v2,curvemap.curvemap-streets-v7",
       "type": "vector"
     }
   },
-  "sprite": "mapbox://sprites/mapbox/light-v9",
-  "glyphs": "mapbox://fonts/mapbox/{fontstack}/{range}.pbf",
+  "sprite": "curvemap://sprites/curvemap/light-v9",
+  "glyphs": "curvemap://fonts/curvemap/{fontstack}/{range}.pbf",
   "layers": [
     {
       "id": "background",
@@ -96,7 +96,7 @@ window.lightv9 = {
       "id": "landcover_wood",
       "type": "fill",
       "metadata": {
-        "mapbox:group": "1456970288113.8113"
+        "curvemap:group": "1456970288113.8113"
       },
       "source": "composite",
       "source-layer": "landcover",
@@ -117,7 +117,7 @@ window.lightv9 = {
       "id": "landcover_scrub",
       "type": "fill",
       "metadata": {
-        "mapbox:group": "1456970288113.8113"
+        "curvemap:group": "1456970288113.8113"
       },
       "source": "composite",
       "source-layer": "landcover",
@@ -138,7 +138,7 @@ window.lightv9 = {
       "id": "landcover_grass",
       "type": "fill",
       "metadata": {
-        "mapbox:group": "1456970288113.8113"
+        "curvemap:group": "1456970288113.8113"
       },
       "source": "composite",
       "source-layer": "landcover",
@@ -159,7 +159,7 @@ window.lightv9 = {
       "id": "landcover_crop",
       "type": "fill",
       "metadata": {
-        "mapbox:group": "1456970288113.8113"
+        "curvemap:group": "1456970288113.8113"
       },
       "source": "composite",
       "source-layer": "landcover",
@@ -281,7 +281,7 @@ window.lightv9 = {
       "id": "hillshade_highlight_bright",
       "type": "fill",
       "metadata": {
-        "mapbox:group": "1456969573402.7817"
+        "curvemap:group": "1456969573402.7817"
       },
       "source": "composite",
       "source-layer": "hillshade",
@@ -313,7 +313,7 @@ window.lightv9 = {
       "id": "hillshade_highlight_med",
       "type": "fill",
       "metadata": {
-        "mapbox:group": "1456969573402.7817"
+        "curvemap:group": "1456969573402.7817"
       },
       "source": "composite",
       "source-layer": "hillshade",
@@ -345,7 +345,7 @@ window.lightv9 = {
       "id": "hillshade_shadow_faint",
       "type": "fill",
       "metadata": {
-        "mapbox:group": "1456969573402.7817"
+        "curvemap:group": "1456969573402.7817"
       },
       "source": "composite",
       "source-layer": "hillshade",
@@ -377,7 +377,7 @@ window.lightv9 = {
       "id": "hillshade_shadow_med",
       "type": "fill",
       "metadata": {
-        "mapbox:group": "1456969573402.7817"
+        "curvemap:group": "1456969573402.7817"
       },
       "source": "composite",
       "source-layer": "hillshade",
@@ -409,7 +409,7 @@ window.lightv9 = {
       "id": "hillshade_shadow_dark",
       "type": "fill",
       "metadata": {
-        "mapbox:group": "1456969573402.7817"
+        "curvemap:group": "1456969573402.7817"
       },
       "source": "composite",
       "source-layer": "hillshade",
@@ -441,7 +441,7 @@ window.lightv9 = {
       "id": "hillshade_shadow_extreme",
       "type": "fill",
       "metadata": {
-        "mapbox:group": "1456969573402.7817"
+        "curvemap:group": "1456969573402.7817"
       },
       "source": "composite",
       "source-layer": "hillshade",
@@ -638,7 +638,7 @@ window.lightv9 = {
       "id": "aeroway-polygon",
       "type": "fill",
       "metadata": {
-        "mapbox:group": "1444934828655.3389"
+        "curvemap:group": "1444934828655.3389"
       },
       "source": "composite",
       "source-layer": "aeroway",
@@ -678,7 +678,7 @@ window.lightv9 = {
       "id": "aeroway-runway",
       "type": "line",
       "metadata": {
-        "mapbox:group": "1444934828655.3389"
+        "curvemap:group": "1444934828655.3389"
       },
       "source": "composite",
       "source-layer": "aeroway",
@@ -718,7 +718,7 @@ window.lightv9 = {
       "id": "aeroway-taxiway",
       "type": "line",
       "metadata": {
-        "mapbox:group": "1444934828655.3389"
+        "curvemap:group": "1444934828655.3389"
       },
       "source": "composite",
       "source-layer": "aeroway",
@@ -797,7 +797,7 @@ window.lightv9 = {
       "id": "tunnel-street-low",
       "type": "line",
       "metadata": {
-        "mapbox:group": "1444855769305.6016"
+        "curvemap:group": "1444855769305.6016"
       },
       "source": "composite",
       "source-layer": "road",
@@ -872,7 +872,7 @@ window.lightv9 = {
       "id": "tunnel-street_limited-low",
       "type": "line",
       "metadata": {
-        "mapbox:group": "1444855769305.6016"
+        "curvemap:group": "1444855769305.6016"
       },
       "source": "composite",
       "source-layer": "road",
@@ -947,7 +947,7 @@ window.lightv9 = {
       "id": "tunnel-service-link-track-case",
       "type": "line",
       "metadata": {
-        "mapbox:group": "1444855769305.6016"
+        "curvemap:group": "1444855769305.6016"
       },
       "source": "composite",
       "source-layer": "road",
@@ -1021,7 +1021,7 @@ window.lightv9 = {
     {
       "id": "tunnel-street_limited-case",
       "metadata": {
-        "mapbox:group": "1444855769305.6016"
+        "curvemap:group": "1444855769305.6016"
       },
       "ref": "tunnel-street_limited-low",
       "paint": {
@@ -1078,7 +1078,7 @@ window.lightv9 = {
     {
       "id": "tunnel-street-case",
       "metadata": {
-        "mapbox:group": "1444855769305.6016"
+        "curvemap:group": "1444855769305.6016"
       },
       "ref": "tunnel-street-low",
       "paint": {
@@ -1136,7 +1136,7 @@ window.lightv9 = {
       "id": "tunnel-secondary-tertiary-case",
       "type": "line",
       "metadata": {
-        "mapbox:group": "1444855769305.6016"
+        "curvemap:group": "1444855769305.6016"
       },
       "source": "composite",
       "source-layer": "road",
@@ -1208,7 +1208,7 @@ window.lightv9 = {
       "id": "tunnel-primary-case",
       "type": "line",
       "metadata": {
-        "mapbox:group": "1444855769305.6016"
+        "curvemap:group": "1444855769305.6016"
       },
       "source": "composite",
       "source-layer": "road",
@@ -1275,7 +1275,7 @@ window.lightv9 = {
       "id": "tunnel-trunk_link-case",
       "type": "line",
       "metadata": {
-        "mapbox:group": "1444855769305.6016"
+        "curvemap:group": "1444855769305.6016"
       },
       "source": "composite",
       "source-layer": "road",
@@ -1347,7 +1347,7 @@ window.lightv9 = {
       "id": "tunnel-motorway_link-case",
       "type": "line",
       "metadata": {
-        "mapbox:group": "1444855769305.6016"
+        "curvemap:group": "1444855769305.6016"
       },
       "source": "composite",
       "source-layer": "road",
@@ -1419,7 +1419,7 @@ window.lightv9 = {
       "id": "tunnel-trunk-case",
       "type": "line",
       "metadata": {
-        "mapbox:group": "1444855769305.6016"
+        "curvemap:group": "1444855769305.6016"
       },
       "source": "composite",
       "source-layer": "road",
@@ -1487,7 +1487,7 @@ window.lightv9 = {
       "id": "tunnel-motorway-case",
       "type": "line",
       "metadata": {
-        "mapbox:group": "1444855769305.6016"
+        "curvemap:group": "1444855769305.6016"
       },
       "source": "composite",
       "source-layer": "road",
@@ -1555,7 +1555,7 @@ window.lightv9 = {
       "id": "tunnel-construction",
       "type": "line",
       "metadata": {
-        "mapbox:group": "1444855769305.6016"
+        "curvemap:group": "1444855769305.6016"
       },
       "source": "composite",
       "source-layer": "road",
@@ -1662,7 +1662,7 @@ window.lightv9 = {
       "id": "tunnel-path",
       "type": "line",
       "metadata": {
-        "mapbox:group": "1444855769305.6016"
+        "curvemap:group": "1444855769305.6016"
       },
       "source": "composite",
       "source-layer": "road",
@@ -1762,7 +1762,7 @@ window.lightv9 = {
       "id": "tunnel-steps",
       "type": "line",
       "metadata": {
-        "mapbox:group": "1444855769305.6016"
+        "curvemap:group": "1444855769305.6016"
       },
       "source": "composite",
       "source-layer": "road",
@@ -1856,7 +1856,7 @@ window.lightv9 = {
     {
       "id": "tunnel-trunk_link",
       "metadata": {
-        "mapbox:group": "1444855769305.6016"
+        "curvemap:group": "1444855769305.6016"
       },
       "ref": "tunnel-trunk_link-case",
       "paint": {
@@ -1888,7 +1888,7 @@ window.lightv9 = {
     {
       "id": "tunnel-motorway_link",
       "metadata": {
-        "mapbox:group": "1444855769305.6016"
+        "curvemap:group": "1444855769305.6016"
       },
       "ref": "tunnel-motorway_link-case",
       "paint": {
@@ -1921,7 +1921,7 @@ window.lightv9 = {
       "id": "tunnel-pedestrian",
       "type": "line",
       "metadata": {
-        "mapbox:group": "1444855769305.6016"
+        "curvemap:group": "1444855769305.6016"
       },
       "source": "composite",
       "source-layer": "road",
@@ -1997,7 +1997,7 @@ window.lightv9 = {
     {
       "id": "tunnel-service-link-track",
       "metadata": {
-        "mapbox:group": "1444855769305.6016"
+        "curvemap:group": "1444855769305.6016"
       },
       "ref": "tunnel-service-link-track-case",
       "paint": {
@@ -2024,7 +2024,7 @@ window.lightv9 = {
     {
       "id": "tunnel-street_limited",
       "metadata": {
-        "mapbox:group": "1444855769305.6016"
+        "curvemap:group": "1444855769305.6016"
       },
       "ref": "tunnel-street_limited-low",
       "paint": {
@@ -2064,7 +2064,7 @@ window.lightv9 = {
     {
       "id": "tunnel-street",
       "metadata": {
-        "mapbox:group": "1444855769305.6016"
+        "curvemap:group": "1444855769305.6016"
       },
       "ref": "tunnel-street-low",
       "paint": {
@@ -2104,7 +2104,7 @@ window.lightv9 = {
     {
       "id": "tunnel-secondary-tertiary",
       "metadata": {
-        "mapbox:group": "1444855769305.6016"
+        "curvemap:group": "1444855769305.6016"
       },
       "ref": "tunnel-secondary-tertiary-case",
       "paint": {
@@ -2137,7 +2137,7 @@ window.lightv9 = {
     {
       "id": "tunnel-primary",
       "metadata": {
-        "mapbox:group": "1444855769305.6016"
+        "curvemap:group": "1444855769305.6016"
       },
       "ref": "tunnel-primary-case",
       "paint": {
@@ -2167,7 +2167,7 @@ window.lightv9 = {
       "id": "tunnel-trunk",
       "type": "line",
       "metadata": {
-        "mapbox:group": "1444855769305.6016"
+        "curvemap:group": "1444855769305.6016"
       },
       "source": "composite",
       "source-layer": "road",
@@ -2216,7 +2216,7 @@ window.lightv9 = {
     {
       "id": "tunnel-motorway",
       "metadata": {
-        "mapbox:group": "1444855769305.6016"
+        "curvemap:group": "1444855769305.6016"
       },
       "ref": "tunnel-motorway-case",
       "paint": {
@@ -2246,7 +2246,7 @@ window.lightv9 = {
       "id": "road-pedestrian-case",
       "type": "line",
       "metadata": {
-        "mapbox:group": "1444855786460.0557"
+        "curvemap:group": "1444855786460.0557"
       },
       "source": "composite",
       "source-layer": "road",
@@ -2330,7 +2330,7 @@ window.lightv9 = {
       "id": "road-street-low",
       "type": "line",
       "metadata": {
-        "mapbox:group": "1444855786460.0557"
+        "curvemap:group": "1444855786460.0557"
       },
       "source": "composite",
       "source-layer": "road",
@@ -2405,7 +2405,7 @@ window.lightv9 = {
       "id": "road-street_limited-low",
       "type": "line",
       "metadata": {
-        "mapbox:group": "1444855786460.0557"
+        "curvemap:group": "1444855786460.0557"
       },
       "source": "composite",
       "source-layer": "road",
@@ -2480,7 +2480,7 @@ window.lightv9 = {
       "id": "road-service-link-track-case",
       "type": "line",
       "metadata": {
-        "mapbox:group": "1444855786460.0557"
+        "curvemap:group": "1444855786460.0557"
       },
       "source": "composite",
       "source-layer": "road",
@@ -2583,7 +2583,7 @@ window.lightv9 = {
     {
       "id": "road-street_limited-case",
       "metadata": {
-        "mapbox:group": "1444855786460.0557"
+        "curvemap:group": "1444855786460.0557"
       },
       "ref": "road-street_limited-low",
       "paint": {
@@ -2656,7 +2656,7 @@ window.lightv9 = {
     {
       "id": "road-street-case",
       "metadata": {
-        "mapbox:group": "1444855786460.0557"
+        "curvemap:group": "1444855786460.0557"
       },
       "ref": "road-street-low",
       "paint": {
@@ -2730,7 +2730,7 @@ window.lightv9 = {
       "id": "road-main-case",
       "type": "line",
       "metadata": {
-        "mapbox:group": "1444855786460.0557"
+        "curvemap:group": "1444855786460.0557"
       },
       "source": "composite",
       "source-layer": "road",
@@ -2832,7 +2832,7 @@ window.lightv9 = {
       "id": "road-primary-case",
       "type": "line",
       "metadata": {
-        "mapbox:group": "1444855786460.0557"
+        "curvemap:group": "1444855786460.0557"
       },
       "source": "composite",
       "source-layer": "road",
@@ -2929,7 +2929,7 @@ window.lightv9 = {
       "id": "road-motorway_link-case",
       "type": "line",
       "metadata": {
-        "mapbox:group": "1444855786460.0557"
+        "curvemap:group": "1444855786460.0557"
       },
       "source": "composite",
       "source-layer": "road",
@@ -3031,7 +3031,7 @@ window.lightv9 = {
       "id": "road-trunk_link-case",
       "type": "line",
       "metadata": {
-        "mapbox:group": "1444855786460.0557"
+        "curvemap:group": "1444855786460.0557"
       },
       "source": "composite",
       "source-layer": "road",
@@ -3133,7 +3133,7 @@ window.lightv9 = {
       "id": "road-trunk-case",
       "type": "line",
       "metadata": {
-        "mapbox:group": "1444855786460.0557"
+        "curvemap:group": "1444855786460.0557"
       },
       "source": "composite",
       "source-layer": "road",
@@ -3231,7 +3231,7 @@ window.lightv9 = {
       "id": "road-motorway-case",
       "type": "line",
       "metadata": {
-        "mapbox:group": "1444855786460.0557"
+        "curvemap:group": "1444855786460.0557"
       },
       "source": "composite",
       "source-layer": "road",
@@ -3312,7 +3312,7 @@ window.lightv9 = {
       "id": "road-construction",
       "type": "line",
       "metadata": {
-        "mapbox:group": "1444855786460.0557"
+        "curvemap:group": "1444855786460.0557"
       },
       "source": "composite",
       "source-layer": "road",
@@ -3419,7 +3419,7 @@ window.lightv9 = {
       "id": "road-sidewalks",
       "type": "line",
       "metadata": {
-        "mapbox:group": "1444855786460.0557"
+        "curvemap:group": "1444855786460.0557"
       },
       "source": "composite",
       "source-layer": "road",
@@ -3517,7 +3517,7 @@ window.lightv9 = {
       "id": "road-path",
       "type": "line",
       "metadata": {
-        "mapbox:group": "1444855786460.0557"
+        "curvemap:group": "1444855786460.0557"
       },
       "source": "composite",
       "source-layer": "road",
@@ -3620,7 +3620,7 @@ window.lightv9 = {
       "id": "road-steps",
       "type": "line",
       "metadata": {
-        "mapbox:group": "1444855786460.0557"
+        "curvemap:group": "1444855786460.0557"
       },
       "source": "composite",
       "source-layer": "road",
@@ -3715,7 +3715,7 @@ window.lightv9 = {
     {
       "id": "road-trunk_link",
       "metadata": {
-        "mapbox:group": "1444855786460.0557"
+        "curvemap:group": "1444855786460.0557"
       },
       "ref": "road-trunk_link-case",
       "paint": {
@@ -3743,7 +3743,7 @@ window.lightv9 = {
     {
       "id": "road-motorway_link",
       "metadata": {
-        "mapbox:group": "1444855786460.0557"
+        "curvemap:group": "1444855786460.0557"
       },
       "ref": "road-motorway_link-case",
       "paint": {
@@ -3771,7 +3771,7 @@ window.lightv9 = {
     {
       "id": "road-pedestrian",
       "metadata": {
-        "mapbox:group": "1444855786460.0557"
+        "curvemap:group": "1444855786460.0557"
       },
       "ref": "road-pedestrian-case",
       "paint": {
@@ -3822,7 +3822,7 @@ window.lightv9 = {
       "id": "road-service-link-track",
       "type": "line",
       "metadata": {
-        "mapbox:group": "1444855786460.0557"
+        "curvemap:group": "1444855786460.0557"
       },
       "source": "composite",
       "source-layer": "road",
@@ -3880,7 +3880,7 @@ window.lightv9 = {
     {
       "id": "road-street_limited",
       "metadata": {
-        "mapbox:group": "1444855786460.0557"
+        "curvemap:group": "1444855786460.0557"
       },
       "ref": "road-street_limited-low",
       "paint": {
@@ -3920,7 +3920,7 @@ window.lightv9 = {
     {
       "id": "road-street",
       "metadata": {
-        "mapbox:group": "1444855786460.0557"
+        "curvemap:group": "1444855786460.0557"
       },
       "ref": "road-street-low",
       "paint": {
@@ -3960,7 +3960,7 @@ window.lightv9 = {
     {
       "id": "road-secondary-tertiary",
       "metadata": {
-        "mapbox:group": "1444855786460.0557"
+        "curvemap:group": "1444855786460.0557"
       },
       "ref": "road-main-case",
       "paint": {
@@ -4000,7 +4000,7 @@ window.lightv9 = {
     {
       "id": "road-primary",
       "metadata": {
-        "mapbox:group": "1444855786460.0557"
+        "curvemap:group": "1444855786460.0557"
       },
       "ref": "road-primary-case",
       "paint": {
@@ -4036,7 +4036,7 @@ window.lightv9 = {
     {
       "id": "road-trunk",
       "metadata": {
-        "mapbox:group": "1444855786460.0557"
+        "curvemap:group": "1444855786460.0557"
       },
       "ref": "road-trunk-case",
       "paint": {
@@ -4064,7 +4064,7 @@ window.lightv9 = {
     {
       "id": "road-motorway",
       "metadata": {
-        "mapbox:group": "1444855786460.0557"
+        "curvemap:group": "1444855786460.0557"
       },
       "ref": "road-motorway-case",
       "paint": {
@@ -4089,7 +4089,7 @@ window.lightv9 = {
       "id": "road-rail",
       "type": "line",
       "metadata": {
-        "mapbox:group": "1444855786460.0557"
+        "curvemap:group": "1444855786460.0557"
       },
       "source": "composite",
       "source-layer": "road",
@@ -4141,7 +4141,7 @@ window.lightv9 = {
       "id": "bridge-pedestrian-case",
       "type": "line",
       "metadata": {
-        "mapbox:group": "1444855799204.86"
+        "curvemap:group": "1444855799204.86"
       },
       "source": "composite",
       "source-layer": "road",
@@ -4205,7 +4205,7 @@ window.lightv9 = {
       "id": "bridge-street-low",
       "type": "line",
       "metadata": {
-        "mapbox:group": "1444855799204.86"
+        "curvemap:group": "1444855799204.86"
       },
       "source": "composite",
       "source-layer": "road",
@@ -4280,7 +4280,7 @@ window.lightv9 = {
       "id": "bridge-street_limited-low",
       "type": "line",
       "metadata": {
-        "mapbox:group": "1444855799204.86"
+        "curvemap:group": "1444855799204.86"
       },
       "source": "composite",
       "source-layer": "road",
@@ -4355,7 +4355,7 @@ window.lightv9 = {
       "id": "bridge-service-link-track-case",
       "type": "line",
       "metadata": {
-        "mapbox:group": "1444855799204.86"
+        "curvemap:group": "1444855799204.86"
       },
       "source": "composite",
       "source-layer": "road",
@@ -4425,7 +4425,7 @@ window.lightv9 = {
       "id": "bridge-street_limited-case",
       "type": "line",
       "metadata": {
-        "mapbox:group": "1444855799204.86"
+        "curvemap:group": "1444855799204.86"
       },
       "source": "composite",
       "source-layer": "road",
@@ -4492,7 +4492,7 @@ window.lightv9 = {
       "id": "bridge-street-case",
       "type": "line",
       "metadata": {
-        "mapbox:group": "1444855799204.86"
+        "curvemap:group": "1444855799204.86"
       },
       "source": "composite",
       "source-layer": "road",
@@ -4572,7 +4572,7 @@ window.lightv9 = {
       "id": "bridge-secondary-tertiary-case",
       "type": "line",
       "metadata": {
-        "mapbox:group": "1444855799204.86"
+        "curvemap:group": "1444855799204.86"
       },
       "source": "composite",
       "source-layer": "road",
@@ -4643,7 +4643,7 @@ window.lightv9 = {
       "id": "bridge-primary-case",
       "type": "line",
       "metadata": {
-        "mapbox:group": "1444855799204.86"
+        "curvemap:group": "1444855799204.86"
       },
       "source": "composite",
       "source-layer": "road",
@@ -4709,7 +4709,7 @@ window.lightv9 = {
       "id": "bridge-trunk_link-case",
       "type": "line",
       "metadata": {
-        "mapbox:group": "1444855799204.86"
+        "curvemap:group": "1444855799204.86"
       },
       "source": "composite",
       "source-layer": "road",
@@ -4789,7 +4789,7 @@ window.lightv9 = {
       "id": "bridge-motorway_link-case",
       "type": "line",
       "metadata": {
-        "mapbox:group": "1444855799204.86"
+        "curvemap:group": "1444855799204.86"
       },
       "source": "composite",
       "source-layer": "road",
@@ -4862,7 +4862,7 @@ window.lightv9 = {
       "id": "bridge-trunk-case",
       "type": "line",
       "metadata": {
-        "mapbox:group": "1444855799204.86"
+        "curvemap:group": "1444855799204.86"
       },
       "source": "composite",
       "source-layer": "road",
@@ -4924,7 +4924,7 @@ window.lightv9 = {
       "id": "bridge-motorway-case",
       "type": "line",
       "metadata": {
-        "mapbox:group": "1444855799204.86"
+        "curvemap:group": "1444855799204.86"
       },
       "source": "composite",
       "source-layer": "road",
@@ -4990,7 +4990,7 @@ window.lightv9 = {
       "id": "bridge-construction",
       "type": "line",
       "metadata": {
-        "mapbox:group": "1444855799204.86"
+        "curvemap:group": "1444855799204.86"
       },
       "source": "composite",
       "source-layer": "road",
@@ -5097,7 +5097,7 @@ window.lightv9 = {
       "id": "bridge-path",
       "type": "line",
       "metadata": {
-        "mapbox:group": "1444855799204.86"
+        "curvemap:group": "1444855799204.86"
       },
       "source": "composite",
       "source-layer": "road",
@@ -5197,7 +5197,7 @@ window.lightv9 = {
       "id": "bridge-steps",
       "type": "line",
       "metadata": {
-        "mapbox:group": "1444855799204.86"
+        "curvemap:group": "1444855799204.86"
       },
       "source": "composite",
       "source-layer": "road",
@@ -5292,7 +5292,7 @@ window.lightv9 = {
       "id": "bridge-trunk_link",
       "type": "line",
       "metadata": {
-        "mapbox:group": "1444855799204.86"
+        "curvemap:group": "1444855799204.86"
       },
       "source": "composite",
       "source-layer": "road",
@@ -5355,7 +5355,7 @@ window.lightv9 = {
       "id": "bridge-motorway_link",
       "type": "line",
       "metadata": {
-        "mapbox:group": "1444855799204.86"
+        "curvemap:group": "1444855799204.86"
       },
       "source": "composite",
       "source-layer": "road",
@@ -5417,7 +5417,7 @@ window.lightv9 = {
     {
       "id": "bridge-pedestrian",
       "metadata": {
-        "mapbox:group": "1444855799204.86"
+        "curvemap:group": "1444855799204.86"
       },
       "ref": "bridge-pedestrian-case",
       "paint": {
@@ -5468,7 +5468,7 @@ window.lightv9 = {
       "id": "bridge-service-link-track",
       "type": "line",
       "metadata": {
-        "mapbox:group": "1444855799204.86"
+        "curvemap:group": "1444855799204.86"
       },
       "source": "composite",
       "source-layer": "road",
@@ -5525,7 +5525,7 @@ window.lightv9 = {
     {
       "id": "bridge-street_limited",
       "metadata": {
-        "mapbox:group": "1444855799204.86"
+        "curvemap:group": "1444855799204.86"
       },
       "ref": "bridge-street_limited-low",
       "paint": {
@@ -5565,7 +5565,7 @@ window.lightv9 = {
     {
       "id": "bridge-street",
       "metadata": {
-        "mapbox:group": "1444855799204.86"
+        "curvemap:group": "1444855799204.86"
       },
       "ref": "bridge-street-low",
       "paint": {
@@ -5606,7 +5606,7 @@ window.lightv9 = {
       "id": "bridge-secondary-tertiary",
       "type": "line",
       "metadata": {
-        "mapbox:group": "1444855799204.86"
+        "curvemap:group": "1444855799204.86"
       },
       "source": "composite",
       "source-layer": "road",
@@ -5674,7 +5674,7 @@ window.lightv9 = {
       "id": "bridge-primary",
       "type": "line",
       "metadata": {
-        "mapbox:group": "1444855799204.86"
+        "curvemap:group": "1444855799204.86"
       },
       "source": "composite",
       "source-layer": "road",
@@ -5737,7 +5737,7 @@ window.lightv9 = {
       "id": "bridge-trunk",
       "type": "line",
       "metadata": {
-        "mapbox:group": "1444855799204.86"
+        "curvemap:group": "1444855799204.86"
       },
       "source": "composite",
       "source-layer": "road",
@@ -5795,7 +5795,7 @@ window.lightv9 = {
       "id": "bridge-motorway",
       "type": "line",
       "metadata": {
-        "mapbox:group": "1444855799204.86"
+        "curvemap:group": "1444855799204.86"
       },
       "source": "composite",
       "source-layer": "road",
@@ -5853,7 +5853,7 @@ window.lightv9 = {
       "id": "bridge-rail",
       "type": "line",
       "metadata": {
-        "mapbox:group": "1444855799204.86"
+        "curvemap:group": "1444855799204.86"
       },
       "source": "composite",
       "source-layer": "road",
@@ -5904,7 +5904,7 @@ window.lightv9 = {
       "id": "bridge-trunk_link-2-case",
       "type": "line",
       "metadata": {
-        "mapbox:group": "1444855799204.86"
+        "curvemap:group": "1444855799204.86"
       },
       "source": "composite",
       "source-layer": "road",
@@ -5989,7 +5989,7 @@ window.lightv9 = {
       "id": "bridge-motorway_link-2-case copy",
       "type": "line",
       "metadata": {
-        "mapbox:group": "1444855799204.86"
+        "curvemap:group": "1444855799204.86"
       },
       "source": "composite",
       "source-layer": "road",
@@ -6062,7 +6062,7 @@ window.lightv9 = {
       "id": "bridge-trunk-2-case",
       "type": "line",
       "metadata": {
-        "mapbox:group": "1444855799204.86"
+        "curvemap:group": "1444855799204.86"
       },
       "source": "composite",
       "source-layer": "road",
@@ -6129,7 +6129,7 @@ window.lightv9 = {
       "id": "bridge-motorway-2-case",
       "type": "line",
       "metadata": {
-        "mapbox:group": "1444855799204.86"
+        "curvemap:group": "1444855799204.86"
       },
       "source": "composite",
       "source-layer": "road",
@@ -6200,7 +6200,7 @@ window.lightv9 = {
       "id": "bridge-trunk_link-2",
       "type": "line",
       "metadata": {
-        "mapbox:group": "1444855799204.86"
+        "curvemap:group": "1444855799204.86"
       },
       "source": "composite",
       "source-layer": "road",
@@ -6260,7 +6260,7 @@ window.lightv9 = {
       "id": "bridge-motorway_link-2",
       "type": "line",
       "metadata": {
-        "mapbox:group": "1444855799204.86"
+        "curvemap:group": "1444855799204.86"
       },
       "source": "composite",
       "source-layer": "road",
@@ -6320,7 +6320,7 @@ window.lightv9 = {
       "id": "bridge-trunk-2",
       "type": "line",
       "metadata": {
-        "mapbox:group": "1444855799204.86"
+        "curvemap:group": "1444855799204.86"
       },
       "source": "composite",
       "source-layer": "road",
@@ -6375,7 +6375,7 @@ window.lightv9 = {
       "id": "bridge-motorway-2",
       "type": "line",
       "metadata": {
-        "mapbox:group": "1444855799204.86"
+        "curvemap:group": "1444855799204.86"
       },
       "source": "composite",
       "source-layer": "road",
@@ -6430,7 +6430,7 @@ window.lightv9 = {
       "id": "admin-3-4-boundaries-bg",
       "type": "line",
       "metadata": {
-        "mapbox:group": "1444934295202.7542"
+        "curvemap:group": "1444934295202.7542"
       },
       "source": "composite",
       "source-layer": "admin",
@@ -6509,7 +6509,7 @@ window.lightv9 = {
       "id": "admin-2-boundaries-bg",
       "type": "line",
       "metadata": {
-        "mapbox:group": "1444934295202.7542"
+        "curvemap:group": "1444934295202.7542"
       },
       "source": "composite",
       "source-layer": "admin",
@@ -6581,7 +6581,7 @@ window.lightv9 = {
       "id": "admin-3-4-boundaries",
       "type": "line",
       "metadata": {
-        "mapbox:group": "1444934295202.7542"
+        "curvemap:group": "1444934295202.7542"
       },
       "source": "composite",
       "source-layer": "admin",
@@ -6669,7 +6669,7 @@ window.lightv9 = {
       "id": "admin-2-boundaries",
       "type": "line",
       "metadata": {
-        "mapbox:group": "1444934295202.7542"
+        "curvemap:group": "1444934295202.7542"
       },
       "source": "composite",
       "source-layer": "admin",
@@ -6729,7 +6729,7 @@ window.lightv9 = {
       "id": "admin-2-boundaries-dispute",
       "type": "line",
       "metadata": {
-        "mapbox:group": "1444934295202.7542"
+        "curvemap:group": "1444934295202.7542"
       },
       "source": "composite",
       "source-layer": "admin",
@@ -6832,7 +6832,7 @@ window.lightv9 = {
       "id": "poi-scalerank3",
       "type": "symbol",
       "metadata": {
-        "mapbox:group": "1444933372896.5967"
+        "curvemap:group": "1444933372896.5967"
       },
       "source": "composite",
       "source-layer": "poi_label",
@@ -6898,7 +6898,7 @@ window.lightv9 = {
       "id": "poi-parks-scalerank3",
       "type": "symbol",
       "metadata": {
-        "mapbox:group": "1444933372896.5967"
+        "curvemap:group": "1444933372896.5967"
       },
       "source": "composite",
       "source-layer": "poi_label",
@@ -6964,7 +6964,7 @@ window.lightv9 = {
       "id": "road-label-small",
       "type": "symbol",
       "metadata": {
-        "mapbox:group": "1444933721429.3076"
+        "curvemap:group": "1444933721429.3076"
       },
       "source": "composite",
       "source-layer": "road_label",
@@ -7031,7 +7031,7 @@ window.lightv9 = {
       "id": "road-label-medium",
       "type": "symbol",
       "metadata": {
-        "mapbox:group": "1444933721429.3076"
+        "curvemap:group": "1444933721429.3076"
       },
       "source": "composite",
       "source-layer": "road_label",
@@ -7090,7 +7090,7 @@ window.lightv9 = {
       "id": "road-label-large",
       "type": "symbol",
       "metadata": {
-        "mapbox:group": "1444933721429.3076"
+        "curvemap:group": "1444933721429.3076"
       },
       "source": "composite",
       "source-layer": "road_label",
@@ -7141,7 +7141,7 @@ window.lightv9 = {
       "id": "poi-scalerank2",
       "type": "symbol",
       "metadata": {
-        "mapbox:group": "1444933358918.2366"
+        "curvemap:group": "1444933358918.2366"
       },
       "source": "composite",
       "source-layer": "poi_label",
@@ -7207,7 +7207,7 @@ window.lightv9 = {
       "id": "poi-parks-scalerank2",
       "type": "symbol",
       "metadata": {
-        "mapbox:group": "1444933358918.2366"
+        "curvemap:group": "1444933358918.2366"
       },
       "source": "composite",
       "source-layer": "poi_label",
@@ -7273,7 +7273,7 @@ window.lightv9 = {
       "id": "water-label",
       "type": "symbol",
       "metadata": {
-        "mapbox:group": "1444933808272.805"
+        "curvemap:group": "1444933808272.805"
       },
       "source": "composite",
       "source-layer": "water_label",
@@ -7313,7 +7313,7 @@ window.lightv9 = {
       "id": "poi-parks-scalerank1",
       "type": "symbol",
       "metadata": {
-        "mapbox:group": "1444933322393.2852"
+        "curvemap:group": "1444933322393.2852"
       },
       "source": "composite",
       "source-layer": "poi_label",
@@ -7379,7 +7379,7 @@ window.lightv9 = {
       "id": "poi-scalerank1",
       "type": "symbol",
       "metadata": {
-        "mapbox:group": "1444933322393.2852"
+        "curvemap:group": "1444933322393.2852"
       },
       "source": "composite",
       "source-layer": "poi_label",
@@ -7880,7 +7880,7 @@ window.lightv9 = {
       "id": "place-city-sm",
       "type": "symbol",
       "metadata": {
-        "mapbox:group": "1444862510685.128"
+        "curvemap:group": "1444862510685.128"
       },
       "source": "composite",
       "source-layer": "place_label",
@@ -7967,7 +7967,7 @@ window.lightv9 = {
       "id": "place-city-md-s",
       "type": "symbol",
       "metadata": {
-        "mapbox:group": "1444862510685.128"
+        "curvemap:group": "1444862510685.128"
       },
       "source": "composite",
       "source-layer": "place_label",
@@ -8075,7 +8075,7 @@ window.lightv9 = {
       "id": "place-city-md-n",
       "type": "symbol",
       "metadata": {
-        "mapbox:group": "1444862510685.128"
+        "curvemap:group": "1444862510685.128"
       },
       "source": "composite",
       "source-layer": "place_label",
@@ -8184,7 +8184,7 @@ window.lightv9 = {
       "id": "place-city-lg-s",
       "type": "symbol",
       "metadata": {
-        "mapbox:group": "1444862510685.128"
+        "curvemap:group": "1444862510685.128"
       },
       "source": "composite",
       "source-layer": "place_label",
@@ -8305,7 +8305,7 @@ window.lightv9 = {
       "id": "place-city-lg-n",
       "type": "symbol",
       "metadata": {
-        "mapbox:group": "1444862510685.128"
+        "curvemap:group": "1444862510685.128"
       },
       "source": "composite",
       "source-layer": "place_label",
@@ -8427,7 +8427,7 @@ window.lightv9 = {
       "id": "marine-label-sm-ln",
       "type": "symbol",
       "metadata": {
-        "mapbox:group": "1444856087950.3635"
+        "curvemap:group": "1444856087950.3635"
       },
       "source": "composite",
       "source-layer": "marine_label",
@@ -8492,7 +8492,7 @@ window.lightv9 = {
       "id": "marine-label-sm-pt",
       "type": "symbol",
       "metadata": {
-        "mapbox:group": "1444856087950.3635"
+        "curvemap:group": "1444856087950.3635"
       },
       "source": "composite",
       "source-layer": "marine_label",
@@ -8543,7 +8543,7 @@ window.lightv9 = {
       "id": "marine-label-md-ln",
       "type": "symbol",
       "metadata": {
-        "mapbox:group": "1444856087950.3635"
+        "curvemap:group": "1444856087950.3635"
       },
       "source": "composite",
       "source-layer": "marine_label",
@@ -8597,7 +8597,7 @@ window.lightv9 = {
       "id": "marine-label-md-pt",
       "type": "symbol",
       "metadata": {
-        "mapbox:group": "1444856087950.3635"
+        "curvemap:group": "1444856087950.3635"
       },
       "source": "composite",
       "source-layer": "marine_label",
@@ -8649,7 +8649,7 @@ window.lightv9 = {
       "id": "marine-label-lg-ln",
       "type": "symbol",
       "metadata": {
-        "mapbox:group": "1444856087950.3635"
+        "curvemap:group": "1444856087950.3635"
       },
       "source": "composite",
       "source-layer": "marine_label",
@@ -8701,7 +8701,7 @@ window.lightv9 = {
       "id": "marine-label-lg-pt",
       "type": "symbol",
       "metadata": {
-        "mapbox:group": "1444856087950.3635"
+        "curvemap:group": "1444856087950.3635"
       },
       "source": "composite",
       "source-layer": "marine_label",
@@ -8752,7 +8752,7 @@ window.lightv9 = {
       "id": "state-label-sm",
       "type": "symbol",
       "metadata": {
-        "mapbox:group": "1444856151690.9143"
+        "curvemap:group": "1444856151690.9143"
       },
       "source": "composite",
       "source-layer": "state_label",
@@ -8810,7 +8810,7 @@ window.lightv9 = {
       "id": "state-label-md",
       "type": "symbol",
       "metadata": {
-        "mapbox:group": "1444856151690.9143"
+        "curvemap:group": "1444856151690.9143"
       },
       "source": "composite",
       "source-layer": "state_label",
@@ -8876,7 +8876,7 @@ window.lightv9 = {
       "id": "state-label-lg",
       "type": "symbol",
       "metadata": {
-        "mapbox:group": "1444856151690.9143"
+        "curvemap:group": "1444856151690.9143"
       },
       "source": "composite",
       "source-layer": "state_label",
@@ -8935,7 +8935,7 @@ window.lightv9 = {
       "id": "country-label-sm",
       "type": "symbol",
       "metadata": {
-        "mapbox:group": "1444856144497.7825"
+        "curvemap:group": "1444856144497.7825"
       },
       "source": "composite",
       "source-layer": "country_label",
@@ -8990,7 +8990,7 @@ window.lightv9 = {
       "id": "country-label-md",
       "type": "symbol",
       "metadata": {
-        "mapbox:group": "1444856144497.7825"
+        "curvemap:group": "1444856144497.7825"
       },
       "source": "composite",
       "source-layer": "country_label",
@@ -9058,7 +9058,7 @@ window.lightv9 = {
       "id": "country-label-lg",
       "type": "symbol",
       "metadata": {
-        "mapbox:group": "1444856144497.7825"
+        "curvemap:group": "1444856144497.7825"
       },
       "source": "composite",
       "source-layer": "country_label",
@@ -9125,7 +9125,7 @@ window.lightv9 = {
   ],
   "created": 0,
   "modified": 0,
-  "owner": "mapbox",
+  "owner": "curvemap",
   "id": "light-v9",
   "draft": false
 }

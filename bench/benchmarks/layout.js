@@ -3,7 +3,7 @@
 import Benchmark from '../lib/benchmark';
 
 import createStyle from '../lib/create_style';
-import VT from '@mapbox/vector-tile';
+import VT from '@hymap/vector-tile';
 import Protobuf from 'pbf';
 import assert from 'assert';
 import promisify from 'pify';
@@ -11,7 +11,7 @@ import WorkerTile from '../../src/source/worker_tile';
 import StyleLayerIndex from '../../src/style/style_layer_index';
 import deref from '../../src/style-spec/deref';
 import { OverscaledTileID } from '../../src/source/tile_id';
-import { normalizeStyleURL, normalizeSourceURL, normalizeTileURL } from '../../src/util/mapbox';
+import { normalizeStyleURL, normalizeSourceURL, normalizeTileURL } from '../../src/util/curvemap';
 
 import type {TileJSON} from '../../src/types/tilejson';
 
@@ -37,7 +37,7 @@ export default class Layout extends Benchmark {
     }
 
     fetchStyle(): Promise<StyleSpecification> {
-        return fetch(normalizeStyleURL(`mapbox://styles/mapbox/streets-v9`))
+        return fetch(normalizeStyleURL(`curvemap://styles/curvemap/streets-v9`))
             .then(response => response.json());
     }
 

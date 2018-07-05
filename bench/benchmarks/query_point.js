@@ -25,7 +25,7 @@ export default class QueryPoint extends Benchmark {
                 width,
                 height,
                 center: [-77.032194, 38.912753],
-                style: 'mapbox://styles/mapbox/streets-v9'
+                style: 'curvemap://styles/curvemap/streets-v9'
             });
         })).then(maps => { this.maps = maps; });
     }

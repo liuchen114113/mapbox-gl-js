@@ -217,7 +217,7 @@ fs.writeFileSync('src/data/array_types.js',
 import assert from 'assert';
 import {Struct, StructArray} from '../util/struct_array';
 import {register} from '../util/web_worker_transfer';
-import Point from '@mapbox/point-geometry';
+import Point from '@hymap/point-geometry';
 
 ${layouts.map(structArrayLayoutJs).join('\n')}
 

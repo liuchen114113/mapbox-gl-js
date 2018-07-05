@@ -382,7 +382,7 @@ class BenchmarksTable extends React.Component {
         return (
             <div style={{width: 960, margin: '2em auto'}}>
                 {this.state.sharing && <span className='loading'></span>}
-                <h1 className="space-bottom1">Mapbox GL JS Benchmarks – {
+                <h1 className="space-bottom1">Curvemap GL JS Benchmarks – {
                     this.props.finished ?
                         <span>Finished <button className='button fr icon share' onClick={this.share}>Share</button></span> :
                         <span>Running</span>}</h1>
@@ -412,21 +412,21 @@ class BenchmarksTable extends React.Component {
     }
 }
 
-const versions = window.mapboxglVersions;
+const versions = window.curvemapglVersions;
 const benchmarks = [];
 const filter = window.location.hash.substr(1);
 
 let finished = false;
 let promise = Promise.resolve();
 
-for (const name in window.mapboxglBenchmarks) {
+for (const name in window.curvemapglBenchmarks) {
     if (filter && name !== filter)
         continue;
 
     const benchmark = { name, versions: [] };
     benchmarks.push(benchmark);
 
-    for (const ver in window.mapboxglBenchmarks[name]) {
+    for (const ver in window.curvemapglBenchmarks[name]) {
         const version = {
             name: ver,
             status: 'waiting',
@@ -441,7 +441,7 @@ for (const name in window.mapboxglBenchmarks) {
             version.status = 'running';
             update();
 
-            return window.mapboxglBenchmarks[name][ver].run()
+            return window.curvemapglBenchmarks[name][ver].run()
                 .then(measurements => {
                     // scale measurements down by iteration count, so that
                     // they represent (average) time for a single iteration

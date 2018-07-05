@@ -7,7 +7,7 @@ Benchmarks help us catch performance regressions and improve performance.
 Start the benchmark server
 
 ```bash
-MAPBOX_ACCESS_TOKEN={YOUR MAPBOX ACCESS TOKEN} yarn start
+CURVEMAP_ACCESS_TOKEN={YOUR CURVEMAP ACCESS TOKEN} yarn start
 ```
 
 To run all benchmarks, open [the benchmark page, `http://localhost:9966/bench`](http://localhost:9966/bench).

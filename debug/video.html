@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Mapbox GL JS debug page</title>
+    <title>Curvemap GL JS debug page</title>
     <meta charset='utf-8'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <link rel='stylesheet' href='/dist/mapbox-gl.css' />
+    <link rel='stylesheet' href='/dist/curvemap-gl.css' />
     <style>
         body { margin: 0; padding: 0; }
         html, body, #map { height: 100%; }
@@ -14,7 +14,7 @@
 <body>
 <div id='map'></div>
 
-<script src='/dist/mapbox-gl-dev.js'></script>
+<script src='/dist/curvemap-gl-dev.js'></script>
 <script src='/debug/access_token_generated.js'></script>
 <script>
 
@@ -23,12 +23,12 @@ var videoStyle = {
     "sources": {
         "satellite": {
             "type": "raster",
-            "url": "mapbox://mapbox.satellite",
+            "url": "curvemap://curvemap.satellite",
             "tileSize": 256
         },
         "video": {
             "type": "video",
-            "urls": [ "https://www.mapbox.com/drone/video/drone.mp4", "https://www.mapbox.com/drone/video/drone.webm" ],
+            "urls": [ "https://www.curvemap.com/drone/video/drone.mp4", "https://www.curvemap.com/drone/video/drone.webm" ],
             "coordinates": [
                 [-122.51596391201019, 37.56238816766053],
                 [-122.51467645168304, 37.56410183312965],
@@ -54,7 +54,7 @@ var videoStyle = {
     }]
 };
 
-var map = new mapboxgl.Map({
+var map = new curvemapgl.Map({
     container: 'map',
     minZoom: 14,
     zoom: 17,
