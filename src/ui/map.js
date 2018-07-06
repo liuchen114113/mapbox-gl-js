@@ -1230,6 +1230,7 @@ class Map extends Camera {
     addLayer(layer: LayerSpecification, before?: string) {
         this.style.addLayer(layer, before);
         this._update(true);
+        this.fire('addLayer', layer);  //发布addLayer事件
         return this;
     }
 
@@ -1258,6 +1259,7 @@ class Map extends Camera {
     removeLayer(id: string) {
         this.style.removeLayer(id);
         this._update(true);
+        this.fire('removeLayer', id);
         return this;
     }
 

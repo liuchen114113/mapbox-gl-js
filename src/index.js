@@ -11,6 +11,11 @@ import GeolocateControl from './ui/control/geolocate_control';
 import AttributionControl from './ui/control/attribution_control';
 import ScaleControl from './ui/control/scale_control';
 import FullscreenControl from './ui/control/fullscreen_control';
+//lc
+import Pitch2dControl from './ui/control/pitch2d_control';
+import StyleToggleControl from './ui/control/styleToggle_control';
+import LayerLegendControl from './ui/control/layerLegend_control';
+
 import Popup from './ui/popup';
 import Marker from './ui/marker';
 import Style from './style/style';
@@ -32,6 +37,9 @@ const exported = {
     AttributionControl,
     ScaleControl,
     FullscreenControl,
+    Pitch2dControl,
+    StyleToggleControl,
+    LayerLegendControl,
     Popup,
     Marker,
     Style,

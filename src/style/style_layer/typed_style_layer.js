@@ -7,11 +7,15 @@ import type HeatmapStyleLayer from './heatmap_style_layer';
 import type HillshadeStyleLayer from './hillshade_style_layer';
 import type LineStyleLayer from './line_style_layer';
 import type SymbolStyleLayer from './symbol_style_layer';
-
-export type TypedStyleLayer = CircleStyleLayer |
+//tjc
+import type ParticleLineStyleLayer from './particleline_style_layer';
+// import type SpriteStyleLayer from './sprite_style_layer';
+export type TypedStyleLayer =
+    CircleStyleLayer |
     FillStyleLayer |
     FillExtrusionStyleLayer |
     HeatmapStyleLayer |
     HillshadeStyleLayer |
     LineStyleLayer |
+    ParticleLineStyleLayer |
     SymbolStyleLayer;

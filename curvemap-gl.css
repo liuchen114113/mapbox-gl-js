@@ -243,7 +243,7 @@ a.curvemapgl-ctrl-logo {
 }
 
 /* stylelint-disable-next-line selector-class-pattern */
-.curvemapgl-ctrl-attrib .mapbox-improve-map {
+.curvemapgl-ctrl-attrib .curvemap-improve-map {
     font-weight: bold;
     margin-left: 2px;
 }
@@ -488,7 +488,7 @@ a.curvemapgl-ctrl-logo {
 
 @media print {
     /* stylelint-disable-next-line selector-class-pattern */
-    .mapbox-improve-map {
+    .curvemap-improve-map {
         display: none;
     }
 }
@@ -531,7 +531,7 @@ a.curvemapgl-ctrl-logo {
     cursor: pointer;
 }
 
-.hymap-style-container {
+.curvemap-style-container {
     overflow: hidden;
     position: absolute;
     top: -5px;

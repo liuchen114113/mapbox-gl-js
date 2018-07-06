@@ -32,7 +32,11 @@ import hillshade from './draw_hillshade';
 import raster from './draw_raster';
 import background from './draw_background';
 import debug from './draw_debug';
+import airline from './draw_airline';   // lc
+import dynamicLine from './draw_dynamic_line'; // lc
 
+import particleline from './draw_particleline';
+import histogram from './draw_histogram';
 const draw = {
     symbol,
     circle,
@@ -43,7 +47,11 @@ const draw = {
     hillshade,
     raster,
     background,
-    debug
+    debug,
+    airline,
+    particleline,
+    dynamicLine,
+    histogram
 };
 
 import type Transform from '../geo/transform';
@@ -196,7 +204,7 @@ class Painter {
         const context = this.context;
         const gl = context.gl;
 
-        // As a temporary workaround for https://github.com/curvemap/curvemap-gl-js/issues/5490,
+        // As a temporary workaround for https://github.com/mapbox/mapbox-gl-js/issues/5490,
         // pending an upstream fix, we draw a fullscreen stencil=0 clipping mask here,
         // effectively clearing the stencil buffer: once an upstream patch lands, remove
         // this function in favor of context.clear({ stencil: 0x0 })

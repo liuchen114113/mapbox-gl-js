@@ -1012,6 +1012,111 @@ export class FeatureIndexArray extends StructArrayLayout1ul2ui8 {
 
 register('FeatureIndexArray', FeatureIndexArray);
 
+class StructArrayLayout4i4ub1ui2ui20 extends StructArray {
+    uint8: Uint8Array;
+    int16: Int16Array;
+
+    _refreshViews() {
+        this.uint8 = new Uint8Array(this.arrayBuffer);
+        this.int16 = new Int16Array(this.arrayBuffer);
+        this.uint16 = new Uint16Array(this.arrayBuffer);
+    }
+
+    emplaceBack(t, r, i, u, e, o, n, a, y, s, c) {
+        const p = this.length;
+        this.resize(p + 1);
+        const h = 10 * p;
+        const f = 20 * p;
+        this.int16[h + 0] = t;
+        this.int16[h + 1] = r;
+        this.int16[h + 2] = i;
+        this.int16[h + 3] = u;
+        this.uint8[f + 8] = e;
+        this.uint8[f + 9] = o;
+        this.uint8[f + 10] = n;
+        this.uint8[f + 11] = a;
+        this.uint16[h + 6] = y;
+        this.uint16[h + 8] = s;
+        this.uint16[h + 9] = c;
+        return f;
+    }
+    emplace(p, t, r, i, u, e, o, n, a, y, s, c) {
+        const h = 10 * p;
+        const f = 20 * p;
+        this.int16[h + 0] = t;
+        this.int16[h + 1] = r;
+        this.int16[h + 2] = i;
+        this.int16[h + 3] = u;
+        this.uint8[f + 8] = e;
+        this.uint8[f + 9] = o;
+        this.uint8[f + 10] = n;
+        this.uint8[f + 11] = a;
+        this.uint16[h + 6] = y;
+        this.uint16[h + 8] = s;
+        this.uint16[h + 9] = c;
+        return f;
+    }
+
+}
+StructArrayLayout4i4ub1ui2ui20.prototype.bytesPerElement = 20;
+register('StructArrayLayout4i4ub1ui2ui20', StructArrayLayout4i4ub1ui2ui20);
+
+/**
+ * mplementation of the StructArray layout:
+ * particleline
+ * tjc
+ */
+class StructArrayLayout4i4ub3ub2ui20 extends StructArray {
+    uint8: Uint8Array;
+    int16: Int16Array;
+    uint16: Uint16Array;
+    _refreshViews() {
+        this.uint8 = new Uint8Array(this.arrayBuffer);
+        this.int16 = new Int16Array(this.arrayBuffer);
+        this.uint16 = new Uint16Array(this.arrayBuffer);
+    }
+
+    emplaceBack(v0: number, v1: number, v2: number, v3: number, v4: number, v5: number, v6: number, v7: numbe, v8: number, v9: number, v10: number, v11: number, v12: number) {
+        const i = this.length;
+        this.resize(i + 1);
+        const o2 = i * 10;
+        const o1 = i * 20;
+        this.int16[o2 + 0] = v0;
+        this.int16[o2 + 1] = v1;
+        this.int16[o2 + 2] = v2;
+        this.int16[o2 + 3] = v3;
+        this.uint8[o1 + 8] = v4;
+        this.uint8[o1 + 9] = v5;
+        this.uint8[o1 + 10] = v6;
+        this.uint8[o1 + 11] = v7;
+        this.uint8[o1 + 12] = v8;
+        this.uint8[o1 + 13] = v9;
+        this.uint8[o1 + 14] = v10;
+        this.uint16[o2 + 8] = v11;
+        this.uint16[o2 + 9] = v12;
+        return i;
+    }
+    emplace(i: number, v0: number, v1: number, v2: number, v3: number, v4: number, v5: number, v6: number, v7: numbe, v8: number, v9: number, v10: number, v11: number, v12: number) {
+        const o2 = i * 10;
+        const o1 = i * 20;
+        this.int16[o2 + 0] = v0;
+        this.int16[o2 + 1] = v1;
+        this.int16[o2 + 2] = v2;
+        this.int16[o2 + 3] = v3;
+        this.uint8[o1 + 8] = v4;
+        this.uint8[o1 + 9] = v5;
+        this.uint8[o1 + 10] = v6;
+        this.uint8[o1 + 11] = v7;
+        this.uint8[o1 + 12] = v8;
+        this.uint8[o1 + 13] = v9;
+        this.uint8[o1 + 14] = v10;
+        this.uint16[o2 + 8] = v11;
+        this.uint16[o2 + 9] = v12;
+        return i;
+    }
+}
+StructArrayLayout4i4ub3ub2ui20.prototype.bytesPerElement = 20;
+register("StructArrayLayout4i4ub3ub2ui20", StructArrayLayout4i4ub3ub2ui20);
 
 export {
     StructArrayLayout2i4,
@@ -1032,6 +1137,8 @@ export {
     StructArrayLayout2ui4,
     StructArrayLayout2f8,
     StructArrayLayout4f16,
+    StructArrayLayout4i4ub1ui2ui20,  //lc添加
+    StructArrayLayout4i4ub3ub2ui20,
     StructArrayLayout2i4 as PosArray,
     StructArrayLayout4i8 as RasterBoundsArray,
     StructArrayLayout2i4 as CircleLayoutArray,
@@ -1046,5 +1153,9 @@ export {
     StructArrayLayout2i2i2i12 as CollisionCircleLayoutArray,
     StructArrayLayout2ub4 as CollisionVertexArray,
     StructArrayLayout3ui6 as TriangleIndexArray,
-    StructArrayLayout2ui4 as LineIndexArray
+    StructArrayLayout2ui4 as LineIndexArray,
+    StructArrayLayout4i4ub3ub2ui20 as ParticleLineLayoutArray,
+    StructArrayLayout4i4ub1ui2ui20 as AirlineLayoutArray,     
+    StructArrayLayout4i4ub1ui2ui20 as DynamicLineLayoutArray,
+    StructArrayLayout2i4i12 as HistogramLayoutArray
 };

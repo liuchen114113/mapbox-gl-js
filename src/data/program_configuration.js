@@ -353,17 +353,16 @@ export default class ProgramConfiguration {
     static createDynamic<Layer: TypedStyleLayer>(layer: Layer, zoom: number, filterProperties: (string) => boolean) {
         const self = new ProgramConfiguration();
         const keys = [];
-
         for (const property in layer.paint._values) {
             if (!filterProperties(property)) continue;
             const value = layer.paint.get(property);
-            if (!(value instanceof PossiblyEvaluatedPropertyValue) || !supportsPropertyExpression(value.property.specification)) {
+         
+            if (!(value instanceof PossiblyEvaluatedPropertyValue)|| !supportsPropertyExpression(value.property.specification)) {//错误位置！
                 continue;
             }
             const name = paintAttributeName(property, layer.type);
             const type = value.property.specification.type;
             const useIntegerZoom = value.property.useIntegerZoom;
-
             if (value.value.kind === 'constant') {
                 self.binders[property] = new ConstantBinder(value.value, name, type);
                 keys.push(`/u_${name}`);
@@ -377,7 +376,6 @@ export default class ProgramConfiguration {
         }
 
         self.cacheKey = keys.sort().join('');
-
         return self;
     }
 
